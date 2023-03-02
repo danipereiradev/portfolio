@@ -60,7 +60,7 @@ export default function Home() {
         </header>
         
         <main className='flex bg-zinc-900'>
-          <div className="flex flex-col md:flex-row h-screen md:items-center container mx-auto justify-start">
+          <div className="flex flex-col md:flex-row min-h-screen md:items-center container mx-auto justify-start">
             <div className="p-7 flex place-self-center mb-7">
           <div className='md:p-12 text-center'>
           <h1 className='text-slate-200 text-4xl md:text-6xl font-extrabold py-12'># Frontend Software Engineer</h1>
