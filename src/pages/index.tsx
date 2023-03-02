@@ -82,7 +82,7 @@ export default function Home() {
               height={100}
               priority
             />
-            <div className='flex justify-center gap-4 pb-7 lg:-translate-y-20 -translate-y-20'>
+            <div className='flex justify-center gap-4 pb-7'>
               <Image
                 src="/js.png"
                 alt="js Logo danipereira.dev"
