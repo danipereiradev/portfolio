@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Lottie from 'react-lottie';
 import animationData from '../../public/animationData/animation.json';
-
+import Link from 'next/link'
 import { GiHamburgerMenu } from "react-icons/gi";
 
 
@@ -31,7 +31,7 @@ export default function Home() {
         <header className='flex bg-black place-content-center' >
           <div className="container flex justify-evenly items-center py-7 md:justify-between ">
         <div className="">
-          <div className='flex gap-2'>
+          <div className='flex gap-2 items-center'>
             <Image className=''
                 src="/code2.png"
                 alt="icon Logo danipereira.dev"
@@ -41,7 +41,7 @@ export default function Home() {
                 priority
               />
             
-              <p className='font-extrabold tracking-widest text-slate-200 text-2xl md:text-2xl '>DANIPEREIRA<span className='font-extrabold text-transparent text-2xl bg-clip-text bg-gradient-to-r from-blue-400 to-purple-300'>.DEV</span></p>
+              <p className='font-extrabold tracking-widest text-slate-200 text-xl md:text-lg '>DANIPEREIRA<span className='font-extrabold text-transparent text-xl bg-clip-text bg-gradient-to-r from-blue-400 to-purple-300'>.DEV</span></p>
               
           </div>
          
@@ -49,9 +49,9 @@ export default function Home() {
         <div>
         <GiHamburgerMenu className='md:hidden text-gray-200 text-4xl mx-auto'/>
           <ul className='hidden md:flex text-gray-200 gap-7 font-bold text-md uppercase'>
-            <li>About</li>
-            <li>Projects</li>
-            <li>Cv</li>
+            <li> <Link href="#">About me</Link></li>
+            <li><Link href="#">Projects</Link></li>
+            <li><Link href="#">Cv</Link></li>
           </ul>
           
         </div>
@@ -69,9 +69,9 @@ export default function Home() {
 
           </div>
           </div>
-          <div className=' md:w-full md:max-w-lg p-7'>
+          <div className=' md:w-full md:max-w-lg px-7'>
           <Lottie options={lottieOptions} />
-          <div className='flex justify-center gap-4 pb-7 md:-translate-y-20 -translate-y-7'>
+          <div className='flex justify-center gap-4 pb-7 md:-translate-y-20 -translate-y-16'>
          <Image
                 src="/js.png"
                 alt="js Logo danipereira.dev"
@@ -83,6 +83,14 @@ export default function Home() {
               <Image
                 src="/ts.png"
                 alt="ts Logo danipereira.dev"
+                
+                width={40}
+                height={40}
+                priority
+              />
+              <Image
+                src="/python.png"
+                alt="python Logo danipereira.dev"
                 
                 width={40}
                 height={40}
@@ -104,18 +112,19 @@ export default function Home() {
 
         <footer className='flex py-7 md:py-4 bg-black place-content-center'>
           <div className="container">
-          <div className='flex md:justify-between justify-center gap-4 text-white w-full place-items-center cursor-pointer'>
+          <div className='flex md:justify-between justify-center gap-4 text-white w-full place-items-center '>
           <p>danipereira.dev © 2023</p>
                <div className='flex gap-4'>
-               <Image
+               <Link href="https://github.com/danipereiracodes" target="_blank"><Image
                 src="/github.png"
                 alt="github Logo danipereira.dev"
                 style={{borderRadius:"4px"}}
                 width={30}
                 height={30}
                 priority
-              />
-               <Image
+              /></Link>
+               
+               <Link href="mailto:info.danipereira@gmail.com" target="_blank"><Image
                 src="/email2.png"
                 alt="envelope Logo danipereira.dev"
                 style={{borderRadius:"4px"}}
@@ -123,6 +132,7 @@ export default function Home() {
                 height={30}
                 priority
               />
+              </Link>
                </div>
           </div>
           </div>
