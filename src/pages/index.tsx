@@ -29,7 +29,7 @@ export default function Home() {
       </Head>
       
         <header className='flex bg-black place-content-center' >
-          <div className="container flex justify-evenly items-center py-7 md:justify-between ">
+          <div className="container flex justify-evenly items-center py-7 lg:justify-between ">
         <div className="">
           <div className='flex gap-2 items-center'>
             <Image className=''
@@ -41,14 +41,14 @@ export default function Home() {
                 priority
               />
             
-              <p className='font-extrabold tracking-widest text-slate-200 text-xl md:text-lg '>DANIPEREIRA<span className='font-extrabold text-transparent text-xl bg-clip-text bg-gradient-to-r from-blue-400 to-purple-300'>.DEV</span></p>
+              <p className='font-extrabold tracking-widest text-slate-200 text-xl lg:text-lg '>DANIPEREIRA<span className='font-extrabold text-transparent text-xl bg-clip-text bg-gradient-to-r from-blue-400 to-purple-300'>.DEV</span></p>
               
           </div>
          
         </div>
         <div>
-        <GiHamburgerMenu className='md:hidden text-gray-200 text-4xl mx-auto'/>
-          <ul className='hidden md:flex text-gray-200 gap-7 font-bold text-md uppercase'>
+        <GiHamburgerMenu className='lg:hidden text-gray-200 text-4xl mx-auto'/>
+          <ul className='hidden lg:flex text-gray-200 gap-7 font-bold text-md uppercase'>
             <li> <Link href="#">About me</Link></li>
             <li><Link href="#">Projects</Link></li>
             <li><Link href="#">Cv</Link></li>
@@ -60,18 +60,18 @@ export default function Home() {
         </header>
         
         <main className='flex bg-zinc-900'>
-          <div className="flex flex-col md:flex-row min-h-screen md:items-center container mx-auto justify-start">
+          <div className="flex flex-col lg:flex-row min-h-screen lg:items-center container mx-auto justify-start">
             <div className="p-7 flex place-self-center mb-7">
-          <div className='md:p-12 text-center'>
-          <h1 className='text-slate-200 text-4xl md:text-6xl font-extrabold py-12'># Frontend Software Engineer</h1>
+          <div className='lg:p-12 text-center'>
+          <h1 className='text-slate-200 text-4xl lg:text-6xl font-extrabold py-12'># Frontend Software Engineer</h1>
           
           <h2 className='text-slate-100 text-xl px-7'><span className='font-extrabold text-transparent text-2xl bg-clip-text bg-gradient-to-r from-blue-400 to-purple-300'>Howdy!</span> I am working on my new Portfolio and I will Be Back with new fresh styles ASAP!</h2>
 
           </div>
           </div>
-          <div className=' md:w-full md:max-w-lg px-7'>
-          <Lottie options={lottieOptions} />
-          <div className='flex justify-center gap-4 pb-7 md:-translate-y-20 -translate-y-16'>
+          <div className='lg:w-full lg:max-w-lg px-7 -translate-y-12'>
+          <Lottie options={lottieOptions}/>
+          <div className='flex justify-center gap-4 pb-7 lg:-translate-y-20 -translate-y-20'>
          <Image
                 src="/js.png"
                 alt="js Logo danipereira.dev"
@@ -110,9 +110,9 @@ export default function Home() {
           </div>
         </main>
 
-        <footer className='flex py-7 md:py-4 bg-black place-content-center'>
+        <footer className='flex py-7 lg:py-4 bg-black place-content-center'>
           <div className="container">
-          <div className='flex md:justify-between justify-center gap-4 text-white w-full place-items-center '>
+          <div className='flex lg:justify-between justify-center gap-4 text-white w-full place-items-center '>
           <p>danipereira.dev © 2023</p>
                <div className='flex gap-4'>
                <Link href="https://github.com/danipereiracodes" target="_blank"><Image
