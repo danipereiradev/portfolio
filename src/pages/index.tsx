@@ -65,7 +65,7 @@ export default function Home() {
           <div className='lg:p-12 text-center'>
           <h1 className='text-slate-200 text-4xl lg:text-6xl font-extrabold py-12'># Frontend Software Engineer</h1>
           
-          <h2 className='text-slate-100 text-xl px-7'><span className='font-extrabold text-transparent text-2xl bg-clip-text bg-gradient-to-r from-blue-400 to-purple-300'>Howdy!</span> I am working on my new Portfolio and I will Be Back with new fresh styles ASAP!</h2>
+          <h2 className='text-slate-100 text-xl px-7'><span className='font-extrabold text-transparent text-2xl bg-clip-text bg-gradient-to-r from-blue-400 to-purple-300'>Howdy!</span> I am working on my new portfolio and I will be back with new brand new styles ASAP!</h2>
 
           </div>
           </div>
