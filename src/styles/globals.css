@@ -16,6 +16,48 @@ body {
   
 }
 
+.glasses {
+  position: absolute;
+  
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -85%);
+}
+
+
+  @media (max-width:640px)   {
+    .glasses {
+     max-width:10rem;
+     transform: translate(-50%, -90%);
+    }
+  }
+
+
+@media (min-width:640px) and (max-width:1040px)  {
+  .glasses {
+   width:9rem;
+   transform: translate(-50%, -80%);
+  }
+}
+
+@media (min-width:375px) and (max-width:640px)   {
+  .glasses {
+   max-width:4rem;
+   transform: translate(-50%, -105%);
+  }
+}
+
+@media (max-width:375px)  {
+  .glasses {
+   width:4rem;
+   transform: translate(-50%, -105%);
+  }
+}
+
+
+
+
+
 @font-face {
   font-family: "WarowniaBd";
   src: url("/public\fonts\Warownia\WarowniaBd.otf");
