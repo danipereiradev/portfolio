@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  padding:0;
+  margin:0;
+  box-sizing: content-box;
+  
+ 
+}
+
+body {
+  min-height:100vh;
+  max-width:100%;
+  
+}
+
 @font-face {
   font-family: "WarowniaBd";
   src: url("/public\fonts\Warownia\WarowniaBd.otf");

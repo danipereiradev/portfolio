@@ -3,6 +3,8 @@ import Image from 'next/image'
 import Lottie from 'react-lottie';
 import animationData from '../../public/animationData/animation.json';
 
+import { GiHamburgerMenu } from "react-icons/gi";
+
 
 const lottieOptions = {
   animationData: animationData,
@@ -20,51 +22,59 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Danipereira.dev</title>
+        <title>DANIPEREIRA.DEV</title>
         <meta name="description" content="Frontend Software Engineer" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/code2.png" />
       </Head>
       
-        <header className='flex flex-col items-center py-4 md:py-7 bg-slate-900 w-full'>
-        <div className="flex flex-col-reverse md:max-w-6xl md:flex-row w-full justify-between items-center px-7">
-          <div className='flex items-center justify-evenly w-full py-4 '>
-          <Image className=''
+        <header className='flex bg-black place-content-center' >
+          <div className="container flex justify-evenly items-center py-7 md:justify-between ">
+        <div className="">
+          <div className='flex gap-2'>
+            <Image className=''
                 src="/code2.png"
-                alt="Vercel Logo"
+                alt="icon Logo danipereira.dev"
                 
                 width={35}
                 height={35}
                 priority
               />
             
-              <p className='font-extrabold tracking-widest text-slate-200 text-2xl md:text-3xl '>DANIPEREIRA<span className=' italic font-extrabold text-transparent text-2xl bg-clip-text bg-gradient-to-r from-blue-400 to-purple-300'>.DEV</span></p>
-              {/* <Image className='rotate-180'
-                src="/bracket1.png"
-                alt="Vercel Logo"
-                
-                width={35}
-                height={35}
-                priority
-              /> */}
+              <p className='font-extrabold tracking-widest text-slate-200 text-2xl md:text-2xl '>DANIPEREIRA<span className='font-extrabold text-transparent text-2xl bg-clip-text bg-gradient-to-r from-blue-400 to-purple-300'>.DEV</span></p>
+              
           </div>
          
-            
-              
-              
-             
-            
+        </div>
+        <div>
+        <GiHamburgerMenu className='md:hidden text-gray-200 text-4xl mx-auto'/>
+          <ul className='hidden md:flex text-gray-200 gap-7 font-bold text-md uppercase'>
+            <li>About</li>
+            <li>Projects</li>
+            <li>Cv</li>
+          </ul>
           
+        </div>
+        
         </div>
         </header>
         
-        <main className='h-screen flex flex-col justify-start bg-black'>
-          <div className='md:max-w-xxl text-center'>
-          <h1 className='text-slate-200 text-4xl font-extrabold py-12'>Frontend Software Engineer</h1>
-          <div className='flex justify-center gap-4 pb-7'>
+        <main className='flex bg-zinc-900'>
+          <div className="flex flex-col md:flex-row h-screen md:items-center container mx-auto justify-start">
+            <div className="p-7 flex place-self-center mb-7">
+          <div className='md:p-12 text-center'>
+          <h1 className='text-slate-200 text-4xl md:text-6xl font-extrabold py-12'># Frontend Software Engineer</h1>
+          
+          <h2 className='text-slate-100 text-xl px-7'><span className='font-extrabold text-transparent text-2xl bg-clip-text bg-gradient-to-r from-blue-400 to-purple-300'>Howdy!</span> I am working on my new Portfolio! I will Be right Back with new fresh styles ASAP!</h2>
+
+          </div>
+          </div>
+          <div className=' md:w-full md:max-w-lg p-7'>
+          <Lottie options={lottieOptions} />
+          <div className='flex justify-center gap-4 pb-7 md:-translate-y-20 -translate-y-7'>
          <Image
                 src="/js.png"
-                alt="Vercel Logo"
+                alt="js Logo danipereira.dev"
                 style={{borderRadius:"4px"}}
                 width={40}
                 height={40}
@@ -72,7 +82,7 @@ export default function Home() {
               />
               <Image
                 src="/ts.png"
-                alt="Vercel Logo"
+                alt="ts Logo danipereira.dev"
                 
                 width={40}
                 height={40}
@@ -80,7 +90,7 @@ export default function Home() {
               />
               <Image
                 src="/react.png"
-                alt="Vercel Logo"
+                alt="react Logo danipereira.dev"
                 
                 width={40}
                 height={40}
@@ -88,22 +98,18 @@ export default function Home() {
               />
           
          </div>
-          <h2 className='text-slate-100 text-xl px-7'>I am working on my new Portfolio! I will Be right Back with new fresh style ASAP!</h2>
-
           </div>
-          <div className=' md:w-full md:max-w-xl pt-8'>
-          <Lottie options={lottieOptions} />
           </div>
-          
         </main>
 
-        <footer className='flex py-7 md:py-12 bg-slate-900'>
-          
-          <div className='flex justify-evenly text-white w-full place-items-center cursor-pointer'>
+        <footer className='flex py-7 md:py-4 bg-black place-content-center'>
+          <div className="container">
+          <div className='flex md:justify-between justify-center gap-4 text-white w-full place-items-center cursor-pointer'>
           <p>danipereira.dev © 2023</p>
+               <div className='flex gap-4'>
                <Image
                 src="/github.png"
-                alt="Vercel Logo"
+                alt="github Logo danipereira.dev"
                 style={{borderRadius:"4px"}}
                 width={30}
                 height={30}
@@ -111,12 +117,14 @@ export default function Home() {
               />
                <Image
                 src="/email2.png"
-                alt="Vercel Logo"
+                alt="envelope Logo danipereira.dev"
                 style={{borderRadius:"4px"}}
                 width={30}
                 height={30}
                 priority
               />
+               </div>
+          </div>
           </div>
         </footer>
 
