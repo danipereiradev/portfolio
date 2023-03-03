@@ -39,7 +39,8 @@ export default function Home() {
 
       <header className={!ischecked ? 'flex bg-black place-content-center' : 'flex bg-slate-900 place-content-center'} >
         <div className="container flex items-center justify-evenly py-7 lg:justify-between ">
-          <div className="">
+          
+            <Link href="/">
             <div className='flex items-center gap-2'>
               <Image className=''
                 src="/code2.png"
@@ -50,11 +51,12 @@ export default function Home() {
                 priority
               />
 
-              <h1 className='items-center pt-2 text-2xl uppercase font-Arcade text-slate-200 lg:text-3xl'>danipereira<span className='pt-2 text-lg font-extrabold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-300 lg:text-2xl '>.DEV</span></h1>
+              <h1 className='items-center pt-2 text-2xl uppercase font-Arcade text-slate-200 lg:text-3xl'>danipereira<span className='pt-2 text-2xl font-extrabold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-300 lg:text-2xl '>.DEV</span></h1>
 
             </div>
+            </Link>
 
-          </div>
+          
           <input onChange={toggleThemeMode} type="checkbox" className="toggle" checked={ischecked} />
 
         </div>
