@@ -4,7 +4,7 @@ import Lottie from 'react-lottie';
 import animationData from '../../public/animationData/animation.json';
 import animationDataBlue from '../../public/animationDataBlue.json';
 import Link from 'next/link'
-import {ChangeEvent, useState} from 'react'
+import {useState} from 'react'
 
 
 
