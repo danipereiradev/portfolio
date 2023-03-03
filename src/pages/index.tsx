@@ -37,7 +37,7 @@ export default function Home() {
         <link rel="icon" href="/code2.png" />
       </Head>
 
-      <header className='flex bg-black place-content-center' >
+      <header className={!ischecked ? 'flex bg-black place-content-center' : 'flex bg-slate-900 place-content-center'} >
         <div className="container flex justify-evenly items-center py-7 lg:justify-between ">
           <div className="">
             <div className='flex gap-2 items-center'>
@@ -64,7 +64,7 @@ export default function Home() {
         <div className="flex flex-col lg:flex-row min-h-full lg:items-center container mx-auto justify-start">
           <div className="p-7 flex flex-col place-self-center mb-7">
             <div className='lg:p-12 text-center'>
-              <h1 className={!ischecked ? 'text-slate-200 text-4xl lg:text-6xl font-extrabold py-12' : 'text-slate-600 text-4xl lg:text-6xl font-extrabold py-12'}># Front-end Software Engineer</h1>
+              <h1 className={!ischecked ? 'text-slate-200 text-4xl lg:text-6xl font-extrabold py-12' : 'text-slate-900 text-4xl lg:text-6xl font-extrabold py-12'}># Front-end Software Engineer</h1>
 
               <h2 className={!ischecked ? 'text-slate-100 text-2xl md:text-3xl md:px-12 font-bold' : 'text-slate-600 text-2xl md:text-3xl md:px-12 font-bold'}><span className='font-extrabold text-transparent text-2xl md:text-3xl bg-clip-text bg-gradient-to-r from-blue-400 to-purple-300'>Howdy!</span> I am working on my new portfolio and I will be back with brand new styles ASAP!</h2>
 
@@ -100,6 +100,7 @@ export default function Home() {
             
             <div className='flex justify-center gap-4 pb-7'>
               <Image
+              
                 src="/js.png"
                 alt="js Logo danipereira.dev"
                 style={{ borderRadius: "4px" }}
@@ -139,7 +140,7 @@ export default function Home() {
        
       </main>
 
-      <footer className=' flex py-7 lg:py-4 bg-black place-content-center'>
+      <footer className={!ischecked ? 'flex py-7 lg:py-4 bg-black place-content-center' : 'flex py-7 lg:py-4 bg-slate-900 place-content-center'}>
         <div className="container">
           <div className='flex lg:justify-between justify-center gap-4 text-white w-full place-items-center '>
             <p>danipereira.dev © 2023</p>
