@@ -51,7 +51,7 @@ export default function Home() {
                 priority
               />
 
-              <h1 className='items-center pt-2 text-2xl uppercase font-Arcade text-slate-200 lg:text-3xl'>danipereira<span className='pt-2 text-2xl font-extrabold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-300 lg:text-2xl '>.DEV</span></h1>
+              <h1 className='items-center pt-2 text-2xl uppercase font-Arcade text-slate-200 lg:text-3xl'>danipereira<span className='pt-2 text-xl font-extrabold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-300 lg:text-2xl '>.DEV</span></h1>
 
             </div>
             </Link>
