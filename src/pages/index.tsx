@@ -60,7 +60,7 @@ export default function Home() {
         </div>
       </header>
 
-      <main className={!ischecked ? 'flex bg-zinc-900' : 'flex bg-slate-200'}>
+      <main className={!ischecked ? 'flex bg-zinc-900' : 'flex bg-white'}>
         <div className="flex flex-col lg:flex-row min-h-screen lg:items-center container mx-auto justify-start">
           <div className="p-7 flex flex-col place-self-center mb-7">
             <div className='lg:p-12 text-center'>
