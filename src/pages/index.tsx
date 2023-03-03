@@ -66,7 +66,7 @@ export default function Home() {
             <div className='lg:p-12 text-center'>
               <h1 className={!ischecked ? 'text-slate-200 text-4xl lg:text-6xl font-extrabold py-12' : 'text-slate-600 text-4xl lg:text-6xl font-extrabold py-12'}># Front-end Software Engineer</h1>
 
-              <h2 className={!ischecked ? 'text-slate-100 text-xl md:px-12' : 'text-slate-600 text-xl md:px-12'}><span className='font-extrabold text-transparent text-2xl bg-clip-text bg-gradient-to-r from-blue-400 to-purple-300'>Howdy!</span> I am working on my new portfolio and I will be back with brand new styles ASAP!</h2>
+              <h2 className={!ischecked ? 'text-slate-100 text-2xl md:text-3xl md:px-12 font-bold' : 'text-slate-600 text-2xl md:text-3xl md:px-12 font-bold'}><span className='font-extrabold text-transparent text-2xl md:text-3xl bg-clip-text bg-gradient-to-r from-blue-400 to-purple-300'>Howdy!</span> I am working on my new portfolio and I will be back with brand new styles ASAP!</h2>
 
             </div>
             
