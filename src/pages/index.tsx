@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Lottie from 'react-lottie';
 import animationData from '../../public/animationData/animation.json';
 import Link from 'next/link'
-import { GiHamburgerMenu } from "react-icons/gi";
+import {useState} from 'react'
 
 
 const lottieOptions = {
@@ -19,6 +19,8 @@ const lottieOptions = {
 
 
 export default function Home() {
+  const [ischecked, setIsChecked ] = useState(false)
+
   return (
     <>
       <Head>
@@ -46,33 +48,28 @@ export default function Home() {
             </div>
 
           </div>
-          <div>
-            <GiHamburgerMenu className='lg:hidden text-gray-200 text-4xl mx-auto' />
-            <ul className='hidden lg:flex text-gray-200 gap-7 font-bold text-md uppercase'>
-              <li> <Link href="#">About me</Link></li>
-              <li><Link href="#">Projects</Link></li>
-              <li><Link href="#">Cv</Link></li>
-            </ul>
-
-          </div>
+          <input onClick={() => setIsChecked((ischecked) => !ischecked )} type="checkbox" className="toggle" checked={ischecked} />
 
         </div>
       </header>
 
       <main className='flex bg-zinc-900'>
         <div className="flex flex-col lg:flex-row min-h-screen lg:items-center container mx-auto justify-start">
-          <div className="p-7 flex place-self-center mb-7">
+          <div className="p-7 flex flex-col place-self-center mb-7">
             <div className='lg:p-12 text-center'>
               <h1 className='text-slate-200 text-4xl lg:text-6xl font-extrabold py-12'># Front-end Software Engineer</h1>
 
               <h2 className='text-slate-100 text-xl md:px-12'><span className='font-extrabold text-transparent text-2xl bg-clip-text bg-gradient-to-r from-blue-400 to-purple-300'>Howdy!</span> I am working on my new portfolio and I will be back with brand new styles ASAP!</h2>
 
             </div>
+            
           </div>
           <div className='lg:w-full lg:max-w-lg px-7 -translate-y-12 relative'>
             
             <div className="relative">
+              
             <Lottie options={lottieOptions} />
+            
             </div>
             <Image className='glasses'
               src="/lentes.png"
@@ -82,6 +79,7 @@ export default function Home() {
               height={100}
               priority
             />
+            
             <div className='flex justify-center gap-4 pb-7'>
               <Image
                 src="/js.png"
@@ -119,9 +117,11 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+       
       </main>
 
-      <footer className='flex py-7 lg:py-4 bg-black place-content-center'>
+      <footer className=' flex py-7 lg:py-4 bg-black place-content-center'>
         <div className="container">
           <div className='flex lg:justify-between justify-center gap-4 text-white w-full place-items-center '>
             <p>danipereira.dev © 2023</p>
