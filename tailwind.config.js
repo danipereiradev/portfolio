@@ -9,11 +9,13 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
-    fontFamily: {
-      'WarowniaBd' : ['WarowniaBd'],
-      'brooklyn' : ['Brooklyn']
-    }
+    extend: {
+      fontFamily: {
+        "Arcade": "Arcade, serif",
+        "Arcade_n": "Arcade_n, serif"
+      }
+    },
+    
   },
   plugins: [require("daisyui")],
   daisyui: {

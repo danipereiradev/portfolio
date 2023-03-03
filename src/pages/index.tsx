@@ -29,7 +29,7 @@ export default function Home() {
   };
 
   return (
-    <div className='min-h-screen flex flex-col'>
+    <div className='flex flex-col min-h-screen'>
       <Head>
         <title>DANIPEREIRA.DEV</title>
         <meta name="description" content="Frontend Software Engineer" />
@@ -38,19 +38,19 @@ export default function Home() {
       </Head>
 
       <header className={!ischecked ? 'flex bg-black place-content-center' : 'flex bg-slate-900 place-content-center'} >
-        <div className="container flex justify-evenly items-center py-7 lg:justify-between ">
+        <div className="container flex items-center justify-evenly py-7 lg:justify-between ">
           <div className="">
-            <div className='flex gap-2 items-center'>
+            <div className='flex items-center gap-2'>
               <Image className=''
                 src="/code2.png"
                 alt="icon Logo danipereira.dev"
 
-                width={35}
-                height={35}
+                width={25}
+                height={25}
                 priority
               />
 
-              <p className='font-extrabold tracking-widest text-slate-200 text-xl lg:text-lg '>DANIPEREIRA<span className='font-extrabold text-transparent text-xl bg-clip-text bg-gradient-to-r from-blue-400 to-purple-300'>.DEV</span></p>
+              <h1 className='items-center pt-2 text-xl uppercase font-Arcade text-slate-200 lg:text-3xl'>danipereira<span className='pt-2 text-lg font-extrabold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-300 lg:text-2xl '>.DEV</span></h1>
 
             </div>
 
@@ -61,17 +61,17 @@ export default function Home() {
       </header>
 
       <main className={!ischecked ? 'flex bg-zinc-900 flex-1' : 'flex bg-white flex-1'}>
-        <div className="flex flex-col lg:flex-row min-h-full lg:items-center container mx-auto justify-start">
-          <div className="p-7 flex flex-col place-self-center mb-7">
-            <div className='lg:p-12 text-center'>
+        <div className="container flex flex-col justify-start min-h-full mx-auto lg:flex-row lg:items-center">
+          <div className="flex flex-col p-7 place-self-center mb-7">
+            <div className='text-center lg:p-12'>
               <h1 className={!ischecked ? 'text-slate-200 text-4xl lg:text-6xl font-extrabold py-12' : 'text-slate-900 text-4xl lg:text-6xl font-extrabold py-12'}># Front-end Software Engineer</h1>
 
-              <h2 className={!ischecked ? 'text-slate-100 text-2xl md:text-3xl md:px-12 font-bold' : 'text-slate-600 text-2xl md:text-3xl md:px-12 font-bold'}><span className='font-extrabold text-transparent text-2xl md:text-3xl bg-clip-text bg-gradient-to-r from-blue-400 to-purple-300'>Howdy!</span> I am working on my new portfolio and I will be back with brand new styles ASAP!</h2>
+              <h2 className={!ischecked ? 'text-slate-100 text-2xl md:text-3xl md:px-12 font-bold' : 'text-slate-600 text-2xl md:text-3xl md:px-12 font-bold'}><span className='text-2xl font-extrabold text-transparent md:text-3xl bg-clip-text bg-gradient-to-r from-blue-400 to-purple-300'>Howdy!</span> I am working on my new portfolio and I will be back with brand new styles ASAP!</h2>
 
             </div>
             
           </div>
-          <div className='lg:w-full lg:max-w-lg px-7 -translate-y-12 relative'>
+          <div className='relative -translate-y-12 lg:w-full lg:max-w-lg px-7'>
             
             <div className="relative">
               
@@ -142,7 +142,7 @@ export default function Home() {
 
       <footer className={!ischecked ? 'flex py-7 lg:py-4 bg-black place-content-center' : 'flex py-7 lg:py-4 bg-slate-900 place-content-center'}>
         <div className="container">
-          <div className='flex lg:justify-between justify-center gap-4 text-white w-full place-items-center '>
+          <div className='flex justify-center w-full gap-4 text-white lg:justify-between place-items-center '>
             <p>danipereira.dev © 2023</p>
             <div className='flex gap-4'>
               <Link href="https://github.com/danipereiracodes" target="_blank"><Image

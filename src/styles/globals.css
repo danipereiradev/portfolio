@@ -62,3 +62,14 @@
   font-family: "Brooklyn";
   src: url("/public\fonts\Brooklyn\Brooklyn-Bold-1.otf");
 }
+
+@layer base {
+  @font-face {
+    font-family: "Arcade";
+    
+    src: url("/fonts/Arcade.woff2") format("woff2");
+  }
+
+  
+}
+
