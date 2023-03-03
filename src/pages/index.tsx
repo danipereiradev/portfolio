@@ -29,7 +29,7 @@ export default function Home() {
   };
 
   return (
-    <>
+    <div className='min-h-screen flex flex-col'>
       <Head>
         <title>DANIPEREIRA.DEV</title>
         <meta name="description" content="Frontend Software Engineer" />
@@ -60,8 +60,8 @@ export default function Home() {
         </div>
       </header>
 
-      <main className={!ischecked ? 'flex bg-zinc-900' : 'flex bg-white'}>
-        <div className="flex flex-col lg:flex-row min-h-screen lg:items-center container mx-auto justify-start">
+      <main className={!ischecked ? 'flex bg-zinc-900 flex-1' : 'flex bg-white flex-1'}>
+        <div className="flex flex-col lg:flex-row min-h-full lg:items-center container mx-auto justify-start">
           <div className="p-7 flex flex-col place-self-center mb-7">
             <div className='lg:p-12 text-center'>
               <h1 className={!ischecked ? 'text-slate-200 text-4xl lg:text-6xl font-extrabold py-12' : 'text-slate-600 text-4xl lg:text-6xl font-extrabold py-12'}># Front-end Software Engineer</h1>
@@ -175,6 +175,6 @@ export default function Home() {
 
 
 
-    </>
+    </div>
   )
 }
