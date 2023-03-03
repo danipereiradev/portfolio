@@ -2,24 +2,31 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Lottie from 'react-lottie';
 import animationData from '../../public/animationData/animation.json';
+import animationDataBlue from '../../public/animationDataBlue.json';
 import Link from 'next/link'
-import {useState} from 'react'
+import {ChangeEvent, useState} from 'react'
 
 
-const lottieOptions = {
-  animationData: animationData,
-  loop: true,
-  speed: 1,
-  autoplay: true,
-  background: "transparent",
-  style: "width:800px;height:800px",
-  hover: true,
 
-};
 
 
 export default function Home() {
   const [ischecked, setIsChecked ] = useState(false)
+
+  const toggleThemeMode = (e: any) => {
+    setIsChecked(e.target.checked)
+  }
+
+  const lottieOptions = {
+    animationData: !ischecked ? animationData : animationDataBlue,
+    loop: true,
+    speed: 1,
+    autoplay: true,
+    background: "transparent",
+    style: "width:800px;height:800px",
+    hover: true,
+  
+  };
 
   return (
     <>
@@ -48,18 +55,18 @@ export default function Home() {
             </div>
 
           </div>
-          <input onClick={() => setIsChecked((ischecked) => !ischecked )} type="checkbox" className="toggle" checked={ischecked} />
+          <input onChange={toggleThemeMode} type="checkbox" className="toggle" checked={ischecked} />
 
         </div>
       </header>
 
-      <main className='flex bg-zinc-900'>
+      <main className={!ischecked ? 'flex bg-zinc-900' : 'flex bg-slate-200'}>
         <div className="flex flex-col lg:flex-row min-h-screen lg:items-center container mx-auto justify-start">
           <div className="p-7 flex flex-col place-self-center mb-7">
             <div className='lg:p-12 text-center'>
-              <h1 className='text-slate-200 text-4xl lg:text-6xl font-extrabold py-12'># Front-end Software Engineer</h1>
+              <h1 className={!ischecked ? 'text-slate-200 text-4xl lg:text-6xl font-extrabold py-12' : 'text-slate-600 text-4xl lg:text-6xl font-extrabold py-12'}># Front-end Software Engineer</h1>
 
-              <h2 className='text-slate-100 text-xl md:px-12'><span className='font-extrabold text-transparent text-2xl bg-clip-text bg-gradient-to-r from-blue-400 to-purple-300'>Howdy!</span> I am working on my new portfolio and I will be back with brand new styles ASAP!</h2>
+              <h2 className={!ischecked ? 'text-slate-100 text-xl md:px-12' : 'text-slate-600 text-xl md:px-12'}><span className='font-extrabold text-transparent text-2xl bg-clip-text bg-gradient-to-r from-blue-400 to-purple-300'>Howdy!</span> I am working on my new portfolio and I will be back with brand new styles ASAP!</h2>
 
             </div>
             
@@ -71,14 +78,25 @@ export default function Home() {
             <Lottie options={lottieOptions} />
             
             </div>
+            {
+              !ischecked ? 
+              <Image className='glasses'
+              src={"/lentes.png"}
+              alt="js Logo danipereira.dev"
+              
+              width={100}
+              height={100}
+              priority
+            /> : 
             <Image className='glasses'
-              src="/lentes.png"
+              src={"/sun.png"}
               alt="js Logo danipereira.dev"
               
               width={100}
               height={100}
               priority
             />
+            }
             
             <div className='flex justify-center gap-4 pb-7'>
               <Image
