@@ -80,25 +80,7 @@ export default function Home() {
             <Lottie options={lottieOptions} />
             
             </div>
-            {
-              !ischecked ? 
-              <Image className='glasses'
-              src={"/lentes.png"}
-              alt="js Logo danipereira.dev"
-              
-              width={100}
-              height={100}
-              priority
-            /> : 
-            <Image className='glasses'
-              src={"/sun.png"}
-              alt="js Logo danipereira.dev"
-              
-              width={100}
-              height={100}
-              priority
-            />
-            }
+            
             
             <div className='flex justify-center gap-4 pb-7'>
               <Image
