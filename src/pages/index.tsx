@@ -38,7 +38,7 @@ export default function Home() {
       </Head>
 
       <header className={!ischecked ? 'flex bg-black place-content-center' : 'flex bg-slate-900 place-content-center'} >
-        <div className="container flex items-center justify-evenly py-7 lg:justify-between ">
+        <div className="container flex items-center px-7 justify-evenly py-7 lg:justify-between ">
           
             <Link href="/">
             <div className='flex items-center gap-2'>
@@ -63,7 +63,7 @@ export default function Home() {
       </header>
 
       <main className={!ischecked ? 'flex bg-zinc-900 flex-1' : 'flex bg-white flex-1'}>
-        <div className="container flex flex-col justify-start min-h-full mx-auto lg:flex-row lg:items-center">
+        <div className="container flex flex-col justify-start min-h-full mx-auto px-7 lg:flex-row lg:items-center">
           <div className="flex flex-col p-7 place-self-center mb-7">
             <div className='text-center lg:p-12'>
               <h1 className={!ischecked ? 'text-slate-200 text-4xl lg:text-6xl font-extrabold py-12' : 'text-slate-900 text-4xl lg:text-6xl font-extrabold py-12'}># Front-end Software Engineer</h1>
@@ -124,8 +124,8 @@ export default function Home() {
        
       </main>
 
-      <footer className={!ischecked ? 'flex py-7 lg:py-4 bg-black place-content-center' : 'flex py-7 lg:py-4 bg-slate-900 place-content-center'}>
-        <div className="container">
+      <footer className={!ischecked ? 'flex py-7 lg:py-4 md:px-4 bg-black place-content-center' : 'flex py-7 lg:py-4 bg-slate-900 place-content-center'}>
+        <div className="container px-7">
           <div className='flex justify-center w-full gap-4 text-white lg:justify-between place-items-center '>
             <p>danipereira.dev © 2023</p>
             <div className='flex gap-4'>
