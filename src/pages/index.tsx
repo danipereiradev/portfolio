@@ -82,12 +82,15 @@ export default function Home() {
           </Link>
 
           <div className="flex items-center gap-4">
+            <p className="text-2xl text-white">{ischecked ? '☀️' : '🌛'}</p>
+
             <input
               onChange={toggleThemeMode}
               type="checkbox"
               className="toggle"
               checked={ischecked}
-            />
+            ></input>
+
             <div
               className="relative"
               onMouseEnter={() => setShowmodal((showModal) => !showModal)}
@@ -96,8 +99,8 @@ export default function Home() {
               <Image
                 src="/uk.jpeg"
                 alt="English language"
-                width={35}
-                height={35}
+                width={25}
+                height={25}
                 priority
                 className="cursor-pointer"
               />
