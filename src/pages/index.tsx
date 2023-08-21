@@ -5,9 +5,30 @@ import animationData from '../../public/animationData/animation.json';
 import animationDataBlue from '../../public/animationDataBlue.json';
 import Link from 'next/link';
 import { useState } from 'react';
+import { ReactNode } from 'react';
+
+interface ModalProps {
+  isChecked: boolean;
+  children: ReactNode;
+}
+
+function Modal({ isChecked, children }: ModalProps) {
+  return (
+    <div
+      className={
+        isChecked
+          ? 'absolute right-0 mt-2 w-64 rounded bg-white p-4 text-lg text-black'
+          : 'text-black` absolute right-0 mt-2 w-64 rounded bg-zinc-900 p-4 text-white'
+      }
+    >
+      {children}
+    </div>
+  );
+}
 
 export default function Home() {
   const [ischecked, setIsChecked] = useState(false);
+  const [showModal, setShowmodal] = useState<Boolean>(false);
 
   const toggleThemeMode = (e: any) => {
     setIsChecked(e.target.checked);
@@ -43,29 +64,50 @@ export default function Home() {
           <Link href="/">
             <div className="flex items-center gap-2">
               <Image
-                className=""
-                src="/code2.png"
+                style={{ filter: 'invert(1)' }}
+                src="/code.png"
                 alt="icon Logo danipereira.dev"
                 width={25}
                 height={25}
                 priority
               />
 
-              <h1 className="items-center pt-2 font-Arcade text-2xl uppercase text-slate-200 lg:text-3xl">
+              <h1 className="items-center pt-2	 font-Arcade text-3xl uppercase tracking-wider text-slate-200">
                 DP
-                <span className="bg-gradient-to-r from-blue-400 to-purple-300 bg-clip-text pt-2 text-xl font-extrabold tracking-widest text-transparent lg:text-3xl ">
+                <span className="bg-gradient-to-r from-blue-400 to-purple-300 bg-clip-text pt-2 text-3xl font-extrabold tracking-widest text-transparent ">
                   DEV
                 </span>
               </h1>
             </div>
           </Link>
 
-          <input
-            onChange={toggleThemeMode}
-            type="checkbox"
-            className="toggle"
-            checked={ischecked}
-          />
+          <div className="flex items-center gap-4">
+            <input
+              onChange={toggleThemeMode}
+              type="checkbox"
+              className="toggle"
+              checked={ischecked}
+            />
+            <div
+              className="relative"
+              onMouseEnter={() => setShowmodal((showModal) => !showModal)}
+              onMouseLeave={() => setShowmodal((showModal) => !showModal)}
+            >
+              <Image
+                src="/uk.jpeg"
+                alt="English language"
+                width={35}
+                height={35}
+                priority
+                className="cursor-pointer"
+              />
+              {showModal && (
+                <Modal isChecked={ischecked}>
+                  Sorry, for now, this site will only be available in English.
+                </Modal>
+              )}
+            </div>
+          </div>
         </div>
       </header>
 
