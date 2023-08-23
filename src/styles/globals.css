@@ -3,73 +3,25 @@
 @tailwind utilities;
 
 * {
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
   box-sizing: content-box;
-  
- 
-}
-
-
-.glasses {
-  position: absolute;
-  
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -85%);
-}
-
-
-  @media (max-width:640px)   {
-    .glasses {
-     max-width:10rem;
-     transform: translate(-50%, -90%);
-    }
-  }
-
-
-@media (min-width:640px) and (max-width:1040px)  {
-  .glasses {
-   width:9rem;
-   transform: translate(-50%, -80%);
-  }
-}
-
-@media (min-width:375px) and (max-width:640px)   {
-  .glasses {
-   max-width:4rem;
-   transform: translate(-50%, -105%);
-  }
-}
-
-@media (max-width:375px)  {
-  .glasses {
-   width:4rem;
-   transform: translate(-50%, -105%);
-  }
-}
-
-
-
-
-
-@font-face {
-  font-family: "WarowniaBd";
-  src: url("/public\fonts\Warownia\WarowniaBd.otf");
 }
 
 @font-face {
-  font-family: "Brooklyn";
-  src: url("/public\fonts\Brooklyn\Brooklyn-Bold-1.otf");
+  font-family: 'WarowniaBd';
+  src: url('/public\fonts\Warownia\WarowniaBd.otf');
+}
+
+@font-face {
+  font-family: 'Brooklyn';
+  src: url('/public\fonts\Brooklyn\Brooklyn-Bold-1.otf');
 }
 
 @layer base {
   @font-face {
-    font-family: "Arcade";
-    
-    src: url("/fonts/Arcade.woff2") format("woff2");
+    font-family: 'Arcade';
+
+    src: url('/fonts/Arcade.woff2') format('woff2');
   }
-
-  
 }
-
