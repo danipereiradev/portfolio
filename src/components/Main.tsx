@@ -10,9 +10,7 @@ export const Main: React.FC<MainProps> = ({ ischecked }) => {
       <HomeBanner />
       <section
         id="cv"
-        className={`${
-          !ischecked ? 'bg-black' : 'bg-white'
-        } flex flex-col items-center justify-evenly`}
+        className='flex flex-col items-center bg-black justify-evenly'
       >
         <Resume />
         </section>
