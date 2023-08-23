@@ -1,7 +1,7 @@
 export const HomeBanner: React.FC = () => {
   return (
     <section
-      className="flex flex-col h-screen bg-white"
+      className="flex flex-col h-screen"
     >
       <div
         style={{
