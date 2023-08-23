@@ -15,7 +15,13 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
   const smoothScroll = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      const headerHeight = 84; // Adjust this to your actual header height
+      let headerHeight = 0; // Default header height for non-desktop screens
+  
+      // Check if the screen width is greater than a certain threshold for desktop screens
+      if (window.innerWidth >= 768) {
+        headerHeight = 84; // Adjust this to your actual header height for desktop screens
+      }
+  
       const offset = section.getBoundingClientRect().top - headerHeight + window.pageYOffset;
       window.scrollTo({ top: offset, behavior: 'smooth' });
     }
