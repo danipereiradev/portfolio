@@ -88,7 +88,7 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
                 priority
                 className="mr-2 cursor-pointer"
               />
-              <p className="mr-4 text-white">English</p>
+              <button className="mr-4 text-white">English</button>
               {/* <input
                 onChange={onToggleThemeMode}
                 type="checkbox"
