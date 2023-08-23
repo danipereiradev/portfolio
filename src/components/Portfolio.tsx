@@ -1,3 +1,5 @@
+import { Loader } from './Loader';
+
 export const Portfolio = () => {
   return (
     <section
@@ -7,12 +9,7 @@ export const Portfolio = () => {
       <h2 className="mt-6 mb-2 text-center text-lg font-bold text-slate-200">
         Portfolio coming soon...
       </h2>
-      <div className="lds-ellipsis">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+      <Loader />
     </section>
   );
 };
