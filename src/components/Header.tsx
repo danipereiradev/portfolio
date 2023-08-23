@@ -16,20 +16,21 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
     const section = document.getElementById(sectionId);
     if (section) {
       let headerHeight = 0; // Default header height for non-desktop screens
-  
+
       // Check if the screen width is greater than a certain threshold for desktop screens
       if (window.innerWidth >= 768) {
         headerHeight = 84; // Adjust this to your actual header height for desktop screens
       }
-  
-      const offset = section.getBoundingClientRect().top - headerHeight + window.pageYOffset;
+
+      const offset =
+        section.getBoundingClientRect().top - headerHeight + window.pageYOffset;
       window.scrollTo({ top: offset, behavior: 'smooth' });
     }
   };
 
   return (
-    <header className="fixed top-0 z-20 flex justify-center w-screen bg-black">
-      <div className="container flex items-center justify-between w-5/6 py-7 lg:py-5">
+    <header className=" fixed top-0 z-20 flex w-screen justify-center bg-black">
+      <div className="container flex w-5/6 items-center justify-between py-7 lg:py-5">
         <Link href="/">
           <div className="flex items-center gap-2">
             <Image
@@ -40,29 +41,29 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
               height={25}
               priority
             />
-            <h1 className="items-center pt-2 text-3xl tracking-wider uppercase font-Arcade text-slate-200">
+            <h1 className="items-center pt-2 font-Arcade text-3xl uppercase tracking-wider text-slate-200">
               DP
-              <span className="pt-2 text-3xl font-extrabold tracking-widest text-transparent bg-gradient-to-r from-blue-400 to-purple-300 bg-clip-text">
+              <span className="bg-gradient-to-r from-blue-400 to-purple-300 bg-clip-text pt-2 text-3xl font-extrabold tracking-widest text-transparent">
                 DEV
               </span>
             </h1>
           </div>
         </Link>
-        <nav className="justify-center hidden font-bold text-slate-200 lg:flex">
+        <nav className="hidden justify-center font-bold text-slate-200 lg:flex">
           <a
-            className="px-4 uppercase cursor-pointer"
+            className="cursor-pointer px-4 uppercase"
             onClick={() => smoothScroll('cv')}
           >
             CV
           </a>
           <a
-            className="px-4 uppercase cursor-pointer"
+            className="cursor-pointer px-4 uppercase"
             onClick={() => smoothScroll('portfolio')}
           >
             Portfolio
           </a>
           <a
-            className="px-4 uppercase cursor-pointer"
+            className="cursor-pointer px-4 uppercase"
             onClick={() => smoothScroll('form')}
           >
             Contact
@@ -97,7 +98,8 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
             </div>
             {showModal && (
               <Modal isChecked={ischecked}>
-                Sorry, for now, this site will only be available in English with dark theme.
+                Sorry, for now, this site will only be available in English with
+                dark theme.
               </Modal>
             )}
           </div>

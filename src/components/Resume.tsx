@@ -111,7 +111,8 @@ const CV: React.FC = () => {
       const startDateObject = new Date(job.date);
       const endDateObject = new Date(job.endDate);
 
-      const millisecondsDiff = endDateObject.getTime() - startDateObject.getTime();
+      const millisecondsDiff =
+        endDateObject.getTime() - startDateObject.getTime();
       return total + millisecondsDiff;
     }, 0);
 
@@ -122,15 +123,23 @@ const CV: React.FC = () => {
 
   const totalYearsOfExperience = calculateTotalExperience();
 
-  
   return (
-    <div className="container w-5/6 mx-auto">
-      <h2 className="mt-6 mb-2 text-lg font-bold text-slate-200">Work Experience{' (' +totalYearsOfExperience.toFixed(0)+ ' Years)'}</h2>
+    <div className="container mx-auto w-5/6">
+      <h2 className="mt-6 mb-2 text-lg font-bold text-slate-200">
+        Work Experience{' (' + totalYearsOfExperience.toFixed(0) + ' Years)'}
+      </h2>
       <div className="grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2">
         {workExperience.map((job, index) => (
-          <div key={index} className="p-4 border-2 rounded-lg border-slate-900">
-            <h3 className="mb-2 font-semibold text-md"><span className='text-lg uppercase'>{job.title}</span> <br></br>at {job.company.toUpperCase()} <br></br><span className='text-zinc-500'> {job.date} / {job.endDate}</span> </h3>
-            
+          <div key={index} className="rounded-lg border-2 border-slate-900 p-4">
+            <h3 className="text-md mb-2 font-semibold">
+              <span className="text-lg uppercase">{job.title}</span> <br></br>at{' '}
+              {job.company.toUpperCase()} <br></br>
+              <span className="text-zinc-500">
+                {' '}
+                {job.date} / {job.endDate}
+              </span>{' '}
+            </h3>
+
             <ul className="mt-4 list-none ">
               {job.responsibilities.map((responsibility, i) => (
                 <li key={i}>{responsibility}</li>
@@ -143,8 +152,11 @@ const CV: React.FC = () => {
       <h2 className="mt-6 mb-2 text-lg font-bold text-slate-200">Skills</h2>
       <div className="grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2">
         {skills.map((skillCategory, index) => (
-          <div key={index} className="p-4 transform border-2 rounded-lg border-slate-900">
-            <h3 className="mb-2 font-semibold text-md">
+          <div
+            key={index}
+            className="transform rounded-lg border-2 border-slate-900 p-4"
+          >
+            <h3 className="text-md mb-2 font-semibold">
               {skillCategory.category}
             </h3>
             <ul className="flex flex-wrap">
