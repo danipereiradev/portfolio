@@ -10,6 +10,7 @@ interface WorkExperience {
   title: string;
   company: string;
   date: string;
+  endDate: string;
   responsibilities: string[];
 }
 
@@ -31,7 +32,8 @@ const workExperience: WorkExperience[] = [
   {
     title: 'Frontend Software Engineer',
     company: 'Babel sistemas',
-    date: 'Jul 2022 - Present',
+    date: '2022-07-01',
+    endDate: new Date().toISOString().split('T')[0],
     responsibilities: [
       'Developed and maintained user-friendly and responsive web applications using React.js, Typescript and Vanilla Js.',
       'Collaborated closely with designers and backend developers to implement seamless user experiences.',
@@ -40,7 +42,8 @@ const workExperience: WorkExperience[] = [
   {
     title: 'Web Designer',
     company: 'Pg Webs',
-    date: 'Jan 2015 - jun 2021',
+    date: '2015-01-01',
+    endDate: '2021-06-01',
     responsibilities: [
       'Designed and developed websites and e-commerce sites using WordPress and PrestaShop.',
       'Ensured cross-browser compatibility and responsiveness in site designs.',
@@ -103,17 +106,32 @@ const skills: Skill[] = [
 ];
 
 const CV: React.FC = () => {
+  const calculateTotalExperience = () => {
+    const totalMilliseconds = workExperience.reduce((total, job) => {
+      const startDateObject = new Date(job.date);
+      const endDateObject = new Date(job.endDate);
+
+      const millisecondsDiff = endDateObject.getTime() - startDateObject.getTime();
+      return total + millisecondsDiff;
+    }, 0);
+
+    const totalYears = totalMilliseconds / (365 * 24 * 60 * 60 * 1000);
+
+    return totalYears;
+  };
+
+  const totalYearsOfExperience = calculateTotalExperience();
+
+  
   return (
     <div className="container w-5/6 mx-auto">
-      <h2 className="mt-6 mb-2 text-lg font-bold text-slate-200">Work Experience</h2>
+      <h2 className="mt-6 mb-2 text-lg font-bold text-slate-200">Work Experience{' (' +totalYearsOfExperience.toFixed(0)+ ' Years)'}</h2>
       <div className="grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2">
         {workExperience.map((job, index) => (
           <div key={index} className="p-4 rounded-lg bg-zinc-900">
-            <h3 className="mb-2 font-semibold text-md">{job.title}</h3>
-            <p className="text-gray-400 underline">
-              {job.company} | {job.date}
-            </p>
-            <ul className="list-none ">
+            <h3 className="mb-2 font-semibold text-md"><span className='text-lg uppercase'>💻{job.title}</span> <br></br>at {job.company.toUpperCase()} <br></br><span className='text-zinc-500'> {job.date} / {job.endDate}</span> </h3>
+            
+            <ul className="mt-4 list-none ">
               {job.responsibilities.map((responsibility, i) => (
                 <li key={i}>{responsibility}</li>
               ))}
