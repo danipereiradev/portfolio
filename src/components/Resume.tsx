@@ -85,8 +85,8 @@ const skills: Skill[] = [
   {
     category: 'Degrees & Certificates',
     skills: [
-      'English C1 degree',
-      'HAB fullstack bootcamp (480 hours)',
+      'English IELTS (2021)',
+      'Fullstack Mern bootcamp (480 hours)',
       'The Ultimate React Course 2023: React, Redux & More by Jonas Schmedtmann (160 hours)',
       'Using TypeScript with React by Dmytro Danylov',
     ],
@@ -128,8 +128,8 @@ const CV: React.FC = () => {
       <h2 className="mt-6 mb-2 text-lg font-bold text-slate-200">Work Experience{' (' +totalYearsOfExperience.toFixed(0)+ ' Years)'}</h2>
       <div className="grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2">
         {workExperience.map((job, index) => (
-          <div key={index} className="p-4 rounded-lg bg-zinc-900">
-            <h3 className="mb-2 font-semibold text-md"><span className='text-lg uppercase'>💻{job.title}</span> <br></br>at {job.company.toUpperCase()} <br></br><span className='text-zinc-500'> {job.date} / {job.endDate}</span> </h3>
+          <div key={index} className="p-4 border-2 rounded-lg border-slate-900">
+            <h3 className="mb-2 font-semibold text-md"><span className='text-lg uppercase'>{job.title}</span> <br></br>at {job.company.toUpperCase()} <br></br><span className='text-zinc-500'> {job.date} / {job.endDate}</span> </h3>
             
             <ul className="mt-4 list-none ">
               {job.responsibilities.map((responsibility, i) => (
@@ -143,7 +143,7 @@ const CV: React.FC = () => {
       <h2 className="mt-6 mb-2 text-lg font-bold text-slate-200">Skills</h2>
       <div className="grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2">
         {skills.map((skillCategory, index) => (
-          <div key={index} className="p-4 transform rounded-lg bg-zinc-900">
+          <div key={index} className="p-4 transform border-2 rounded-lg border-slate-900">
             <h3 className="mb-2 font-semibold text-md">
               {skillCategory.category}
             </h3>
@@ -152,7 +152,7 @@ const CV: React.FC = () => {
                 <li
                   className={
                     skillCategory.border
-                      ? 'mr-4 mb-2 list-none border border-zinc-700 px-4 py-[4px] text-gray-400'
+                      ? 'mr-4 mb-2 list-none border border-slate-900 px-4 py-[4px] text-gray-400'
                       : 'mr-4 mb-2 list-none py-[4px] text-gray-400'
                   }
                   key={skill}
