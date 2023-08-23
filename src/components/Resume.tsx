@@ -104,16 +104,16 @@ const skills: Skill[] = [
 
 const CV: React.FC = () => {
   return (
-    <div className="container mx-auto">
+    <div className="container w-5/6 mx-auto">
       <h2 className="mt-6 mb-2 text-lg font-bold">Work Experience</h2>
       <div className="grid grid-cols-1 gap-4 text-white md:grid-cols-2">
         {workExperience.map((job, index) => (
-          <div key={index} className="rounded-lg bg-zinc-900 p-4">
-            <h3 className="text-md mb-2 font-semibold">{job.title}</h3>
+          <div key={index} className="p-4 rounded-lg bg-zinc-900">
+            <h3 className="mb-2 font-semibold text-md">{job.title}</h3>
             <p className="text-gray-400 underline">
               {job.company} | {job.date}
             </p>
-            <ul className=" list-none">
+            <ul className="list-none ">
               {job.responsibilities.map((responsibility, i) => (
                 <li key={i}>{responsibility}</li>
               ))}
@@ -125,8 +125,8 @@ const CV: React.FC = () => {
       <h2 className="mt-6 mb-2 text-lg font-bold">Skills</h2>
       <div className="grid grid-cols-1 gap-4 text-white md:grid-cols-2">
         {skills.map((skillCategory, index) => (
-          <div key={index} className="transform rounded-lg bg-zinc-900 p-4">
-            <h3 className="text-md mb-2 font-semibold">
+          <div key={index} className="p-4 transform rounded-lg bg-zinc-900">
+            <h3 className="mb-2 font-semibold text-md">
               {skillCategory.category}
             </h3>
             <ul className="flex flex-wrap">
@@ -145,7 +145,7 @@ const CV: React.FC = () => {
             </ul>
           </div>
         ))}
-        {/*  <div className="w-100 flex">
+        {/*  <div className="flex w-100">
           <Image
             src="/js.png"
             alt="js Logo danipereira.dev"

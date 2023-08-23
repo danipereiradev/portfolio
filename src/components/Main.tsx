@@ -23,7 +23,7 @@ export const Main: React.FC<MainProps> = ({ ischecked }) => {
         } flex h-screen items-center justify-center`}
       >
         <h2 className="text-2xl font-bold text-slate-100 md:text-3xl">
-          PORTFOLIO SECTION
+          PORTFOLIO COMING SOON
         </h2>
         {/* Your content here */}
       </section>
@@ -34,7 +34,7 @@ export const Main: React.FC<MainProps> = ({ ischecked }) => {
         } flex h-screen items-center justify-center`}
       >
         <h2 className="text-2xl font-bold text-slate-100 md:text-3xl">
-          FORM SECTION
+          CONTACT FORM COMING SOON
         </h2>
         {/* Your content here */}
       </section>

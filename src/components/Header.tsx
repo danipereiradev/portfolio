@@ -23,7 +23,7 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
 
   return (
     <header className="fixed top-0 z-20 flex justify-center w-screen bg-black">
-      <div className="container flex items-center justify-between py-7 lg:py-5">
+      <div className="container flex items-center justify-between w-5/6 py-7 lg:py-5">
         <Link href="/">
           <div className="flex items-center gap-2">
             <Image
@@ -82,12 +82,12 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
                 className="mr-2 cursor-pointer"
               />
               <p className="mr-4">English</p>
-              <input
+              {/* <input
                 onChange={onToggleThemeMode}
                 type="checkbox"
-                className="toggle"
+                className="toggle sm:hidden"
                 checked={ischecked}
-              />
+              /> */}
             </div>
             {showModal && (
               <Modal isChecked={ischecked}>
