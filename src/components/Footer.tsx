@@ -10,11 +10,11 @@ export const Footer: React.FC<FooterProps> = ({ ischecked }) => {
     <footer
       className={`${
         !ischecked ? 'bg-black py-7' : 'bg-slate-900 py-7'
-      } md:px-4 lg:py-4`}
+      }  lg:py-4`}
     >
-      <div className="container px-7">
-        <div className="flex w-full place-items-center justify-center gap-4 text-white lg:justify-between ">
-          <p>danipereira.dev © 2023</p>
+      <div className="">
+        <div className="flex justify-center w-full gap-4 text-white place-items-center lg:justify-center mt-7 ">
+        
           <div className="flex gap-4">
             <Link href="https://github.com/danipereiracodes" target="_blank">
               <Image

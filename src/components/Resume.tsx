@@ -83,8 +83,8 @@ const skills: Skill[] = [
     category: 'Degrees & Certificates',
     skills: [
       'English C1 degree',
-      'HAB fullstack bootcamp',
-      'The Ultimate React Course 2023: React, Redux & More by Jonas Schmedtmann',
+      'HAB fullstack bootcamp (480 hours)',
+      'The Ultimate React Course 2023: React, Redux & More by Jonas Schmedtmann (160 hours)',
       'Using TypeScript with React by Dmytro Danylov',
     ],
     border: false,
