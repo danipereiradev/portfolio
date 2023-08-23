@@ -11,7 +11,7 @@ export const Main: React.FC<MainProps> = ({ ischecked }) => {
       <HomeBanner />
       <section
         id="cv"
-        className='flex flex-col items-center h-screen bg-black justify-evenly'
+        className='flex flex-col items-center bg-black justify-evenly'
       >
         <Resume />
         </section>
