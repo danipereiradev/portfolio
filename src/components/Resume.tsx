@@ -124,7 +124,10 @@ const CV: React.FC = () => {
   const totalYearsOfExperience = calculateTotalExperience();
 
   return (
-    <div className="container mx-auto w-5/6">
+    <section
+      id="cv"
+      className="container mx-auto flex  w-5/6 flex-col  justify-evenly py-28"
+    >
       <h2 className="mt-6 mb-2 text-lg font-bold text-slate-200">
         Work Experience{' (' + totalYearsOfExperience.toFixed(0) + ' Years)'}
       </h2>
@@ -207,7 +210,7 @@ const CV: React.FC = () => {
           />
         </div> */}
       </div>
-    </div>
+    </section>
   );
 };
 
