@@ -42,7 +42,7 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
             </h1>
           </div>
         </Link>
-        <nav className="justify-center hidden font-bold text-white lg:flex">
+        <nav className="justify-center hidden font-bold text-slate-200 lg:flex">
           <a
             className="px-4 uppercase cursor-pointer"
             onClick={() => smoothScroll('cv')}
@@ -81,7 +81,7 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
                 priority
                 className="mr-2 cursor-pointer"
               />
-              <p className="mr-4">English</p>
+              <p className="mr-4 text-white">English</p>
               {/* <input
                 onChange={onToggleThemeMode}
                 type="checkbox"
@@ -91,7 +91,7 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
             </div>
             {showModal && (
               <Modal isChecked={ischecked}>
-                Sorry, for now, this site will only be available in English.
+                Sorry, for now, this site will only be available in English with dark theme.
               </Modal>
             )}
           </div>

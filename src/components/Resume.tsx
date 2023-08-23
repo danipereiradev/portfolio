@@ -105,8 +105,8 @@ const skills: Skill[] = [
 const CV: React.FC = () => {
   return (
     <div className="container w-5/6 mx-auto">
-      <h2 className="mt-6 mb-2 text-lg font-bold">Work Experience</h2>
-      <div className="grid grid-cols-1 gap-4 text-white md:grid-cols-2">
+      <h2 className="mt-6 mb-2 text-lg font-bold text-slate-200">Work Experience</h2>
+      <div className="grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2">
         {workExperience.map((job, index) => (
           <div key={index} className="p-4 rounded-lg bg-zinc-900">
             <h3 className="mb-2 font-semibold text-md">{job.title}</h3>
@@ -122,8 +122,8 @@ const CV: React.FC = () => {
         ))}
       </div>
 
-      <h2 className="mt-6 mb-2 text-lg font-bold">Skills</h2>
-      <div className="grid grid-cols-1 gap-4 text-white md:grid-cols-2">
+      <h2 className="mt-6 mb-2 text-lg font-bold text-slate-200">Skills</h2>
+      <div className="grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2">
         {skills.map((skillCategory, index) => (
           <div key={index} className="p-4 transform rounded-lg bg-zinc-900">
             <h3 className="mb-2 font-semibold text-md">

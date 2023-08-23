@@ -1,5 +1,6 @@
 import Resume from '@/components/Resume';
 import { HomeBanner } from './HomeBanner';
+import { Portfolio } from './Portfolio';
 interface MainProps {
   ischecked: Boolean;
 }
@@ -10,11 +11,17 @@ export const Main: React.FC<MainProps> = ({ ischecked }) => {
       <HomeBanner />
       <section
         id="cv"
-        className='flex flex-col items-center bg-black justify-evenly'
+        className='flex flex-col items-center h-screen bg-black justify-evenly'
       >
         <Resume />
         </section>
-        {/* Your content here */}
+        <section
+        id="portfolio"
+        className='flex flex-col items-center justify-center h-screen bg-black'
+      >
+        <Portfolio />
+        <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+        </section>
     
       
     </main>
