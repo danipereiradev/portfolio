@@ -15,13 +15,15 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
   const smoothScroll = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+      const headerHeight = 84; // Adjust this to your actual header height
+      const offset = section.getBoundingClientRect().top - headerHeight + window.pageYOffset;
+      window.scrollTo({ top: offset, behavior: 'smooth' });
     }
   };
 
   return (
-    <header className="fixed top-0 right-0 z-20 flex w-screen bg-black">
-      <div className="container flex items-center justify-between px-7 py-7 lg:px-16 lg:py-5">
+    <header className="fixed top-0 z-20 flex justify-center w-screen bg-black">
+      <div className="container flex items-center justify-between py-7 lg:py-5">
         <Link href="/">
           <div className="flex items-center gap-2">
             <Image
@@ -32,29 +34,29 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
               height={25}
               priority
             />
-            <h1 className="items-center pt-2 font-Arcade text-3xl uppercase tracking-wider text-slate-200">
+            <h1 className="items-center pt-2 text-3xl tracking-wider uppercase font-Arcade text-slate-200">
               DP
-              <span className="bg-gradient-to-r from-blue-400 to-purple-300 bg-clip-text pt-2 text-3xl font-extrabold tracking-widest text-transparent">
+              <span className="pt-2 text-3xl font-extrabold tracking-widest text-transparent bg-gradient-to-r from-blue-400 to-purple-300 bg-clip-text">
                 DEV
               </span>
             </h1>
           </div>
         </Link>
-        <nav className="hidden w-2/3 justify-center font-bold text-white lg:flex">
+        <nav className="justify-center hidden font-bold text-white lg:flex">
           <a
-            className="cursor-pointer px-4 uppercase"
+            className="px-4 uppercase cursor-pointer"
             onClick={() => smoothScroll('cv')}
           >
             CV
           </a>
           <a
-            className="cursor-pointer px-4 uppercase"
+            className="px-4 uppercase cursor-pointer"
             onClick={() => smoothScroll('portfolio')}
           >
             Portfolio
           </a>
           <a
-            className="cursor-pointer px-4 uppercase"
+            className="px-4 uppercase cursor-pointer"
             onClick={() => smoothScroll('form')}
           >
             Contact
