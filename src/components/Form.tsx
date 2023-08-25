@@ -40,7 +40,7 @@ export const Form = () => {
             ></textarea>
           </div>
           <button
-            className="border border-slate-900 bg-slate-900 py-4 px-8"
+            className="border border-slate-900 bg-slate-900 py-4 px-8 hover:bg-slate-200 hover:text-slate-900"
             onClick={(e) => e.preventDefault()}
           >
             Send Message
