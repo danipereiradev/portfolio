@@ -1,12 +1,13 @@
 export const Form = () => {
   return (
     <section
-      id="portfolio"
+      id="contact"
       className="container mx-auto flex w-5/6 flex-col justify-center py-28"
     >
-      <h2 className="mt-6 mb-2 text-center text-lg font-bold text-slate-200">
+      <h2 className="text-center text-3xl tracking-widest">CONTACT</h2>
+      <h3 className="mt-6 mb-2 text-center text-lg font-bold text-slate-200">
         Fill the above form and I will get back to you as soon as possible.
-      </h2>
+      </h3>
       <div className="form-container py-8 ">
         <form className=" justify-center-center container flex flex-1 flex-col items-center  gap-4 ">
           <div className="name flex w-full grow flex-col  text-center md:w-4/6">

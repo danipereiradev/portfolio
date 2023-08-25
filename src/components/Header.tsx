@@ -64,7 +64,7 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
           </a>
           <a
             className="cursor-pointer px-4 uppercase"
-            onClick={() => smoothScroll('form')}
+            onClick={() => smoothScroll('contact')}
           >
             Contact
           </a>

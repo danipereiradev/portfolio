@@ -128,9 +128,10 @@ const CV: React.FC = () => {
       id="cv"
       className="container mx-auto flex  w-5/6 flex-col  justify-evenly py-28"
     >
-      <h2 className="mt-6 mb-2 text-lg font-bold text-slate-200">
+      <h2 className="text-center text-3xl tracking-widest ">CV</h2>
+      <h3 className="mt-6 mb-2 text-lg font-bold text-slate-200">
         Work Experience{' (' + totalYearsOfExperience.toFixed(0) + ' Years)'}
-      </h2>
+      </h3>
       <div className="grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2">
         {workExperience.map((job, index) => (
           <div key={index} className="rounded-lg border-2 border-slate-900 p-4">
@@ -151,7 +152,6 @@ const CV: React.FC = () => {
           </div>
         ))}
       </div>
-
       <h2 className="mt-6 mb-2 text-lg font-bold text-slate-200">Skills</h2>
       <div className="grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2">
         {skills.map((skillCategory, index) => (
