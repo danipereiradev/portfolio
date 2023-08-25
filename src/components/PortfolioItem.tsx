@@ -37,15 +37,14 @@ export const PortfolioItem: React.FC<PortfolioItemProps> = (props) => {
   };
 
   return (
-    <div className="portfolio-item h-1/3 grow justify-center rounded-lg border-2 border-slate-900 py-8">
-      <div className="image-container relative h-full w-full">
+    <div className="portfolio-item h-1/3 grow items-start justify-center rounded-lg border-2 border-slate-900 py-8">
+      <div className="image-container relative h-full w-full rounded-lg">
         <Image
           src={imageUrl}
           alt="portfolio 1"
           width={600}
           height={200}
           priority
-          className="object-cover"
         />
         <div
           className={`popup absolute inset-0 flex items-center justify-center opacity-80  ${

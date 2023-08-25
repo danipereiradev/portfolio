@@ -167,7 +167,7 @@ const CV: React.FC = () => {
                 <li
                   className={
                     skillCategory.border
-                      ? 'mr-4 mb-2 list-none border border-slate-900 px-4 py-[4px] text-gray-400'
+                      ? 'mr-4 mb-2 min-w-[3rem] list-none border border-slate-900 px-4 py-[4px] text-gray-400'
                       : 'mr-4 mb-2 list-none py-[4px] text-gray-400'
                   }
                   key={skill}

@@ -41,9 +41,9 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
               height={25}
               priority
             />
-            <h1 className="items-center pt-2 font-Arcade text-3xl uppercase tracking-wider text-slate-200">
+            <h1 className="items-center pt-2 font-Arcade text-3xl uppercase tracking-wider text-slate-200 ">
               DP
-              <span className="bg-gradient-to-r from-blue-400 to-purple-300 bg-clip-text pt-2 text-3xl font-extrabold tracking-widest text-transparent">
+              <span className="from-50% via-65% to-90% bg-gradient-to-r from-white via-sky-500 to-emerald-500 bg-clip-text pt-2 text-3xl font-extrabold tracking-widest text-transparent">
                 DEV
               </span>
             </h1>
