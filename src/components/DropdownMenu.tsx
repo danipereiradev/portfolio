@@ -92,12 +92,16 @@ export const DropdownMenu: React.FC<dropdownProps> = ({ onShowDropDown }) => {
   };
 
   return (
-    <div className="right-[calc(1rem - 10px)] absolute top-12 flex flex w-48 flex-1 flex-col rounded-lg  bg-black text-slate-200 lg:hidden">
+    <div
+      className={`right-[calc(1rem - 10px)] dropdown absolute top-12 flex flex flex-1 flex-col rounded-lg bg-black text-slate-200 lg:hidden ${
+        showDropdown ? 'open' : ''
+      }`}
+    >
       <OutsideClickHandler onOutsideClick={handleOutsideClick}>
-        <div>
-          <nav className=" flex flex-col items-center justify-center text-left font-bold text-slate-200">
+        <div className="">
+          <nav className="flex flex-col text-left font-bold text-slate-200">
             <a
-              className="w-full cursor-pointer   px-4 py-4 text-center uppercase"
+              className="w-full cursor-pointer p-8 text-center uppercase"
               onClick={() => smoothScroll('cv')}
             >
               CV
@@ -109,14 +113,14 @@ export const DropdownMenu: React.FC<dropdownProps> = ({ onShowDropDown }) => {
               Portfolio
             </a>
             <a
-              className="w-full cursor-pointer  px-4 py-4 text-center uppercase"
+              className="p-8text-center w-full  cursor-pointer p-8 uppercase"
               onClick={() => smoothScroll('contact')}
             >
               Contact
             </a>
 
             <div className="flex flex-col items-center gap-4">
-              <div className=" w-full cursor-pointer px-4 py-2 text-center uppercase">
+              <div className=" w-full cursor-pointer p-8 text-center uppercase">
                 <select
                   name="language"
                   id="language"
