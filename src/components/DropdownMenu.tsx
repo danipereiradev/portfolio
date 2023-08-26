@@ -1,6 +1,11 @@
 import { useState } from 'react';
 import { countriesEU } from '@/data/countries';
 import { Modal } from './Modal';
+import OutsideClickHandler from 'react-outside-click-handler';
+
+interface dropdownProps {
+  onShowDropDown: (newState: boolean) => void;
+}
 
 // TO-DO SACAR ESTA FUNCIÓN A UN HELPER
 const smoothScroll = (sectionId: string) => {
@@ -28,8 +33,16 @@ const themeEmojis = [
   },
 ];
 
-export const DropdownMenu = () => {
+export const DropdownMenu: React.FC<dropdownProps> = ({ onShowDropDown }) => {
   const [showModal, setShowmodal] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(true);
+
+  const handleOutsideClick = () => {
+    // Handle the logic to close the dropdown
+    setShowDropdown(false);
+    // Notify the parent component that the dropdown should be hidden
+    onShowDropDown(false); // Call the passed function
+  };
 
   const [modalData, setModalData] = useState('');
   const [selectedLanguage, setSelectedLenguage] = useState('GB');
@@ -79,57 +92,61 @@ export const DropdownMenu = () => {
   };
 
   return (
-    <div className=" absolute top-12 flex flex flex-1 flex-col rounded-lg   bg-black text-slate-200 lg:hidden">
-      <nav className=" flex flex-col items-center justify-center text-left font-bold text-slate-200">
-        <a
-          className="w-full cursor-pointer   px-4 py-4 text-center uppercase"
-          onClick={() => smoothScroll('cv')}
-        >
-          CV
-        </a>
-        <a
-          className="w-full cursor-pointer px-4 py-4 text-center uppercase"
-          onClick={() => smoothScroll('portfolio')}
-        >
-          Portfolio
-        </a>
-        <a
-          className="w-full cursor-pointer  px-4 py-4 text-center uppercase"
-          onClick={() => smoothScroll('contact')}
-        >
-          Contact
-        </a>
+    <div className="absolute top-12 flex flex w-48 flex-1 flex-col rounded-lg  bg-black text-slate-200 lg:hidden">
+      <OutsideClickHandler onOutsideClick={handleOutsideClick}>
+        <div>
+          <nav className=" flex flex-col items-center justify-center text-left font-bold text-slate-200">
+            <a
+              className="w-full cursor-pointer   px-4 py-4 text-center uppercase"
+              onClick={() => smoothScroll('cv')}
+            >
+              CV
+            </a>
+            <a
+              className="w-full cursor-pointer px-4 py-4 text-center uppercase"
+              onClick={() => smoothScroll('portfolio')}
+            >
+              Portfolio
+            </a>
+            <a
+              className="w-full cursor-pointer  px-4 py-4 text-center uppercase"
+              onClick={() => smoothScroll('contact')}
+            >
+              Contact
+            </a>
 
-        <div className="flex flex-col items-center gap-4">
-          <div className=" w-full cursor-pointer px-4 py-2 text-center uppercase">
-            <select
-              name="language"
-              id="language"
-              onChange={handleOptionChange}
-              className="relative h-8 w-12 bg-black"
-              value={selectedLanguage}
-            >
-              {languageOptions}
-            </select>
-            {showModal && (
-              <Modal className="absolute top-4"> {modalData}</Modal>
-            )}
-            <select
-              onChange={handleThemeChange}
-              className=" relative h-8 w-12 bg-black"
-              id="theme"
-              name="theme"
-              value={selectedTheme}
-            >
-              <option>☀️</option>
-              <option>🌛</option>
-            </select>
-            {showModal && (
-              <Modal className="absolute top-4"> {modalData}</Modal>
-            )}
-          </div>
+            <div className="flex flex-col items-center gap-4">
+              <div className=" w-full cursor-pointer px-4 py-2 text-center uppercase">
+                <select
+                  name="language"
+                  id="language"
+                  onChange={handleOptionChange}
+                  className="relative h-8 w-12 bg-black"
+                  value={selectedLanguage}
+                >
+                  {languageOptions}
+                </select>
+                {showModal && (
+                  <Modal className="absolute top-4"> {modalData}</Modal>
+                )}
+                <select
+                  onChange={handleThemeChange}
+                  className=" relative h-8 w-12 bg-black"
+                  id="theme"
+                  name="theme"
+                  value={selectedTheme}
+                >
+                  <option>☀️</option>
+                  <option>🌛</option>
+                </select>
+                {showModal && (
+                  <Modal className="absolute top-4"> {modalData}</Modal>
+                )}
+              </div>
+            </div>
+          </nav>
         </div>
-      </nav>
+      </OutsideClickHandler>
     </div>
   );
 };

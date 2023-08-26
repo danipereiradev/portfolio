@@ -5,6 +5,8 @@ import { Modal } from './Modal';
 import { useState } from 'react';
 import { countriesEU } from '@/data/countries';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { IoMdClose } from 'react-icons/io';
+
 import DropdownMenu from './DropdownMenu';
 
 interface HeaderProps {
@@ -23,7 +25,7 @@ const themeEmojis = [
 
 const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
   const [showModal, setShowmodal] = useState(false);
-  const [showDropdown, setShowDropDown] = useState(true);
+  const [showDropdown, setShowDropDown] = useState(false);
   const [modalData, setModalData] = useState('');
   const [selectedLanguage, setSelectedLenguage] = useState('GB');
   const [selectedTheme, setSelectedTheme] = useState(themeEmojis[0].darkIcon);
@@ -109,14 +111,24 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
             </h1>
           </div>
         </Link>
-        <div className="relative">
-          <GiHamburgerMenu
-            size={24}
-            className="cursor-pointer hover:text-slate-400 lg:hidden"
-            onClick={() => setShowDropDown((prevState) => !prevState)}
-          />
 
-          {showDropdown && <DropdownMenu />}
+        <div className="relative flex flex-col items-center justify-center">
+          {!showDropdown ? (
+            <GiHamburgerMenu
+              size={24}
+              className="cursor-pointer hover:text-slate-400 lg:hidden"
+              onClick={() => setShowDropDown((prevState) => !prevState)}
+            />
+          ) : (
+            <IoMdClose
+              className="cursor-pointer hover:text-slate-400 lg:hidden"
+              onClick={() => setShowDropDown((prevState) => !prevState)}
+              size={30}
+            />
+          )}
+
+          {showDropdown && <DropdownMenu onShowDropDown={setShowDropDown} />}
+
           <nav className="hidden items-center justify-center font-bold text-slate-200 lg:flex">
             <a
               className="cursor-pointer px-4 uppercase"
