@@ -92,7 +92,7 @@ export const DropdownMenu: React.FC<dropdownProps> = ({ onShowDropDown }) => {
   };
 
   return (
-    <div className="absolute top-12 flex flex w-48 flex-1 flex-col rounded-lg  bg-black text-slate-200 lg:hidden">
+    <div className="right-[calc(1rem - 10px)] absolute top-12 flex flex w-48 flex-1 flex-col rounded-lg  bg-black text-slate-200 lg:hidden">
       <OutsideClickHandler onOutsideClick={handleOutsideClick}>
         <div>
           <nav className=" flex flex-col items-center justify-center text-left font-bold text-slate-200">
