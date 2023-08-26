@@ -3,9 +3,73 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Modal } from './Modal';
 import { useState } from 'react';
+import { countriesEU } from '@/data/countries';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import DropdownMenu from './DropdownMenu';
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  onToggleThemeMode: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  ischecked: boolean;
+}
+
+const themeEmojis = [
+  {
+    lightIcon: '☀️',
+  },
+  {
+    darkIcon: '🌛',
+  },
+];
+
+const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
   const [showModal, setShowmodal] = useState(false);
+  const [showDropdown, setShowDropDown] = useState(true);
+  const [modalData, setModalData] = useState('');
+  const [selectedLanguage, setSelectedLenguage] = useState('GB');
+  const [selectedTheme, setSelectedTheme] = useState(themeEmojis[0].darkIcon);
+
+  const languageSelectetion = countriesEU.filter((country) => {
+    return country.countryCode === 'GB' || country.countryCode === 'ES';
+  });
+
+  const languageOptions = languageSelectetion.map((language) => {
+    return (
+      <option key={language.areaCode} value={language.countryCode}>
+        {language.flag}
+      </option>
+    );
+  });
+
+  const handleOptionChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedValue = event.target.value;
+
+    if (selectedValue === 'ES') {
+      setSelectedLenguage('ES');
+      setShowmodal((prevModalState) => !prevModalState);
+      setModalData('Muy pronto estará disponible la versión en Español');
+
+      setTimeout(() => {
+        setShowmodal(false);
+        setSelectedLenguage('GB');
+      }, 3000);
+    }
+  };
+
+  const handleThemeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedTheme = event.target.value;
+
+    if (selectedTheme === themeEmojis[0].lightIcon) {
+      setShowmodal((prevModalState) => !prevModalState);
+      setSelectedTheme(themeEmojis[0].lightIcon);
+
+      setModalData("I'm working on a lighter theme for ligher people!");
+
+      setTimeout(() => {
+        setShowmodal(false);
+        setSelectedTheme(themeEmojis[1].darkIcon);
+      }, 3000);
+    }
+  };
 
   const smoothScroll = (sectionId: string) => {
     const section = document.getElementById(sectionId);
@@ -38,43 +102,71 @@ const Header: React.FC = () => {
             />
             <h1
               className=" 
-              items-center bg-gradient-to-r from-cyan-200
+              items-center bg-gradient-to-r from-white
   to-teal-400 bg-clip-text pt-2 font-Arcade text-3xl uppercase tracking-wider text-transparent "
             >
               DPDEV
             </h1>
           </div>
         </Link>
-        <nav className="hidden justify-center font-bold text-slate-200 lg:flex">
-          <a
-            className="cursor-pointer px-4 uppercase"
-            onClick={() => smoothScroll('cv')}
-          >
-            CV
-          </a>
-          <a
-            className="cursor-pointer px-4 uppercase"
-            onClick={() => smoothScroll('portfolio')}
-          >
-            Portfolio
-          </a>
-          <a
-            className="cursor-pointer px-4 uppercase"
-            onClick={() => smoothScroll('contact')}
-          >
-            Contact
-          </a>
-        </nav>
-        <div className="flex items-center gap-4">
-          <div
-            className="relative"
-            onMouseEnter={() =>
-              setShowmodal((prevModalState) => !prevModalState)
-            }
-            onMouseLeave={() =>
-              setShowmodal((prevModalState) => !prevModalState)
-            }
-          ></div>
+        <div className="relative">
+          <GiHamburgerMenu
+            size={24}
+            className="cursor-pointer hover:text-slate-400 lg:hidden"
+            onClick={() => setShowDropDown((prevState) => !prevState)}
+          />
+
+          {showDropdown && <DropdownMenu />}
+          <nav className="hidden items-center justify-center font-bold text-slate-200 lg:flex">
+            <a
+              className="cursor-pointer px-4 uppercase"
+              onClick={() => smoothScroll('cv')}
+            >
+              CV
+            </a>
+            <a
+              className="cursor-pointer px-4 uppercase"
+              onClick={() => smoothScroll('portfolio')}
+            >
+              Portfolio
+            </a>
+            <a
+              className="cursor-pointer px-4 uppercase"
+              onClick={() => smoothScroll('contact')}
+            >
+              Contact
+            </a>
+
+            <div className="flex flex-col items-center gap-4">
+              <div className="relative flex  gap-2">
+                <select
+                  name="language"
+                  id="language"
+                  onChange={handleOptionChange}
+                  className="relative h-8 w-12 bg-black"
+                  value={selectedLanguage}
+                >
+                  {languageOptions}
+                </select>
+                {showModal && (
+                  <Modal className="absolute top-4"> {modalData}</Modal>
+                )}
+                <select
+                  onChange={handleThemeChange}
+                  className=" relative h-8 w-12 bg-black"
+                  id="theme"
+                  name="theme"
+                  value={selectedTheme}
+                >
+                  <option>☀️</option>
+                  <option>🌛</option>
+                </select>
+                {showModal && (
+                  <Modal className="absolute top-4"> {modalData}</Modal>
+                )}
+              </div>
+            </div>
+          </nav>
         </div>
       </div>
     </header>

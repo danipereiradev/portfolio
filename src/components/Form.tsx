@@ -80,11 +80,7 @@ export const Form = () => {
                 required
               >
                 {countriesEU.map((country) => (
-                  <option
-                    key={uuidv4()}
-                    value={country.areaCode}
-                    selected={country?.selected}
-                  >
+                  <option key={uuidv4()} value={country.areaCode}>
                     {country.flag + ' '}
                     {country.countryCode}({country.areaCode})
                   </option>
