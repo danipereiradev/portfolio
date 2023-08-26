@@ -19,8 +19,8 @@ export default function App() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/code2.png" />
       </Head>
-      <Header onToggleThemeMode={HandletoggleThemeMode} ischecked={ischecked} />
-      <Main ischecked={ischecked} />
+      <Header />
+      <Main ischecked={ischecked} onToggleThemeMode={HandletoggleThemeMode} />
       <Footer ischecked={ischecked} />
     </div>
   );

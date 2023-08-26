@@ -81,16 +81,3 @@
     transform: translate(24px, 0);
   }
 }
-
-@keyframes kenBurnsAnimation {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.1);
-  }
-}
-
-.ken-burns-background {
-  animation: kenBurnsAnimation 10s infinite alternate;
-}

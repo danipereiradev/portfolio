@@ -4,12 +4,7 @@ import Link from 'next/link';
 import { Modal } from './Modal';
 import { useState } from 'react';
 
-interface HeaderProps {
-  onToggleThemeMode: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  ischecked: boolean;
-}
-
-const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
+const Header: React.FC = () => {
   const [showModal, setShowmodal] = useState(false);
 
   const smoothScroll = (sectionId: string) => {
@@ -41,11 +36,12 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
               height={25}
               priority
             />
-            <h1 className="items-center pt-2 font-Arcade text-3xl uppercase tracking-wider text-slate-200 ">
-              DP
-              <span className="from-50% via-65% to-90% bg-gradient-to-r from-white via-sky-500 to-emerald-500 bg-clip-text pt-2 text-3xl font-extrabold tracking-widest text-transparent">
-                DEV
-              </span>
+            <h1
+              className=" 
+              items-center bg-gradient-to-r from-cyan-200
+  to-teal-400 bg-clip-text pt-2 font-Arcade text-3xl uppercase tracking-wider text-transparent "
+            >
+              DPDEV
             </h1>
           </div>
         </Link>
@@ -78,31 +74,7 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
             onMouseLeave={() =>
               setShowmodal((prevModalState) => !prevModalState)
             }
-          >
-            <div className="flex items-center">
-              <Image
-                src="/uk.jpeg"
-                alt="English language"
-                width={15}
-                height={15}
-                priority
-                className="mr-2 cursor-pointer"
-              />
-              <button className="mr-4 text-white">English</button>
-              {/* <input
-                onChange={onToggleThemeMode}
-                type="checkbox"
-                className="toggle sm:hidden"
-                checked={ischecked}
-              /> */}
-            </div>
-            {showModal && (
-              <Modal isChecked={ischecked}>
-                Sorry, for now, this site will only be available in English with
-                dark theme.
-              </Modal>
-            )}
-          </div>
+          ></div>
         </div>
       </div>
     </header>

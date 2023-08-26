@@ -75,18 +75,18 @@ export const Form = () => {
            flex"
             >
               <select
-                className="w-1/4 appearance-none border border-slate-900 bg-black py-4 px-2 pl-8 placeholder-slate-700"
+                className="w-1/4 appearance-none border border-slate-900 bg-black py-4 px-2 placeholder-slate-700"
                 name="areaCode"
                 required
               >
                 {countriesEU.map((country) => (
                   <option
                     key={uuidv4()}
-                    value={country.code}
+                    value={country.areaCode}
                     selected={country?.selected}
                   >
                     {country.flag + ' '}
-                    {country.name.slice(0, 5) + ' '}({country.code})
+                    {country.countryCode}({country.areaCode})
                   </option>
                 ))}
               </select>
