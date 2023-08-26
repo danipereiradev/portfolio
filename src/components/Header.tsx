@@ -8,6 +8,7 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoMdClose } from 'react-icons/io';
 
 import DropdownMenu from './DropdownMenu';
+import { TestDropdown } from './testDropDown';
 
 interface HeaderProps {
   onToggleThemeMode: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -90,7 +91,7 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
   };
 
   return (
-    <header className=" fixed top-0 z-20 flex w-screen justify-center bg-black">
+    <header className="fixed relative top-0 z-20 flex w-screen items-center justify-center bg-black px-12 lg:px-0">
       <div className="container flex w-5/6 items-center justify-between py-7 lg:py-5">
         <Link href="/">
           <div className="flex items-center gap-2">
@@ -112,7 +113,7 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
           </div>
         </Link>
 
-        <div className="relative flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center">
           {!showDropdown ? (
             <GiHamburgerMenu
               size={24}
@@ -128,6 +129,7 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
           )}
 
           {showDropdown && <DropdownMenu onShowDropDown={setShowDropDown} />}
+          {/* {showDropdown && <TestDropdown />} */}
 
           <nav className="hidden items-center justify-center font-bold text-slate-200 lg:flex">
             <a

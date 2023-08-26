@@ -92,62 +92,54 @@ export const DropdownMenu: React.FC<dropdownProps> = ({ onShowDropDown }) => {
   };
 
   return (
-    <div
-      className={`right-[calc(1rem - 10px)] dropdown absolute top-12 flex flex flex-1 flex-col rounded-lg bg-black text-slate-200 lg:hidden ${
-        showDropdown ? 'open' : ''
-      }`}
-    >
+    <div className=" absolute left-0 top-24 flex h-1/3 w-screen flex-col items-center justify-center border-t-2 border-slate-900 bg-black py-12 opacity-80">
       <OutsideClickHandler onOutsideClick={handleOutsideClick}>
         <div className="">
-          <nav className="flex flex-col text-left font-bold text-slate-200">
+          <nav className="flex  items-center justify-around gap-4   text-center text-sm font-bold text-slate-200">
             <a
-              className="w-full cursor-pointer p-8 text-center uppercase"
+              className="w-full cursor-pointer uppercase"
               onClick={() => smoothScroll('cv')}
             >
               CV
             </a>
             <a
-              className="w-full cursor-pointer px-4 py-4 text-center uppercase"
+              className="w-full cursor-pointer uppercase"
               onClick={() => smoothScroll('portfolio')}
             >
               Portfolio
             </a>
             <a
-              className="p-8text-center w-full  cursor-pointer p-8 uppercase"
+              className="w-full cursor-pointer uppercase"
               onClick={() => smoothScroll('contact')}
             >
               Contact
             </a>
 
-            <div className="flex flex-col items-center gap-4">
-              <div className=" w-full cursor-pointer p-8 text-center uppercase">
-                <select
-                  name="language"
-                  id="language"
-                  onChange={handleOptionChange}
-                  className="relative h-8 w-12 bg-black"
-                  value={selectedLanguage}
-                >
-                  {languageOptions}
-                </select>
-                {showModal && (
-                  <Modal className="absolute top-4"> {modalData}</Modal>
-                )}
-                <select
-                  onChange={handleThemeChange}
-                  className=" relative h-8 w-12 bg-black"
-                  id="theme"
-                  name="theme"
-                  value={selectedTheme}
-                >
-                  <option>☀️</option>
-                  <option>🌛</option>
-                </select>
-                {showModal && (
-                  <Modal className="absolute top-4"> {modalData}</Modal>
-                )}
-              </div>
-            </div>
+            <select
+              name="language"
+              id="language"
+              onChange={handleOptionChange}
+              className="relative h-8 w-12 bg-black"
+              value={selectedLanguage}
+            >
+              {languageOptions}
+            </select>
+            {showModal && (
+              <Modal className="absolute top-4"> {modalData}</Modal>
+            )}
+            <select
+              onChange={handleThemeChange}
+              className=" relative h-8 w-12 bg-black"
+              id="theme"
+              name="theme"
+              value={selectedTheme}
+            >
+              <option>☀️</option>
+              <option>🌛</option>
+            </select>
+            {showModal && (
+              <Modal className="absolute top-4"> {modalData}</Modal>
+            )}
           </nav>
         </div>
       </OutsideClickHandler>
