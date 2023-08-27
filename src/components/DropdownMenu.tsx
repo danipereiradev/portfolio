@@ -98,7 +98,7 @@ export const DropdownMenu: React.FC<dropdownProps> = ({ onShowDropDown }) => {
         <div className="flex flex-col items-center">
           <nav className="my-dropdown2 flex flex-col gap-6 text-center text-2xl font-bold text-slate-200">
             <a
-              className="w-full cursor-pointer py-8 uppercase"
+              className="w-screen cursor-pointer border-b-2 border-t-2  border-slate-900 py-8 font-Arcade uppercase"
               onClick={() => {
                 smoothScroll('cv');
                 handleOutsideClick();
@@ -107,7 +107,7 @@ export const DropdownMenu: React.FC<dropdownProps> = ({ onShowDropDown }) => {
               CV
             </a>
             <a
-              className="w-full cursor-pointer py-8 uppercase"
+              className="w-screen cursor-pointer items-center border-b-2 border-slate-900 py-8 font-Arcade uppercase"
               onClick={() => {
                 smoothScroll('portfolio');
                 handleOutsideClick();
@@ -116,7 +116,7 @@ export const DropdownMenu: React.FC<dropdownProps> = ({ onShowDropDown }) => {
               Portfolio
             </a>
             <a
-              className="w-full cursor-pointer py-8 uppercase"
+              className="w-screen cursor-pointer border-b-2 border-slate-900 py-8 font-Arcade uppercase"
               onClick={() => {
                 smoothScroll('contact');
                 handleOutsideClick();
@@ -125,7 +125,7 @@ export const DropdownMenu: React.FC<dropdownProps> = ({ onShowDropDown }) => {
               Contact
             </a>
           </nav>
-          <div className="relative flex items-center gap-4 py-8">
+          <div className="flex w-screen cursor-pointer items-center justify-center gap-4 border-b-2 border-slate-900 py-8 py-8 uppercase">
             {showModal && (
               <Modal className="absolute top-12"> {modalData}</Modal>
             )}

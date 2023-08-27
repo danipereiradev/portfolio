@@ -145,7 +145,7 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
 
           {showDropdown && <DropdownMenu onShowDropDown={setShowDropDown} />}
 
-          <nav className="hidden items-center justify-center font-bold text-slate-200 lg:flex">
+          <nav className="hidden items-center justify-center font-Arcade text-2xl font-bold text-slate-200 lg:flex">
             <div className="mr-16 flex">
               <a
                 className="cursor-pointer px-4 uppercase"
@@ -173,7 +173,7 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
                   name="language"
                   id="language"
                   onChange={handleOptionChange}
-                  className="relative h-8 bg-black text-sm font-normal"
+                  className="relative h-8 bg-black text-sm font-normal uppercase"
                   value={selectedLanguage}
                 >
                   {languageOptions}
@@ -187,7 +187,7 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
 
                 <select
                   onChange={handleThemeChange}
-                  className=" relative h-8  bg-black text-sm font-normal"
+                  className=" relative h-8  bg-black text-sm font-normal uppercase"
                   id="theme"
                   name="theme"
                   value={selectedTheme}
