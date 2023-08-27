@@ -103,7 +103,7 @@
 
 @keyframes fadeInDown {
   from {
-    transform: translateY(-40px); /* Move up by 20px initially */
+    transform: translateY(-400px); /* Move up by 20px initially */
     z-index: -1;
   }
   to {

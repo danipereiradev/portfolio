@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { countriesEU } from '@/data/countries';
 import { Modal } from './Modal';
 import OutsideClickHandler from 'react-outside-click-handler';
+import { HiOutlineSun } from 'react-icons/hi';
+import { MdDarkMode } from 'react-icons/md';
 
 interface dropdownProps {
   onShowDropDown: (newState: boolean) => void;
@@ -26,10 +28,10 @@ const smoothScroll = (sectionId: string) => {
 
 const themeEmojis = [
   {
-    lightIcon: '☀️',
+    lightIcon: <HiOutlineSun size={20} />,
   },
   {
-    darkIcon: '🌛',
+    darkIcon: <MdDarkMode size={20} />,
   },
 ];
 
@@ -38,9 +40,7 @@ export const DropdownMenu: React.FC<dropdownProps> = ({ onShowDropDown }) => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [modalData, setModalData] = useState('');
   const [selectedLanguage, setSelectedLenguage] = useState('GB');
-  const [selectedTheme, setSelectedTheme] = useState(themeEmojis[1].darkIcon);
-
-  console.log(selectedTheme);
+  const [selectedTheme, setSelectedTheme] = useState('Dark');
 
   const handleOutsideClick = () => {
     // Handle the logic to close the dropdown
@@ -56,7 +56,7 @@ export const DropdownMenu: React.FC<dropdownProps> = ({ onShowDropDown }) => {
   const languageOptions = languageSelectetion.map((language) => {
     return (
       <option key={language.areaCode} value={language.countryCode}>
-        {language.flag}
+        {language.language}
       </option>
     );
   });
@@ -79,69 +79,92 @@ export const DropdownMenu: React.FC<dropdownProps> = ({ onShowDropDown }) => {
   const handleThemeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedTheme = event.target.value;
 
-    if (selectedTheme === themeEmojis[0].lightIcon) {
+    if (selectedTheme === 'Light') {
       setShowmodal((prevModalState) => !prevModalState);
-      setSelectedTheme(themeEmojis[0].lightIcon);
+      setSelectedTheme('Light');
 
       setModalData("I'm working on a lighter theme for ligher people!");
 
       setTimeout(() => {
         setShowmodal(false);
-        setSelectedTheme(themeEmojis[1].darkIcon);
+        setSelectedTheme('Dark');
       }, 3000);
     }
   };
 
   return (
-    <div className="my-dropdown absolute left-0 top-24 flex h-1/3 w-screen flex-col items-center justify-center  bg-black py-12  ">
+    <div className="my-dropdown absolute left-0 top-24 z-10 flex h-screen w-screen flex-col items-center justify-start  bg-black py-12  ">
       <OutsideClickHandler onOutsideClick={handleOutsideClick}>
-        <div className={``}>
-          <nav className="my-dropdown2 flex  items-center justify-around gap-6   text-center text-sm font-bold text-slate-200">
+        <div className="flex flex-col items-center">
+          <nav className="my-dropdown2 flex flex-col gap-6 text-center text-2xl font-bold text-slate-200">
             <a
-              className="w-full cursor-pointer uppercase"
-              onClick={() => smoothScroll('cv')}
+              className="w-full cursor-pointer py-8 uppercase"
+              onClick={() => {
+                smoothScroll('cv');
+                handleOutsideClick();
+              }}
             >
               CV
             </a>
             <a
-              className="w-full cursor-pointer uppercase"
-              onClick={() => smoothScroll('portfolio')}
+              className="w-full cursor-pointer py-8 uppercase"
+              onClick={() => {
+                smoothScroll('portfolio');
+                handleOutsideClick();
+              }}
             >
               Portfolio
             </a>
             <a
-              className="w-full cursor-pointer uppercase"
-              onClick={() => smoothScroll('contact')}
+              className="w-full cursor-pointer py-8 uppercase"
+              onClick={() => {
+                smoothScroll('contact');
+                handleOutsideClick();
+              }}
             >
               Contact
             </a>
-
-            <div className="relative flex">
+          </nav>
+          <div className="relative flex items-center gap-4 py-8">
+            {showModal && (
+              <Modal className="absolute top-12"> {modalData}</Modal>
+            )}
+            <div
+              className="flex items-center
+            "
+            >
               <select
                 name="language"
                 id="language"
                 onChange={handleOptionChange}
-                className=" h-8 w-8 bg-black"
+                className=" h-8 bg-black"
                 value={selectedLanguage}
               >
                 {languageOptions}
               </select>
+              <div className="icon-container">
+                {selectedLanguage === 'ES' ? '🇪🇸' : '🇬🇧'}
+              </div>
+            </div>
 
+            <div className="flex items-center">
               <select
                 onChange={handleThemeChange}
-                className=" h-8 w-8 bg-black"
+                className=" h-8 bg-black"
                 id="theme"
                 name="theme"
                 value={selectedTheme}
               >
-                <option>☀️</option>
-                <option>🌛</option>
+                <option>Light</option>
+                <option>Dark</option>
               </select>
+              <div className="icon-container">
+                {selectedTheme === 'Light'
+                  ? themeEmojis[0].lightIcon
+                  : themeEmojis[1].darkIcon}
+              </div>
             </div>
-            {showModal && (
-              <Modal className="absolute top-12"> {modalData}</Modal>
-            )}
-          </nav>
+          </div>
         </div>
       </OutsideClickHandler>
     </div>

@@ -85,7 +85,7 @@ const skills: Skill[] = [
   {
     category: 'Degrees & Certificates',
     skills: [
-      'English IELTS (2021)',
+      'English IELTS (2012)',
       'Fullstack Mern bootcamp (480 hours)',
       'The Ultimate React Course 2023: React, Redux & More by Jonas Schmedtmann (160 hours)',
       'Using TypeScript with React by Dmytro Danylov',
@@ -131,27 +131,27 @@ const CV: React.FC = () => {
       className="container mx-auto flex  w-5/6 flex-col  justify-evenly py-28"
     >
       <h2 className="text-center text-3xl tracking-widest ">CV</h2>
-      <h3 className="mt-6 mb-2 text-lg font-bold text-slate-200">Education</h3>
+      <h3 className="mt-6 mb-2 text-lg font-bold text-slate-200">EDUCATION</h3>
       <div className="grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2">
         {education.map((educ, index) => (
           <div key={index} className="rounded-lg border-2 border-slate-900 p-4">
             <h3 className="text-md mb-2 font-semibold">
-              <span className="text-lg uppercase">{educ.degree}</span> <br></br>
-              at {educ.school.toUpperCase()} <br></br>
+              <span className="text-lg ">{educ.degree}</span> <br></br>
+              at {educ.school} <br></br>
               <span className="text-zinc-500"> {educ.date}</span>{' '}
             </h3>
           </div>
         ))}
       </div>
       <h3 className="mt-6 mb-2 text-lg font-bold text-slate-200">
-        Work Experience{' (' + totalYearsOfExperience.toFixed(0) + ' Years)'}
+        WORK EXPERIENCE{' (' + totalYearsOfExperience.toFixed(0) + ' Years)'}
       </h3>
       <div className="grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2">
         {workExperience.map((job, index) => (
           <div key={index} className="rounded-lg border-2 border-slate-900 p-4">
             <h3 className="text-md mb-2 font-semibold">
-              <span className="text-lg uppercase">{job.title}</span> <br></br>at{' '}
-              {job.company.toUpperCase()} <br></br>
+              <span className="text-lg">{job.title}</span> <br></br>at{' '}
+              {job.company} <br></br>
               <span className="text-zinc-500">
                 {' '}
                 {job.date} / {job.endDate}
@@ -167,7 +167,7 @@ const CV: React.FC = () => {
         ))}
       </div>
 
-      <h2 className="mt-6 mb-2 text-lg font-bold text-slate-200">Skills</h2>
+      <h2 className="mt-6 mb-2 text-lg font-bold text-slate-200">SKILLS</h2>
       <div className="grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2">
         {skills.map((skillCategory, index) => (
           <div

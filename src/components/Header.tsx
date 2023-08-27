@@ -6,9 +6,10 @@ import { useState } from 'react';
 import { countriesEU } from '@/data/countries';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoMdClose } from 'react-icons/io';
+import { HiOutlineSun } from 'react-icons/hi';
+import { MdDarkMode } from 'react-icons/md';
 
 import DropdownMenu from './DropdownMenu';
-import { TestDropdown } from './testDropDown';
 
 interface HeaderProps {
   onToggleThemeMode: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -17,10 +18,10 @@ interface HeaderProps {
 
 const themeEmojis = [
   {
-    lightIcon: '☀️',
+    lightIcon: <HiOutlineSun size={20} />,
   },
   {
-    darkIcon: '🌛',
+    darkIcon: <MdDarkMode size={20} />,
   },
 ];
 
@@ -29,16 +30,18 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
   const [showDropdown, setShowDropDown] = useState(false);
   const [modalData, setModalData] = useState('');
   const [selectedLanguage, setSelectedLenguage] = useState('GB');
-  const [selectedTheme, setSelectedTheme] = useState(themeEmojis[0].darkIcon);
+  const [selectedTheme, setSelectedTheme] = useState('Dark');
 
   const languageSelectetion = countriesEU.filter((country) => {
     return country.countryCode === 'GB' || country.countryCode === 'ES';
   });
 
+  console.log(languageSelectetion);
+
   const languageOptions = languageSelectetion.map((language) => {
     return (
       <option key={language.areaCode} value={language.countryCode}>
-        {language.flag}
+        {language.language}
       </option>
     );
   });
@@ -61,15 +64,15 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
   const handleThemeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedTheme = event.target.value;
 
-    if (selectedTheme === themeEmojis[0].lightIcon) {
+    if (selectedTheme === 'Light') {
       setShowmodal((prevModalState) => !prevModalState);
-      setSelectedTheme(themeEmojis[0].lightIcon);
+      setSelectedTheme('Light');
 
       setModalData("I'm working on a lighter theme for ligher people!");
 
       setTimeout(() => {
         setShowmodal(false);
-        setSelectedTheme(themeEmojis[1].darkIcon);
+        setSelectedTheme('Dark');
       }, 3000);
     }
   };
@@ -129,52 +132,62 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
           )}
 
           {showDropdown && <DropdownMenu onShowDropDown={setShowDropDown} />}
-          {/* {showDropdown && <TestDropdown />} */}
 
           <nav className="hidden items-center justify-center font-bold text-slate-200 lg:flex">
-            <a
-              className="cursor-pointer px-4 uppercase"
-              onClick={() => smoothScroll('cv')}
-            >
-              CV
-            </a>
-            <a
-              className="cursor-pointer px-4 uppercase"
-              onClick={() => smoothScroll('portfolio')}
-            >
-              Portfolio
-            </a>
-            <a
-              className="cursor-pointer px-4 uppercase"
-              onClick={() => smoothScroll('contact')}
-            >
-              Contact
-            </a>
+            <div className="mr-16 flex">
+              <a
+                className="cursor-pointer px-4 uppercase"
+                onClick={() => smoothScroll('cv')}
+              >
+                CV
+              </a>
+              <a
+                className="cursor-pointer px-4 uppercase"
+                onClick={() => smoothScroll('portfolio')}
+              >
+                Portfolio
+              </a>
+              <a
+                className="cursor-pointer px-4 uppercase"
+                onClick={() => smoothScroll('contact')}
+              >
+                Contact
+              </a>
+            </div>
 
             <div className="flex flex-col items-center gap-4">
-              <div className="relative flex  gap-2">
+              <div className="relative flex  items-center gap-2">
                 <select
                   name="language"
                   id="language"
                   onChange={handleOptionChange}
-                  className="relative h-8 w-12 bg-black"
+                  className="relative h-8 bg-black text-sm font-normal"
                   value={selectedLanguage}
                 >
                   {languageOptions}
                 </select>
+                <div className="icon-container">
+                  {selectedLanguage === 'ES' ? '🇪🇸' : '🇬🇧'}
+                </div>
                 {showModal && (
                   <Modal className="absolute top-4"> {modalData}</Modal>
                 )}
+
                 <select
                   onChange={handleThemeChange}
-                  className=" relative h-8 w-12 bg-black"
+                  className=" relative h-8  bg-black text-sm font-normal"
                   id="theme"
                   name="theme"
                   value={selectedTheme}
                 >
-                  <option>☀️</option>
-                  <option>🌛</option>
+                  <option>Light</option>
+                  <option>Dark</option>
                 </select>
+                <div className="icon-container">
+                  {selectedTheme === 'Light'
+                    ? themeEmojis[0].lightIcon
+                    : themeEmojis[1].darkIcon}
+                </div>
                 {showModal && (
                   <Modal className="absolute top-4"> {modalData}</Modal>
                 )}

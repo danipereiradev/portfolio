@@ -455,6 +455,7 @@ export const countriesEU = [
     countryCode: 'ES',
     flag: '🇪🇸',
     selected: true,
+    language: 'Esp',
   },
   {
     name: 'Sweden',
@@ -479,6 +480,7 @@ export const countriesEU = [
     areaCode: '+44',
     countryCode: 'GB',
     flag: '🇬🇧',
+    language: 'Eng',
   },
   {
     name: 'Vatican City',
