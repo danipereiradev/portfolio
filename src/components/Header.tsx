@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Modal } from './Modal';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { countriesEU } from '@/data/countries';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoMdClose } from 'react-icons/io';
@@ -92,6 +92,18 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
       window.scrollTo({ top: offset, behavior: 'smooth' });
     }
   };
+
+  useEffect(() => {
+    if (showDropdown) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+
+    return () => {
+      document.body.classList.remove('no-scroll');
+    };
+  }, [showDropdown]);
 
   return (
     <header className="fixed top-0 z-20 flex w-screen items-center justify-center bg-black px-12 lg:px-0">
