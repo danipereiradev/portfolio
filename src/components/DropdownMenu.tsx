@@ -93,10 +93,10 @@ export const DropdownMenu: React.FC<dropdownProps> = ({ onShowDropDown }) => {
   };
 
   return (
-    <div className=" absolute left-0 top-24 flex h-1/3 w-screen flex-col items-center justify-center border-t-2 border-slate-900 bg-black py-12 opacity-80">
+    <div className="my-dropdown absolute left-0 top-24 flex h-1/3 w-screen flex-col items-center justify-center  bg-black py-12  ">
       <OutsideClickHandler onOutsideClick={handleOutsideClick}>
-        <div className="">
-          <nav className="flex  items-center justify-around gap-6   text-center text-sm font-bold text-slate-200">
+        <div className={``}>
+          <nav className="my-dropdown2 flex  items-center justify-around gap-6   text-center text-sm font-bold text-slate-200">
             <a
               className="w-full cursor-pointer uppercase"
               onClick={() => smoothScroll('cv')}

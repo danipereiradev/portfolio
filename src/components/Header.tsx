@@ -91,7 +91,7 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
   };
 
   return (
-    <header className="fixed  top-0 z-20 flex w-screen items-center justify-center bg-black px-12 lg:px-0">
+    <header className="fixed top-0 z-20 flex w-screen items-center justify-center bg-black px-12 lg:px-0">
       <div className="container flex w-5/6 items-center justify-between py-7 lg:py-5">
         <Link href="/">
           <div className="flex items-center gap-2">

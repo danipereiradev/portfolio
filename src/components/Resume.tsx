@@ -23,8 +23,8 @@ interface Skill {
 const education: Education[] = [
   {
     degree: 'Highschool ',
-    school: 'I.E.S Do Castro',
-    date: 'Sep 2001 - jun 2005',
+    school: 'I.E.S Do Castro (Vigo, GAL)',
+    date: '2001-09-01 / 2005-06-01',
   },
 ];
 
@@ -105,6 +105,8 @@ const skills: Skill[] = [
   },
 ];
 
+console.log([...skills]);
+
 const CV: React.FC = () => {
   const calculateTotalExperience = () => {
     const totalMilliseconds = workExperience.reduce((total, job) => {
@@ -129,6 +131,18 @@ const CV: React.FC = () => {
       className="container mx-auto flex  w-5/6 flex-col  justify-evenly py-28"
     >
       <h2 className="text-center text-3xl tracking-widest ">CV</h2>
+      <h3 className="mt-6 mb-2 text-lg font-bold text-slate-200">Education</h3>
+      <div className="grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2">
+        {education.map((educ, index) => (
+          <div key={index} className="rounded-lg border-2 border-slate-900 p-4">
+            <h3 className="text-md mb-2 font-semibold">
+              <span className="text-lg uppercase">{educ.degree}</span> <br></br>
+              at {educ.school.toUpperCase()} <br></br>
+              <span className="text-zinc-500"> {educ.date}</span>{' '}
+            </h3>
+          </div>
+        ))}
+      </div>
       <h3 className="mt-6 mb-2 text-lg font-bold text-slate-200">
         Work Experience{' (' + totalYearsOfExperience.toFixed(0) + ' Years)'}
       </h3>
@@ -152,6 +166,7 @@ const CV: React.FC = () => {
           </div>
         ))}
       </div>
+
       <h2 className="mt-6 mb-2 text-lg font-bold text-slate-200">Skills</h2>
       <div className="grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2">
         {skills.map((skillCategory, index) => (
@@ -163,18 +178,21 @@ const CV: React.FC = () => {
               {skillCategory.category}
             </h3>
             <ul className="flex flex-wrap">
-              {skillCategory.skills.map((skill) => (
-                <li
-                  className={
-                    skillCategory.border
-                      ? 'mr-4 mb-2 min-w-[3rem] list-none border border-slate-900 px-4 py-[4px] text-gray-400'
-                      : 'mr-4 mb-2 list-none py-[4px] text-gray-400'
-                  }
-                  key={skill}
-                >
-                  {skill}
-                </li>
-              ))}
+              {skillCategory.skills
+                .slice() // Create a copy of the skills array
+                .sort((a, b) => a.length - b.length) // Sort the skills within the array based on length
+                .map((skill) => (
+                  <li
+                    className={
+                      skillCategory.border
+                        ? 'mr-4 mb-2 min-w-[3rem] list-none border border-slate-900 px-4 py-[4px] text-gray-400'
+                        : 'mr-4 mb-2 list-none py-[4px] text-gray-400'
+                    }
+                    key={skill}
+                  >
+                    {skill}
+                  </li>
+                ))}
             </ul>
           </div>
         ))}

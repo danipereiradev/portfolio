@@ -9,7 +9,7 @@ export const HomeBanner: React.FC = () => {
       >
         <div className="absolute inset-0 bg-black opacity-60"></div>
       </div>
-      <div className="relative z-10 mx-auto flex flex-col items-center justify-center justify-items-center justify-self-center">
+      <div className="relative mx-auto flex flex-col items-center justify-center justify-items-center justify-self-center">
         <div className="lg:max-w-3/4 w-5/6 text-center">
           <h1 className="animated-title py-12 text-4xl font-extrabold text-slate-200 lg:text-6xl">
             # Front-end Software Engineer
