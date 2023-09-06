@@ -119,9 +119,9 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
               priority
             />
             <h1
-              className=" 
-              font- items-center bg-gradient-to-r
-  from-white to-teal-400 bg-clip-text pt-2 text-3xl uppercase tracking-wider text-transparent "
+              className="font-Arcade
+              items-center bg-gradient-to-r from-white
+  to-teal-400 bg-clip-text pt-2 font- text-3xl uppercase tracking-wider text-transparent "
             >
               DPDEV
             </h1>
@@ -145,7 +145,7 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
 
           {showDropdown && <DropdownMenu onShowDropDown={setShowDropDown} />}
 
-          <nav className="font- hidden items-center justify-center text-2xl font-bold text-slate-200 lg:flex">
+          <nav className="hidden items-center justify-center font- text-lg font-bold text-slate-200 lg:flex">
             <div className="mr-16 flex">
               <a
                 className="cursor-pointer px-4 uppercase"
