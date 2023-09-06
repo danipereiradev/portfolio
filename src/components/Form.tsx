@@ -49,9 +49,7 @@ export const Form = () => {
       id="contact"
       className="container mx-auto flex w-5/6 flex-col justify-center py-28"
     >
-      <h2 className="text-center font-Arcade text-4xl tracking-widest">
-        CONTACT
-      </h2>
+      <h2 className="font- text-center text-4xl tracking-widest">CONTACT</h2>
       <h3 className="mt-6 mb-2 text-center text-lg font-bold text-slate-200">
         Fill the above form and I will get back to you as soon as possible.
       </h3>

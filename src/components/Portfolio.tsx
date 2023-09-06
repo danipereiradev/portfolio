@@ -55,9 +55,7 @@ export const Portfolio = () => {
       id="portfolio"
       className="container mx-auto flex w-5/6 flex-col items-center justify-center"
     >
-      <h2 className="text-center font-Arcade text-4xl tracking-widest">
-        PORTFOLIO
-      </h2>
+      <h2 className="text-center font- text-4xl tracking-widest">PORTFOLIO</h2>
       <h3 className="mt-6 mb-2 text-center text-lg font-bold text-slate-200">
         More projects coming soon...
       </h3>

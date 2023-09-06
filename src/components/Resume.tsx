@@ -130,7 +130,7 @@ const CV: React.FC = () => {
       id="cv"
       className="container mx-auto flex  w-5/6 flex-col  justify-evenly py-28"
     >
-      <h2 className="text-center font-Arcade text-4xl tracking-widest ">CV</h2>
+      <h2 className="font- text-center text-4xl tracking-widest ">CV</h2>
       <h3 className="mt-6 mb-2 text-lg font-bold text-slate-200">EDUCATION</h3>
       <div className="grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2">
         {education.map((educ, index) => (
