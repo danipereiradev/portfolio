@@ -11,8 +11,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        '': ', serif',
-        _n: '_n, serif',
+        Arcade: 'Arcade, serif',
+        Arcade_n: 'Arcade_n, serif',
       },
     },
   },
