@@ -1,0 +1,80 @@
+{
+  "menu": {
+    "cv": "Curriculum",
+    "Portfolio": "Portafolio",
+    "Contact": "Contacto"
+  },
+  "others": {
+    "years": "años",
+    "modalThemeLight": "Estoy trabajando en un tema mas claro! Por el momento dejemos las luces apagadas"
+  },
+  "homeBanner": {
+    "title": "Desarrollador web frontend",
+    "description": "Estoy trabajando en mi nuevo portfolio y muy pronto estaré de vuelta con nuevos proyectos!"
+  },
+  "cv": {
+    "title": "Curriculum",
+    "education": "Estudios",
+    "highschool": "Instituto E.S.O",
+    "workExperienceTitle": "Experiencia Laboral",
+    "workExperience": {
+      "title1": "Desarrollador de software front-end",
+      "desc1": "Desarrollar y mantener interfaces de usuario y aplicaciones web responsivas utilizando Javascript, typescript y librerias frontend como ReactJS, colaborando de forma cercana con diseñadores UX/UI y desarrolladores back-end para implementar firmes y eficientes experiencias de usuario.",
+      "title2": "Diseñador web",
+      "desc2": "Diseñar y desarrollar páginas web con Wordpress y Prestashop, garantizando la compatibilidad entre navegadores y la capacidad de respuesta de los sitios web, colaborando con el cliente para recopilar los requisitos y brindar soluciones para sus necesidades y mejorar su presencia online"
+    },
+    "skills": {
+      "title": "Habilidades",
+      "subtitle1": {
+        "title": "Habilidades técnicas",
+        "test": "Testing unitario con Jest",
+        "responsive": "Diseño web responsivo",
+        "git": "Control de versiones con Git"
+      },
+      "subtitle2": {
+        "title": "Habilidades blandas",
+        "skill1": "Trabajo en equipo",
+        "skill2": "Adaptabilidad",
+        "skill3": "Comunicación",
+        "skill4": "Resolución de problemas"
+      }
+    },
+    "degrees": {
+      "title": "Certificaciones de estudios",
+      "subtitle1": "International English Language Testing System (2012) ",
+      "subtitle2": "Bootcamp de 480h Fullstack Mern (2021)",
+      "subtitle3": "Utilizando TypeScript con React de Dmytro Danylov",
+      "subtitle4": "El curso final de React 2023: React, Redux y más de Jonas Schmedtmann (160 horas)"
+    },
+    "languages": {
+      "title": "Idiomas",
+      "lang1": "Castellano (Nativo)",
+      "lang2": "Inglés (Fluido)",
+      "lang3": "Galego (Nativo)"
+    },
+    "about": {
+      "title": "Algo más sobre mi",
+      "desc1": "Con mucha sed de conocimiento y siempre muy interesado en trabajar con compañeras y compañeros para resolver todo tipo de problemas. Sin duda juego mejor en equipo. Siempre voluntario para ayudar a cualquier ser vivo."
+    }
+  },
+  "portfolio": {
+    "title": "Portafolio",
+    "desc": "Nuevos projectos muy pronto...",
+    "buttons": {
+      "live": "Ver online",
+      "code": "código"
+    }
+  },
+  "contact": {
+    "title": "Contactame",
+    "desc": "Rellena el formulario de abajo y te contestaré lo antes posible",
+    "form": {
+      "name": "Tu nombre",
+      "phone": "Tu teléfono",
+      "mail": "Tu email",
+      "message": "Escribe tu mensaje",
+      "privacy": "He leído y acepto la política de privacidad",
+      "send": "Enviar"
+    }
+  }
+}

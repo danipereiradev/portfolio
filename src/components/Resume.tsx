@@ -1,113 +1,110 @@
 import React from 'react';
-
-interface Education {
-  degree: string;
-  school: string;
-  date: string;
-}
-
-interface WorkExperience {
-  title: string;
-  company: string;
-  date: string;
-  endDate: string;
-  responsibilities: string[];
-}
-
-interface Skill {
-  category: string;
-  skills: string[];
-  border: Boolean;
-}
-
-const education: Education[] = [
-  {
-    degree: 'Highschool ',
-    school: 'I.E.S Do Castro (Vigo, GAL)',
-    date: '2001-09-01 / 2005-06-01',
-  },
-];
-
-const workExperience: WorkExperience[] = [
-  {
-    title: 'Frontend Software Engineer',
-    company: 'Babel sistemas',
-    date: '2022-07-01',
-    endDate: new Date().toISOString().split('T')[0],
-    responsibilities: [
-      'Developed and maintained user-friendly and responsive web applications using React.js, Typescript and Vanilla Js.',
-      'Collaborated closely with designers and backend developers to implement seamless user experiences.',
-    ],
-  },
-  {
-    title: 'Web Designer',
-    company: 'Pg Webs',
-    date: '2015-01-01',
-    endDate: '2021-06-01',
-    responsibilities: [
-      'Designed and developed websites and e-commerce sites using WordPress and PrestaShop.',
-      'Ensured cross-browser compatibility and responsiveness in site designs.',
-      'Collaborated with clients to gather requirements and provide solutions for their online presence needs.',
-    ],
-  },
-];
-
-const skills: Skill[] = [
-  {
-    category: 'Technical Skills',
-    skills: [
-      'React.js',
-      'Next.js',
-      'JavaScript (ES6+)',
-      'Typescript',
-      'HTML5',
-      'Bootstrap',
-      'Tailwind',
-      'CSS3 (Sass)',
-      'Responsive Web Design',
-      'Version Control (Git)',
-      'Webpack',
-      'RESTful APIs',
-      'Unit Testing (Jest)',
-    ],
-    border: true,
-  },
-  {
-    category: 'Soft Skills',
-    skills: ['Problem Solving', 'Communication', 'Teamwork', 'Adaptability'],
-    border: true,
-  },
-  {
-    category: 'Languages',
-    skills: ['Galician (Native)', 'Spanish (Native)', 'English (Fluent)'],
-    border: true,
-  },
-  {
-    category: 'Degrees & Certificates',
-    skills: [
-      'English IELTS (2012)',
-      'Fullstack Mern bootcamp (480 hours)',
-      'The Ultimate React Course 2023: React, Redux & More by Jonas Schmedtmann (160 hours)',
-      'Using TypeScript with React by Dmytro Danylov',
-    ],
-    border: false,
-  },
-  {
-    category: 'More about me',
-    skills: [
-      `Thirst for knowledge, always looking forward to work with people and sort out any kind of problems. 
-
-      Def, I consider myself a team player.
-      
-      Always down for Volunteering and helping all beings.`,
-    ],
-    border: false,
-  },
-];
-
-console.log([...skills]);
+import { useTranslation } from 'react-i18next';
 
 const CV: React.FC = () => {
+  const { t } = useTranslation();
+
+  interface Education {
+    degree: string;
+    school: string;
+    date: string;
+  }
+
+  interface WorkExperience {
+    title: string;
+    company: string;
+    date: string;
+    endDate: string;
+    responsibilities: string;
+  }
+
+  interface Skill {
+    category: string;
+    skills: string[];
+    border: Boolean;
+  }
+
+  const education: Education[] = [
+    {
+      degree: t('cv.highschool'),
+      school: 'I.E.S Do Castro (Vigo, GAL)',
+      date: '2001-09-01 / 2005-06-01',
+    },
+  ];
+
+  const workExperience: WorkExperience[] = [
+    {
+      title: t('cv.workExperience.title1'),
+      company: 'Babel sistemas',
+      date: '2022-07-01',
+      endDate: new Date().toISOString().split('T')[0],
+      responsibilities: t('cv.workExperience.desc1'),
+    },
+    {
+      title: t('cv.workExperience.title2'),
+      company: 'Pg Webs',
+      date: '2015-01-01',
+      endDate: '2021-06-01',
+      responsibilities: t('cv.workExperience.desc2'),
+    },
+  ];
+
+  const skills: Skill[] = [
+    {
+      category: t('cv.skills.subtitle1.title'),
+      skills: [
+        'React.js',
+        'Next.js',
+        'JavaScript (ES6+)',
+        'Typescript',
+        'HTML5',
+        'Bootstrap',
+        'Tailwind',
+        'CSS3 (Sass)',
+        t('cv.skills.subtitle1.responsive'),
+        t('cv.skills.subtitle1.git'),
+        'Webpack',
+        'RESTful APIs',
+        t('cv.skills.subtitle1.test'),
+      ],
+      border: true,
+    },
+    {
+      category: t('cv.skills.subtitle2.title'),
+      skills: [
+        t('cv.skills.subtitle2.skill1'),
+        t('cv.skills.subtitle2.skill2'),
+        t('cv.skills.subtitle2.skill3'),
+        t('cv.skills.subtitle2.skill4'),
+      ],
+      border: true,
+    },
+    {
+      category: t('cv.languages.title'),
+      skills: [
+        t('cv.languages.lang1'),
+        t('cv.languages.lang2'),
+        t('cv.languages.lang3'),
+      ],
+      border: true,
+    },
+    {
+      category: t('cv.degrees.title'),
+      skills: [
+        t('cv.degrees.subtitle1'),
+        t('cv.degrees.subtitle2'),
+        t('cv.degrees.subtitle3'),
+        t('cv.degrees.subtitle4'),
+      ],
+      border: false,
+    },
+    {
+      category: t('cv.about.title'),
+      skills: [t('cv.about.desc1')],
+      border: false,
+    },
+  ];
+
   const calculateTotalExperience = () => {
     const totalMilliseconds = workExperience.reduce((total, job) => {
       const startDateObject = new Date(job.date);
@@ -130,8 +127,12 @@ const CV: React.FC = () => {
       id="cv"
       className="container mx-auto flex  w-5/6 flex-col  justify-evenly py-28"
     >
-      <h2 className="font- text-center text-4xl tracking-widest ">CV</h2>
-      <h3 className="mt-6 mb-2 text-lg font-bold text-slate-200">EDUCATION</h3>
+      <h2 className="font- text-center text-4xl tracking-widest ">
+        {t('cv.title').toUpperCase()}
+      </h2>
+      <h3 className="mt-6 mb-2 text-lg font-bold text-slate-200">
+        {t('cv.education')}
+      </h3>
       <div className="grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2">
         {education.map((educ, index) => (
           <div key={index} className="rounded-lg border-2 border-slate-900 p-4">
@@ -144,7 +145,12 @@ const CV: React.FC = () => {
         ))}
       </div>
       <h3 className="mt-6 mb-2 text-lg font-bold text-slate-200">
-        WORK EXPERIENCE{' (' + totalYearsOfExperience.toFixed(0) + ' Years)'}
+        {t('cv.workExperienceTitle')}
+        {' (' +
+          totalYearsOfExperience.toFixed(0) +
+          ' ' +
+          t('others.years') +
+          ')'}
       </h3>
       <div className="grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2">
         {workExperience.map((job, index) => (
@@ -158,16 +164,14 @@ const CV: React.FC = () => {
               </span>{' '}
             </h3>
 
-            <ul className="mt-4 list-none ">
-              {job.responsibilities.map((responsibility, i) => (
-                <li key={i}>{responsibility}</li>
-              ))}
-            </ul>
+            <p className="mt-4 list-none ">{job.responsibilities}</p>
           </div>
         ))}
       </div>
 
-      <h2 className="mt-6 mb-2 text-lg font-bold text-slate-200">SKILLS</h2>
+      <h2 className="mt-6 mb-2 text-lg font-bold text-slate-200">
+        {t('cv.skills.title')}
+      </h2>
       <div className="grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2">
         {skills.map((skillCategory, index) => (
           <div

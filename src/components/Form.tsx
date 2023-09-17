@@ -2,11 +2,14 @@ import { countriesEU } from '@/data/countries';
 import { useForm, ValidationError } from '@formspree/react';
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import { useTranslation } from 'react-i18next';
 
 export const Form = () => {
   const [state, handleSubmit] = useForm('xjvqwpde');
   const [showSuccess, setShowSuccess] = useState(true);
   const [isPrivacyChecked, setIsPrivacyChecked] = useState(false);
+
+  const { t } = useTranslation();
 
   const handlePrivacyCheckboxChange = (
     e: React.ChangeEvent<HTMLInputElement>
@@ -18,7 +21,6 @@ export const Form = () => {
     e.preventDefault();
 
     handleSubmit(e);
-    console.log(state);
 
     setTimeout(() => {
       setShowSuccess(false);
@@ -49,9 +51,11 @@ export const Form = () => {
       id="contact"
       className="container mx-auto flex w-5/6 flex-col justify-center py-28"
     >
-      <h2 className="font- text-center text-4xl tracking-widest">CONTACT</h2>
+      <h2 className="font- text-center text-4xl tracking-widest">
+        {t('contact.title').toUpperCase()}
+      </h2>
       <h3 className="mt-6 mb-2 text-center text-lg font-bold text-slate-200">
-        Fill the above form and I will get back to you as soon as possible.
+        {t('contact.desc')}
       </h3>
       <div className="form-container py-8 ">
         <form
@@ -64,7 +68,7 @@ export const Form = () => {
               name="name"
               type="text"
               className=" border border-slate-900 bg-black py-4 px-2 placeholder-gray-700"
-              placeholder="Your name"
+              placeholder={t('contact.form.name')}
               required
             />
             <ValidationError prefix="name" field="name" errors={state.errors} />
@@ -91,7 +95,7 @@ export const Form = () => {
                 name="phone"
                 type="tel"
                 className="border border-slate-900 bg-black py-4 px-2 placeholder-slate-700 md:w-[85%]"
-                placeholder="Your phone"
+                placeholder={t('contact.form.phone')}
                 required
               />
             </div>
@@ -107,7 +111,7 @@ export const Form = () => {
               name="email"
               className="border border-slate-900 bg-black py-4 px-2 placeholder-slate-700"
               type="email"
-              placeholder="Your Email"
+              placeholder={t('contact.form.mail')}
               required
             />
             <ValidationError
@@ -121,7 +125,7 @@ export const Form = () => {
               className="border border-slate-900 bg-black py-4 px-2 placeholder-slate-700"
               rows={4}
               cols={50}
-              placeholder="Write your message"
+              placeholder={t('contact.form.message')}
               id="message"
               name="message"
               required
@@ -143,7 +147,7 @@ export const Form = () => {
             />
 
             <label htmlFor="privacyPolicy" className="text-slate-200">
-              I accept the privacy policy{' '}
+              {t('contact.form.privacy') + ' '}
               <span
                 className="text-slate-600
 "
@@ -160,7 +164,7 @@ export const Form = () => {
             disabled={!isPrivacyChecked}
             type="submit"
           >
-            Send Message
+            {t('contact.form.send')}
           </button>
         </form>
       </div>

@@ -3,11 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Modal } from './Modal';
 import { useState, useEffect } from 'react';
-import { countriesEU } from '@/data/countries';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoMdClose } from 'react-icons/io';
-import { HiOutlineSun } from 'react-icons/hi';
-import { MdDarkMode } from 'react-icons/md';
+import { useTranslation } from 'react-i18next';
 
 import DropdownMenu from './DropdownMenu';
 
@@ -16,49 +14,23 @@ interface HeaderProps {
   ischecked: boolean;
 }
 
-const themeEmojis = [
-  {
-    lightIcon: <HiOutlineSun size={20} />,
-  },
-  {
-    darkIcon: <MdDarkMode size={20} />,
-  },
-];
-
 const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
   const [showModal, setShowmodal] = useState(false);
   const [showDropdown, setShowDropDown] = useState(false);
   const [modalData, setModalData] = useState('');
-  const [selectedLanguage, setSelectedLenguage] = useState('GB');
+
   const [selectedTheme, setSelectedTheme] = useState('Dark');
 
-  const languageSelectetion = countriesEU.filter((country) => {
-    return country.countryCode === 'GB' || country.countryCode === 'ES';
-  });
+  const { i18n, t } = useTranslation();
 
-  console.log(languageSelectetion);
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+    localStorage.setItem('language', lng);
+  };
 
-  const languageOptions = languageSelectetion.map((language) => {
-    return (
-      <option key={language.areaCode} value={language.countryCode}>
-        {language.language}
-      </option>
-    );
-  });
-
-  const handleOptionChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const selectedValue = event.target.value;
-
-    if (selectedValue === 'ES') {
-      setSelectedLenguage('ES');
-      setShowmodal((prevModalState) => !prevModalState);
-      setModalData('Muy pronto estará disponible la versión en Español');
-
-      setTimeout(() => {
-        setShowmodal(false);
-        setSelectedLenguage('GB');
-      }, 3000);
-    }
+  const handleLanguageChange = (event: any) => {
+    const selectedLanguage = event.target.value;
+    changeLanguage(selectedLanguage);
   };
 
   const handleThemeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -68,7 +40,7 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
       setShowmodal((prevModalState) => !prevModalState);
       setSelectedTheme('Light');
 
-      setModalData("I'm working on a lighter theme for ligher people!");
+      setModalData(t('others.modalThemeLight'));
 
       setTimeout(() => {
         setShowmodal(false);
@@ -151,19 +123,19 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
                 className="cursor-pointer px-4 uppercase"
                 onClick={() => smoothScroll('cv')}
               >
-                CV
+                {t('menu.cv')}
               </a>
               <a
                 className="cursor-pointer px-4 uppercase"
                 onClick={() => smoothScroll('portfolio')}
               >
-                Portfolio
+                {t('menu.Portfolio')}
               </a>
               <a
                 className="cursor-pointer px-4 uppercase"
                 onClick={() => smoothScroll('contact')}
               >
-                Contact
+                {t('menu.Contact')}
               </a>
             </div>
 
@@ -172,15 +144,14 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
                 <select
                   name="language"
                   id="language"
-                  onChange={handleOptionChange}
+                  onChange={handleLanguageChange}
                   className="relative h-8 bg-black text-sm font-normal uppercase"
-                  value={selectedLanguage}
+                  value={i18n.language}
                 >
-                  {languageOptions}
+                  <option value="en">En</option>
+                  <option value="es">Es</option>
                 </select>
-                <div className="icon-container">
-                  {selectedLanguage === 'ES' ? '🇪🇸' : '🇬🇧'}
-                </div>
+
                 {showModal && (
                   <Modal className="absolute top-4"> {modalData}</Modal>
                 )}
@@ -195,11 +166,7 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
                   <option>Light</option>
                   <option>Dark</option>
                 </select>
-                <div className="icon-container">
-                  {selectedTheme === 'Light'
-                    ? themeEmojis[0].lightIcon
-                    : themeEmojis[1].darkIcon}
-                </div>
+
                 {showModal && (
                   <Modal className="absolute top-4"> {modalData}</Modal>
                 )}

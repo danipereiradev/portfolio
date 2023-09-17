@@ -2,8 +2,7 @@ import { useState } from 'react';
 import { countriesEU } from '@/data/countries';
 import { Modal } from './Modal';
 import OutsideClickHandler from 'react-outside-click-handler';
-import { HiOutlineSun } from 'react-icons/hi';
-import { MdDarkMode } from 'react-icons/md';
+import { useTranslation } from 'react-i18next';
 
 interface dropdownProps {
   onShowDropDown: (newState: boolean) => void;
@@ -26,14 +25,14 @@ const smoothScroll = (sectionId: string) => {
   }
 };
 
-const themeEmojis = [
+/* const themeEmojis = [
   {
     lightIcon: <HiOutlineSun size={20} />,
   },
   {
     darkIcon: <MdDarkMode size={20} />,
   },
-];
+]; */
 
 export const DropdownMenu: React.FC<dropdownProps> = ({ onShowDropDown }) => {
   const [showModal, setShowmodal] = useState(false);
@@ -42,6 +41,18 @@ export const DropdownMenu: React.FC<dropdownProps> = ({ onShowDropDown }) => {
   const [selectedLanguage, setSelectedLenguage] = useState('GB');
   const [selectedTheme, setSelectedTheme] = useState('Dark');
 
+  const { i18n, t } = useTranslation();
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+    localStorage.setItem('language', lng);
+  };
+
+  const handleLanguageChange = (event: any) => {
+    const selectedLanguage = event.target.value;
+    changeLanguage(selectedLanguage);
+  };
+
   const handleOutsideClick = () => {
     // Handle the logic to close the dropdown
     setShowDropdown(false);
@@ -49,32 +60,8 @@ export const DropdownMenu: React.FC<dropdownProps> = ({ onShowDropDown }) => {
     onShowDropDown(false); // Call the passed function
   };
 
-  const languageSelectetion = countriesEU.filter((country) => {
-    return country.countryCode === 'GB' || country.countryCode === 'ES';
-  });
-
-  const languageOptions = languageSelectetion.map((language) => {
-    return (
-      <option key={language.areaCode} value={language.countryCode}>
-        {language.language}
-      </option>
-    );
-  });
   //TODO SACAR FUNCION A HELPER
-  const handleOptionChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const selectedValue = event.target.value;
 
-    if (selectedValue === 'ES') {
-      setSelectedLenguage('ES');
-      setShowmodal((prevModalState) => !prevModalState);
-      setModalData('Muy pronto estará disponible la versión en Español');
-
-      setTimeout(() => {
-        setShowmodal(false);
-        setSelectedLenguage('GB');
-      }, 3000);
-    }
-  };
   //TODO SACAR FUNCION A HELPER
   const handleThemeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedTheme = event.target.value;
@@ -83,7 +70,7 @@ export const DropdownMenu: React.FC<dropdownProps> = ({ onShowDropDown }) => {
       setShowmodal((prevModalState) => !prevModalState);
       setSelectedTheme('Light');
 
-      setModalData("I'm working on a lighter theme for ligher people!");
+      setModalData(t('others.modalThemeLight'));
 
       setTimeout(() => {
         setShowmodal(false);
@@ -104,7 +91,7 @@ export const DropdownMenu: React.FC<dropdownProps> = ({ onShowDropDown }) => {
                 handleOutsideClick();
               }}
             >
-              CV
+              {t('menu.cv')}
             </a>
             <a
               className="font- w-screen cursor-pointer   items-center py-8 uppercase"
@@ -113,7 +100,7 @@ export const DropdownMenu: React.FC<dropdownProps> = ({ onShowDropDown }) => {
                 handleOutsideClick();
               }}
             >
-              Portfolio
+              {t('menu.Portfolio')}
             </a>
             <a
               className="font- w-screen  cursor-pointer py-8 uppercase"
@@ -122,7 +109,7 @@ export const DropdownMenu: React.FC<dropdownProps> = ({ onShowDropDown }) => {
                 handleOutsideClick();
               }}
             >
-              Contact
+              {t('menu.Contact')}
             </a>
           </nav>
           <div className="flex w-screen cursor-pointer items-center justify-center gap-4 py-8 py-8 uppercase">
@@ -136,15 +123,13 @@ export const DropdownMenu: React.FC<dropdownProps> = ({ onShowDropDown }) => {
               <select
                 name="language"
                 id="language"
-                onChange={handleOptionChange}
-                className=" h-8 bg-black"
-                value={selectedLanguage}
+                onChange={handleLanguageChange}
+                className="relative h-8 bg-black text-sm font-normal uppercase"
+                value={i18n.language}
               >
-                {languageOptions}
+                <option value="en">En</option>
+                <option value="es">Es</option>
               </select>
-              <div className="icon-container">
-                {selectedLanguage === 'ES' ? '🇪🇸' : '🇬🇧'}
-              </div>
             </div>
 
             <div className="flex items-center">
@@ -158,11 +143,6 @@ export const DropdownMenu: React.FC<dropdownProps> = ({ onShowDropDown }) => {
                 <option>Light</option>
                 <option>Dark</option>
               </select>
-              <div className="icon-container">
-                {selectedTheme === 'Light'
-                  ? themeEmojis[0].lightIcon
-                  : themeEmojis[1].darkIcon}
-              </div>
             </div>
           </div>
         </div>

@@ -1,0 +1,80 @@
+{
+  "menu": {
+    "cv": "Resume",
+    "Portfolio": "Portfolio",
+    "Contact": "Contact"
+  },
+  "others": {
+    "years": "years",
+    "modalThemeLight": "I'm working on a lighter theme, meanwhile, let's keep the lights off"
+  },
+  "homeBanner": {
+    "title": "Frontend web developer",
+    "description": "I am working on my new portfolio and I will be back with brand new styles very soon!"
+  },
+  "cv": {
+    "title": "Resume",
+    "education": "Education",
+    "highschool": "Highschool",
+    "workExperienceTitle": "Work experience",
+    "workExperience": {
+      "title1": "Frontend Software developer",
+      "desc1": "Developed and maintained user-friendly and responsive web applications using React.js, Typescript and Vanilla Js. Collaborated closely with designers and backend developers to implement seamless user experiences.",
+      "title2": "Web designer",
+      "desc2": "Designed and developed websites and e-commerce sites using WordPress and PrestaShop. Ensured cross-browser compatibility and responsiveness in site designs. Collaborated with clients to gather requirements and provide solutions for their online presence needs."
+    },
+    "skills": {
+      "title": "Skills",
+      "subtitle1": {
+        "title": "Technical skills",
+        "test": "Unit Testing with Jest",
+        "responsive": "Responsive Web Design",
+        "git": "Version Control with Git"
+      },
+      "subtitle2": {
+        "title": "Soft Skills",
+        "skill1": "Teamwork",
+        "skill2": "Adaptability",
+        "skill3": "Communication",
+        "skill4": "Problem Solving"
+      }
+    },
+    "degrees": {
+      "title": "Degrees & Certificates",
+      "subtitle1": "International English Language Testing System (2012) ",
+      "subtitle2": "Fullstack Mern bootcamp (480 hours)",
+      "subtitle3": "Using TypeScript with React by Dmytro Danylov",
+      "subtitle4": "The Ultimate React Course 2023: React, Redux & More by Jonas Schmedtmann (160 hours)"
+    },
+    "languages": {
+      "title": "Languages",
+      "lang1": "Spanish (Native)",
+      "lang2": "English (Fluent)",
+      "lang3": "Galician (Native)"
+    },
+    "about": {
+      "title": "More about me",
+      "desc1": "Thirst for knowledge, always looking forward to work with people and sort out any kind of problems. Def, I consider myself a team player. Always down for Volunteering and helping all beings."
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "desc": "More projects coming soon...",
+    "buttons": {
+      "live": "Live view",
+      "code": "code"
+    }
+  },
+  "contact": {
+    "title": "Contact me",
+    "desc": "Fill the form below and I will get back to you as soon as possible.",
+    "form": {
+      "name": "Your name",
+      "phone": "Your phone num",
+      "mail": "Your email",
+      "message": "Write your message",
+      "privacy": "I have read and accept the privacy policy",
+      "send": "Send"
+    }
+  }
+}
