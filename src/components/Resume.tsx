@@ -138,7 +138,7 @@ const CV: React.FC = () => {
           <div key={index} className="rounded-lg border-2 border-slate-900 p-4">
             <h3 className="text-md mb-2 font-semibold">
               <span className="text-lg ">{educ.degree}</span> <br></br>
-              at {educ.school} <br></br>
+              {educ.school} <br></br>
               <span className="text-zinc-500"> {educ.date}</span>{' '}
             </h3>
           </div>
@@ -156,7 +156,7 @@ const CV: React.FC = () => {
         {workExperience.map((job, index) => (
           <div key={index} className="rounded-lg border-2 border-slate-900 p-4">
             <h3 className="text-md mb-2 font-semibold">
-              <span className="text-lg">{job.title}</span> <br></br>at{' '}
+              <span className="text-lg">{job.title}</span> <br></br>
               {job.company} <br></br>
               <span className="text-zinc-500">
                 {' '}

@@ -23,7 +23,11 @@ export const Portfolio = () => {
   ];
 
   const thingsToMap = portfolioData.map((data) => (
-    <PortfolioItem key={data.id} {...data} />
+    <>
+      <a href={data.linkLive} target="blank">
+        <PortfolioItem key={data.id} {...data} />
+      </a>
+    </>
   ));
 
   return (
