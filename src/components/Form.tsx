@@ -51,7 +51,7 @@ export const Form = () => {
       id="contact"
       className="container mx-auto flex w-5/6 flex-col justify-center py-28"
     >
-      <h2 className="font- text-center text-4xl tracking-widest">
+      <h2 className="font- text-center text-2xl tracking-widest">
         {t('contact.title').toUpperCase()}
       </h2>
       <h3 className="mt-6 mb-2 text-center text-lg font-bold text-slate-200">
