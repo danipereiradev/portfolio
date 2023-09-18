@@ -51,6 +51,7 @@ export const DropdownMenu: React.FC<dropdownProps> = ({ onShowDropDown }) => {
   const handleLanguageChange = (event: any) => {
     const selectedLanguage = event.target.value;
     changeLanguage(selectedLanguage);
+    handleOutsideClick();
   };
 
   const handleOutsideClick = () => {
@@ -127,8 +128,9 @@ export const DropdownMenu: React.FC<dropdownProps> = ({ onShowDropDown }) => {
                 className="relative h-8 bg-black text-sm font-normal uppercase"
                 value={i18n.language}
               >
-                <option value="en">En</option>
                 <option value="es">Es</option>
+                <option value="gl">Gl</option>
+                <option value="en">En</option>
               </select>
             </div>
 

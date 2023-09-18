@@ -2,7 +2,8 @@
   "menu": {
     "cv": "Curriculum",
     "Portfolio": "Portafolio",
-    "Contact": "Contacto"
+    "Contact": "Contacto",
+    "about": "Sobre mi"
   },
   "others": {
     "years": "años",
@@ -76,5 +77,9 @@
       "privacy": "He leído y acepto la política de privacidad",
       "send": "Enviar"
     }
+  },
+  "about": {
+    "title": "Sobre mi",
+    "desc": "Comencé esta travesía en 2011 cuando me sumergí en el mundo del desarrollo web, creando un sitio de comercio electrónico para mi empresa utilizando Prestashop. Durante este tiempo, profundicé en los ámbitos de HTML, CSS y los fundamentos de JavaScript para hacer que mis sitios web fueran más inteligentes y eficientes.\n Después de tomar la decisión de cerrar mi empresa, redirigí mi enfoque hacia mi pasión, ofreciendo servicios de desarrollo web a quienes los necesitan.\nTambién comencé a construir sitios web para todos los demás que los necesitaban después de cerrar mi empresa para poder centrarme a tiempo completo en mi pasión.\nEn 2021, me inscribí en un completo curso de JavaScript que abarcaba tanto el desarrollo front-end como el back-end con React, Express JS, GIT y SQL. Fue durante este curso que desarrollé un profundo aprecio por la biblioteca React y su rico ecosistema, decidiendo finalmente especializarme en ella y perfeccionar mis habilidades aún más.\nCon una sed insaciable de conocimiento y un fuerte deseo de colaborar con otros para resolver diversos desafíos, me identifico como un jugador de equipo dedicado. Siempre estoy ansioso por ofrecerme como voluntario y extender una mano amiga a todos los seres vivos."
   }
 }

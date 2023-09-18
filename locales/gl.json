@@ -2,7 +2,8 @@
   "menu": {
     "cv": "Currículo",
     "Portfolio": "Portafolio",
-    "Contact": "Contacto"
+    "Contact": "Contacto",
+    "about": "Sobre min"
   },
   "others": {
     "years": "anos",
@@ -76,5 +77,9 @@
       "privacy": "Leín e acepto a política de privacidade",
       "send": "Enviar"
     }
+  },
+  "about": {
+    "title": "Sobre min",
+    "desc": "Inicieime nesta viaxe en 2011 cando mergulléime no mundo do desenvolvemento de sitios web, creando un sitio de comercio electrónico para a miña empresa utilizando Prestashop. Durante este tempo, aprofundei nos ámbitos de HTML, CSS e os fundamentos de JavaScript para facer que os meus sitios web fosen máis intelixentes e eficientes.\nDespois de tomar a decisión de pechar a miña empresa, redirixín o meu enfoque cara á miña paixón, ofrecendo servizos de desenvolvemento web a quen os necesitase.\nTamen comecei a construír sitios web para todos os demais que os necesitasen despois de pechar a miña empresa para poder centrarme a tempo completo na miña paixón.\nEn 2021, inscribínme nun completo curso de JavaScript que abrangía tanto o desenvolvemento front-end como o back-end con React, Express JS, GIT e SQL. Foi durante este curso que desenvolvín un profundo aprecio pola biblioteca React e o seu rico ecosistema, decidindo finalmente especializarme nela e perfeccionar as miñas habilidades aínda máis.\nCunha sede insaciable de coñecemento e un forte desexo de colaborar con outros para resolver diversos desafíos, identifícome como un xogador de equipo dedicado. Sempre estou ansioso por ofrecerme como voluntario e estender unha man amiga a todos os seres vivos."
   }
 }

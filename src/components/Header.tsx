@@ -117,13 +117,19 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
 
           {showDropdown && <DropdownMenu onShowDropDown={setShowDropDown} />}
 
-          <nav className="font- hidden items-center justify-center text-lg font-bold text-slate-200 lg:flex">
+          <nav className="text-md hidden items-center justify-center font-bold text-slate-200 lg:flex">
             <div className="mr-16 flex">
               <a
                 className="cursor-pointer px-4 uppercase"
                 onClick={() => smoothScroll('cv')}
               >
                 {t('menu.cv')}
+              </a>
+              <a
+                className="cursor-pointer px-4 uppercase"
+                onClick={() => smoothScroll('about')}
+              >
+                {t('menu.about')}
               </a>
               <a
                 className="cursor-pointer px-4 uppercase"
