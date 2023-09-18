@@ -30,7 +30,7 @@ export const Form = () => {
   if (state.succeeded && showSuccess) {
     return (
       <section className="container mx-auto flex w-5/6 flex-col justify-center py-28">
-        <h2 className="text-center text-3xl tracking-widest">
+        <h2 className="text-center text-2xl tracking-widest">
           Thanks! Your message was sent successfully
         </h2>
         <h3 className="mt-6 mb-2 text-center text-lg font-bold text-slate-200">

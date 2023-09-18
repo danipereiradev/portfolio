@@ -34,7 +34,7 @@ export const Portfolio = () => {
       id="portfolio"
       className="lg:w-3/3 container mx-auto flex flex-col items-center justify-center"
     >
-      <h2 className="font- text-center text-4xl tracking-widest">
+      <h2 className="font- text-center text-2xl tracking-widest">
         {t('portfolio.title').toUpperCase()}
       </h2>
       <h3 className="mt-6 mb-2 text-center text-lg font-bold text-slate-200">

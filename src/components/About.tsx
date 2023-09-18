@@ -20,7 +20,7 @@ export const About = () => {
       id="about"
       className="container mx-auto flex w-5/6 flex-col items-center justify-center gap-16 py-28 "
     >
-      <h2 className="font- text-center text-4xl tracking-widest ">
+      <h2 className="font- text-center text-2xl tracking-widest ">
         {t('about.title').toUpperCase()}
       </h2>
       <div className=" flex flex-col-reverse items-center md:flex-row-reverse md:gap-16">
