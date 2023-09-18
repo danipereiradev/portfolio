@@ -3,6 +3,7 @@ import { HomeBanner } from './HomeBanner';
 import { Portfolio } from './Portfolio';
 import { Form } from './Form';
 import { About } from './About';
+import { useState } from 'react';
 
 export const Main: React.FC = () => {
   return (

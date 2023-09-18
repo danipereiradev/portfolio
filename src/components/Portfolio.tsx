@@ -13,12 +13,15 @@ export const Portfolio = () => {
       title: 'BALLOON APP',
       buttonLive: t('portfolio.buttons.live').toUpperCase(),
       buttonCode: t('portfolio.buttons.code').toUpperCase(),
+      buttonInfo: t('portfolio.buttons.info').toUpperCase(),
       isLive: true,
       imageUrl: '/balloon.png',
       description: 'Lorem ipsum',
       techLogos: ['/js.png', '/react.png'],
       linkLive: 'https://balloon.balloonapp.net/',
       linkCode: 'https://github.com/danipereiracodes/Balloon_Front',
+      technologies: ['/js.png', '/react.png', '/node-logo.png'],
+      popupDescription: t('portfolio.projects.balloon.description'),
     },
   ];
 

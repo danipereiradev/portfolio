@@ -63,7 +63,14 @@
     "desc": "Novos proxectos moi pronto...",
     "buttons": {
       "live": "Ver en liña",
-      "code": "código"
+      "code": "código",
+      "info": "Mais info",
+      "close": "Fechar"
+    },
+    "projects": {
+      "balloon": {
+        "description": "É unha aplicación web de comercio electrónico desenvolvida con tecnoloxías de vangarda. Esta plataforma, construída con React.js para o frontend e Node.js con Express.js para o backend, representa un fito na miña carreira como desenvolvedor.\n\nA aplicación ofrece aos usuarios a oportunidade de reservar experiencias únicas en toda a península. O noso principal enfoque foi proporcionar unha experiencia de reserva sinxela e personalizada. Implementamos unha ampla gama de funcionalidades, desde un sistema de reserva de entradas ata un filtro avanzado que permite aos usuarios buscar actividades por categoría, cidade, rango de prezo e datas dispoñibles.\n\nPara mellorar a experiencia do usuario, integráronse bibliotecas como o React Date Picker para simplificar a selección de datas e o React Responsive Carousel para presentar imaxes e detalles das actividades de forma atractiva.\n\nEste proxecto foi un emocionante desafío que nos permitiu amosar as nosas habilidades de desenvolvemento web e crear unha aplicación que simplifica a busca e reserva de experiencias."
+      }
     }
   },
   "contact": {

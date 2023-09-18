@@ -1,23 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, type ReactNode } from 'react';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGlobe, faCode } from '@fortawesome/free-solid-svg-icons';
+import {
+  faGlobe,
+  faCode,
+  faCircleInfo,
+} from '@fortawesome/free-solid-svg-icons';
+import { PortfolioItemPopup } from './PortfolioItemPopup';
 
 interface PortfolioItemProps {
   id: number;
   title: string;
   buttonLive: string;
   buttonCode: string;
+  buttonInfo: string;
   isLive: Boolean;
   imageUrl: string;
   description: string;
   techLogos: string[];
   linkLive: string | undefined;
   linkCode: string;
+  technologies: string[];
+  popupDescription: any;
 }
 
 export const PortfolioItem: React.FC<PortfolioItemProps> = (props) => {
   const [checkLive, setCheckLive] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
+
+  const openPopup = () => {
+    setIsOpen(true);
+  };
+
+  const closePopup = () => {
+    setIsOpen(false);
+  };
 
   const {
     imageUrl,
@@ -25,9 +42,12 @@ export const PortfolioItem: React.FC<PortfolioItemProps> = (props) => {
     isLive,
     buttonLive,
     buttonCode,
+    buttonInfo,
     linkLive,
     linkCode,
   } = props;
+
+  console.log(props);
 
   const handleCheckLiveView = () => {
     setCheckLive(!checkLive);
@@ -85,8 +105,16 @@ export const PortfolioItem: React.FC<PortfolioItemProps> = (props) => {
               {buttonCode}
             </div>
           </a>
+          <div
+            className="flex cursor-pointer gap-1 text-xs"
+            onClick={openPopup}
+          >
+            <FontAwesomeIcon icon={faCircleInfo} className="w-[.9rem]" />
+            {buttonInfo}
+          </div>
         </div>
       </div>
+      {isOpen && <PortfolioItemPopup onClosePopup={closePopup} {...props} />}
     </div>
   );
 };

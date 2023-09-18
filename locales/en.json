@@ -63,7 +63,14 @@
     "desc": "More projects coming soon...",
     "buttons": {
       "live": "Live view",
-      "code": "code"
+      "code": "code",
+      "info": "More info",
+      "close": "Close"
+    },
+    "projects": {
+      "balloon": {
+        "description": "It is an e-commerce web application developed with cutting-edge technologies. This platform, built with React.js for the frontend and Node.js with Express.js for the backend, represents a milestone in my career as a developer.\n\nThe application offers users the opportunity to book unique experiences throughout the peninsula. Our primary focus was to provide a seamless and personalized booking experience. We implemented a wide range of features, from a ticket reservation system to an advanced filter that allows users to search for activities by category, city, price range, and available dates.\n\nTo enhance the user experience, we integrated libraries such as React Date Picker to simplify date selection and React Responsive Carousel to present images and activity details attractively.\n\nThis project was an exciting challenge that allowed us to showcase our web development skills and create an application that simplifies the search and booking of experiences."
+      }
     }
   },
   "contact": {
