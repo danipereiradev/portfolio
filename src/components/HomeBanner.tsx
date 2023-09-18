@@ -2,7 +2,6 @@ import { useTranslation } from 'react-i18next';
 
 export const HomeBanner: React.FC = () => {
   const { t } = useTranslation();
-  console.log(t('greeting'));
 
   return (
     <section className="relative flex h-screen">
