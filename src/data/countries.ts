@@ -1,5 +1,26 @@
 export const countriesEU = [
   {
+    name: 'Spain',
+    areaCode: '+34',
+    countryCode: 'ES',
+    flag: '🇪🇸',
+    selected: true,
+    language: 'Esp',
+  },
+  {
+    name: 'United States',
+    areaCode: '+1',
+    countryCode: 'US',
+    flag: '🇺🇸',
+  },
+  {
+    name: 'United Kingdom',
+    areaCode: '+44',
+    countryCode: 'GB',
+    flag: '🇬🇧',
+    language: 'Eng',
+  },
+  {
     name: 'Antigua and Barbuda',
     areaCode: '+1-268',
     countryCode: 'AG',
@@ -191,12 +212,7 @@ export const countriesEU = [
     countryCode: 'TT',
     flag: '🇹🇹',
   },
-  {
-    name: 'United States',
-    areaCode: '+1',
-    countryCode: 'US',
-    flag: '🇺🇸',
-  },
+
   {
     name: 'Uruguay',
     areaCode: '+598',
@@ -449,14 +465,7 @@ export const countriesEU = [
     countryCode: 'SI',
     flag: '🇸🇮',
   },
-  {
-    name: 'Spain',
-    areaCode: '+34',
-    countryCode: 'ES',
-    flag: '🇪🇸',
-    selected: true,
-    language: 'Esp',
-  },
+
   {
     name: 'Sweden',
     areaCode: '+46',
@@ -475,13 +484,7 @@ export const countriesEU = [
     countryCode: 'UA',
     flag: '🇺🇦',
   },
-  {
-    name: 'United Kingdom',
-    areaCode: '+44',
-    countryCode: 'GB',
-    flag: '🇬🇧',
-    language: 'Eng',
-  },
+
   {
     name: 'Vatican City',
     areaCode: '+379',

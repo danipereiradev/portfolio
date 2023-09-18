@@ -82,11 +82,15 @@ export const Form = () => {
                 className="w-1/4 appearance-none border border-slate-900 bg-black py-4 px-2 placeholder-slate-700"
                 name="areaCode"
                 required
+                defaultValue={countriesEU.findIndex(
+                  (country) => country.countryCode === 'ES'
+                )}
               >
                 {countriesEU.map((country) => (
                   <option key={uuidv4()} value={country.areaCode}>
                     {country.flag + ' '}
-                    {country.countryCode}({country.areaCode})
+                    {country.countryCode}
+                    {country.areaCode}
                   </option>
                 ))}
               </select>
