@@ -26,7 +26,7 @@ interface PortfolioItemProps {
 
 export const PortfolioItem: React.FC<PortfolioItemProps> = (props) => {
   const [checkLive, setCheckLive] = useState(false);
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const openPopup = () => {
     setIsOpen(true);
