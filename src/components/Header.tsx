@@ -149,6 +149,7 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
                   value={i18n.language}
                 >
                   <option value="en">En</option>
+                  <option value="gl">Gl</option>
                   <option value="es">Es</option>
                 </select>
 
