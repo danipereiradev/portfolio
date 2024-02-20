@@ -10,12 +10,12 @@ export const Portfolio = () => {
   const portfolioData = [
     {
       id: 1,
-      title: 'AI FITNESS APP',
+      title: 'FEEL-FIT APP',
       buttonLive: t('portfolio.buttons.live').toUpperCase(),
       buttonCode: t('portfolio.buttons.code').toUpperCase(),
       buttonInfo: t('portfolio.buttons.info').toUpperCase(),
       isLive: false,
-      imageUrl: '/fitness_construction.jpg',
+      imageUrl: '/feelfit.png',
       description: 'Lorem ipsum',
       techLogos: ['/js.png', '/react.png'],
       linkLive: '/',
