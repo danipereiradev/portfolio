@@ -47,7 +47,7 @@ export const About = () => {
             alt="about me picture"
           />
         </div>
-        <div className="flex flex-col text-center  md:w-[50%]">
+        <div className="flex flex-col text-center text-white  md:w-[50%]">
           {textWithLineBreaks}
         </div>
       </div>

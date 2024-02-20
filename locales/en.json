@@ -10,7 +10,7 @@
     "modalThemeLight": "I'm working on a lighter theme, meanwhile, let's keep the lights off"
   },
   "homeBanner": {
-    "title": "Frontend web developer",
+    "title": "Frontend Web Developer",
     "description": "I am working on my new portfolio and I will be back with brand new styles very soon!"
   },
   "cv": {
@@ -19,10 +19,12 @@
     "highschool": "Highschool",
     "workExperienceTitle": "Work experience",
     "workExperience": {
-      "title1": "Frontend Software developer",
+      "title1": "Frontend Software Developer",
       "desc1": "Developed and maintained user-friendly and responsive web applications using React.js, Typescript and Vanilla Js. Collaborated closely with designers and backend developers to implement seamless user experiences.",
-      "title2": "Web designer",
-      "desc2": "Designed and developed websites and e-commerce sites using WordPress and PrestaShop. Ensured cross-browser compatibility and responsiveness in site designs. Collaborated with clients to gather requirements and provide solutions for their online presence needs."
+      "title2": "Frontend Software Developer",
+      "desc2": "Hired for a limited duration for the migration from jQuery to React for an entire E-commerce App. Ensuring project completion with enhanced efficiency and sustainability.",
+      "title3": "Web designer",
+      "desc3": "Designed and developed websites and e-commerce sites using WordPress and PrestaShop. Ensured cross-browser compatibility and responsiveness in site designs. Collaborated with clients to gather requirements and provide solutions for their online presence needs."
     },
     "skills": {
       "title": "Skills",
@@ -70,6 +72,9 @@
     "projects": {
       "balloon": {
         "description": "It is an e-commerce web application developed with cutting-edge technologies. This platform, built with React.js for the frontend and Node.js with Express.js for the backend, represents a milestone in my career as a developer.\n\nThe application offers users the opportunity to book unique experiences throughout the peninsula. Our primary focus was to provide a seamless and personalized booking experience. We implemented a wide range of features, from a ticket reservation system to an advanced filter that allows users to search for activities by category, city, price range, and available dates.\n\nTo enhance the user experience, we integrated libraries such as React Date Picker to simplify date selection and React Responsive Carousel to present images and activity details attractively.\n\nThis project was an exciting challenge that allowed us to showcase our web development skills and create an application that simplifies the search and booking of experiences."
+      },
+      "fitness": {
+        "description": ""
       }
     }
   },

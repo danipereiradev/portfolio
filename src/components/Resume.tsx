@@ -16,6 +16,7 @@ const CV: React.FC = () => {
     date: string;
     endDate: string;
     responsibilities: string;
+    link?: string;
   }
 
   interface Skill {
@@ -35,17 +36,26 @@ const CV: React.FC = () => {
   const workExperience: WorkExperience[] = [
     {
       title: t('cv.workExperience.title1'),
-      company: 'Babel sistemas',
+      company: 'Babel Sistemas de Información',
       date: '2022-07-01',
-      endDate: new Date().toISOString().split('T')[0],
+      endDate: '2024-01-12',
       responsibilities: t('cv.workExperience.desc1'),
+      link: 'https://www.babelgroup.com/',
     },
     {
       title: t('cv.workExperience.title2'),
+      company: 'Grupo Reprogalicia',
+      date: '2022-03-01',
+      endDate: '2022-06-01',
+      responsibilities: t('cv.workExperience.desc2'),
+      link: 'https://www.linkedin.com/company/grupo-reprogalicia/about/',
+    },
+    {
+      title: t('cv.workExperience.title3'),
       company: 'Pg Webs',
       date: '2015-01-01',
       endDate: '2021-06-01',
-      responsibilities: t('cv.workExperience.desc2'),
+      responsibilities: t('cv.workExperience.desc3'),
     },
   ];
 
@@ -74,8 +84,8 @@ const CV: React.FC = () => {
       skills: [
         t('cv.skills.subtitle2.skill1'),
         t('cv.skills.subtitle2.skill2'),
-        t('cv.skills.subtitle2.skill3'),
         t('cv.skills.subtitle2.skill4'),
+        t('cv.skills.subtitle2.skill3'),
       ],
       border: true,
     },
@@ -124,27 +134,27 @@ const CV: React.FC = () => {
 
   return (
     <section
-      id="cv"
-      className="container mx-auto flex  w-5/6 flex-col  justify-evenly py-28"
+      id='cv'
+      className='container mx-auto flex  w-5/6  flex-col justify-evenly  py-28 text-white'
     >
-      <h2 className="font- text-center text-2xl tracking-widest ">
+      <h2 className='font- text-center text-2xl tracking-widest '>
         {t('cv.title').toUpperCase()}
       </h2>
-      <h3 className="mt-6 mb-2 text-lg font-bold text-slate-200">
+      <h3 className='mt-6 mb-2 text-lg font-bold text-slate-200'>
         {t('cv.education')}
       </h3>
-      <div className="grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2">
+      <div className='grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2'>
         {education.map((educ, index) => (
-          <div key={index} className="rounded-lg border-2 border-slate-900 p-4">
-            <h3 className="text-md mb-2 font-semibold">
-              <span className="text-lg ">{educ.degree}</span> <br></br>
+          <div key={index} className='rounded-lg border-2 border-slate-900 p-4'>
+            <h3 className='text-md mb-2 font-semibold'>
+              <span className='text-lg '>{educ.degree}</span> <br></br>
               {educ.school} <br></br>
-              <span className="text-zinc-500"> {educ.date}</span>{' '}
+              <span className='text-zinc-500'> {educ.date}</span>{' '}
             </h3>
           </div>
         ))}
       </div>
-      <h3 className="mt-6 mb-2 text-lg font-bold text-slate-200">
+      <h3 className='mt-6 mb-2 text-lg font-bold text-slate-200'>
         {t('cv.workExperienceTitle')}
         {' (' +
           totalYearsOfExperience.toFixed(0) +
@@ -152,36 +162,45 @@ const CV: React.FC = () => {
           t('others.years') +
           ')'}
       </h3>
-      <div className="grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2">
+      <div className='grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2'>
         {workExperience.map((job, index) => (
-          <div key={index} className="rounded-lg border-2 border-slate-900 p-4">
-            <h3 className="text-md mb-2 font-semibold">
-              <span className="text-lg">{job.title}</span> <br></br>
-              {job.company} <br></br>
-              <span className="text-zinc-500">
+          <div key={index} className='rounded-lg border-2 border-slate-900 p-4'>
+            <h3 className='text-md mb-2 font-semibold'>
+              {' '}
+              <span className='text-lg'>{job.title}</span>
+              <br></br>
+              <a
+                href={job.link}
+                target='blank'
+                className='hover:text-[#2dd4bf]'
+              >
+                {job.company}{' '}
+              </a>
+              <br></br>
+              <span className='text-zinc-500'>
                 {' '}
                 {job.date} / {job.endDate}
               </span>{' '}
             </h3>
 
-            <p className="mt-4 list-none ">{job.responsibilities}</p>
+            <p className='mt-4 list-none '>{job.responsibilities}</p>
           </div>
         ))}
       </div>
 
-      <h2 className="mt-6 mb-2 text-lg font-bold text-slate-200">
+      <h2 className='mt-6 mb-2 text-lg font-bold text-slate-200'>
         {t('cv.skills.title')}
       </h2>
-      <div className="grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2">
+      <div className='grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2'>
         {skills.map((skillCategory, index) => (
           <div
             key={index}
-            className="transform rounded-lg border-2 border-slate-900 p-4"
+            className='transform rounded-lg border-2 border-slate-900 p-4'
           >
-            <h3 className="text-md mb-2 font-semibold">
+            <h3 className='text-md mb-2 font-semibold'>
               {skillCategory.category}
             </h3>
-            <ul className="flex flex-wrap">
+            <ul className='flex flex-wrap'>
               {skillCategory.skills
                 .slice() // Create a copy of the skills array
                 .sort((a, b) => a.length - b.length) // Sort the skills within the array based on length

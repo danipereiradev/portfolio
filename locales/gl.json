@@ -21,8 +21,10 @@
     "workExperience": {
       "title1": "Desenvolvedor de software front-end",
       "desc1": "Desenvolver e manter interfaces de usuario e aplicacións web responsivas utilizando Javascript, typescript e bibliotecas frontend como ReactJS, colaborando de forma cercana con deseñadores UX/UI e desenvolvedores back-end para implementar experiencias de usuario sólidas e eficientes.",
-      "title2": "Deseñador web",
-      "desc2": "Deseñar e desenvolver páxinas web con Wordpress e Prestashop, garantindo a compatibilidade entre navegadores e a capacidade de resposta dos sitios web, colaborando co cliente para recoller os requisitos e ofrecer solucións ás súas necesidades e mellorar a súa presenza en liña."
+      "title2": "Desenvolvedor de Software Frontend",
+      "desc2": "Contratado por un período limitado para a migración de jQuery a React para toda unha Aplicación de Comercio Electrónico. Garantindo a finalización do proxecto cunha maior eficiencia e sustentabilidade.",
+      "title3": "Deseñador web",
+      "desc3": "Deseñar e desenvolver páxinas web con Wordpress e Prestashop, garantindo a compatibilidade entre navegadores e a capacidade de resposta dos sitios web, colaborando co cliente para recoller os requisitos e ofrecer solucións ás súas necesidades e mellorar a súa presenza en liña."
     },
     "skills": {
       "title": "Habilidades",
@@ -70,6 +72,9 @@
     "projects": {
       "balloon": {
         "description": "É unha aplicación web de comercio electrónico desenvolvida con tecnoloxías de vangarda. Esta plataforma, construída con React.js para o frontend e Node.js con Express.js para o backend, representa un fito na miña carreira como desenvolvedor.\n\nA aplicación ofrece aos usuarios a oportunidade de reservar experiencias únicas en toda a península. O noso principal enfoque foi proporcionar unha experiencia de reserva sinxela e personalizada. Implementamos unha ampla gama de funcionalidades, desde un sistema de reserva de entradas ata un filtro avanzado que permite aos usuarios buscar actividades por categoría, cidade, rango de prezo e datas dispoñibles.\n\nPara mellorar a experiencia do usuario, integráronse bibliotecas como o React Date Picker para simplificar a selección de datas e o React Responsive Carousel para presentar imaxes e detalles das actividades de forma atractiva.\n\nEste proxecto foi un emocionante desafío que nos permitiu amosar as nosas habilidades de desenvolvemento web e crear unha aplicación que simplifica a busca e reserva de experiencias."
+      },
+      "fitness": {
+        "description": ""
       }
     }
   },
