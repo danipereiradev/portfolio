@@ -78,38 +78,38 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
   }, [showDropdown]);
 
   return (
-    <header className="fixed top-0 z-20 flex w-screen items-center justify-center bg-black px-12 lg:px-0">
-      <div className="container flex w-5/6 items-center justify-between py-7 lg:py-5">
-        <Link href="/">
-          <div className="flex items-center gap-2">
+    <header className='fixed top-0 z-20 flex w-screen items-center justify-center bg-black px-12 lg:px-0'>
+      <div className='container flex w-5/6 items-center justify-between py-7 lg:py-5'>
+        <Link href='/'>
+          <div className='flex items-center gap-2'>
             <Image
               style={{ filter: 'invert(1)' }}
-              src="/code.png"
-              alt="icon Logo danipereira.dev"
+              src='/code.png'
+              alt='icon Logo danipereira.dev'
               width={25}
               height={25}
               priority
             />
             <h1
-              className="font-
+              className='font-
               items-center bg-gradient-to-r from-white
-  to-teal-400 bg-clip-text pt-2 font-Arcade text-3xl uppercase tracking-wider text-transparent "
+  to-teal-400 bg-clip-text pt-2 font-Arcade text-3xl uppercase tracking-wider text-transparent '
             >
-              DPDEV
+              DANIPEREIRA.ES
             </h1>
           </div>
         </Link>
 
-        <div className="flex flex-col items-center justify-center">
+        <div className='flex flex-col items-center justify-center'>
           {!showDropdown ? (
             <GiHamburgerMenu
               size={24}
-              className="cursor-pointer hover:text-slate-400 lg:hidden"
+              className='cursor-pointer hover:text-slate-400 lg:hidden'
               onClick={() => setShowDropDown((prevState) => !prevState)}
             />
           ) : (
             <IoMdClose
-              className="cursor-pointer hover:text-slate-400 lg:hidden"
+              className='cursor-pointer hover:text-slate-400 lg:hidden'
               onClick={() => setShowDropDown((prevState) => !prevState)}
               size={30}
             />
@@ -117,57 +117,57 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
 
           {showDropdown && <DropdownMenu onShowDropDown={setShowDropDown} />}
 
-          <nav className="text-md hidden items-center justify-center font-bold text-slate-200 lg:flex">
-            <div className="mr-16 flex">
+          <nav className='text-md hidden items-center justify-center font-bold text-slate-200 lg:flex'>
+            <div className='mr-16 flex'>
               <a
-                className="cursor-pointer px-4 uppercase"
+                className='cursor-pointer px-4 uppercase'
                 onClick={() => smoothScroll('cv')}
               >
                 {t('menu.cv')}
               </a>
               <a
-                className="cursor-pointer px-4 uppercase"
+                className='cursor-pointer px-4 uppercase'
                 onClick={() => smoothScroll('about')}
               >
                 {t('menu.about')}
               </a>
               <a
-                className="cursor-pointer px-4 uppercase"
+                className='cursor-pointer px-4 uppercase'
                 onClick={() => smoothScroll('portfolio')}
               >
                 {t('menu.Portfolio')}
               </a>
               <a
-                className="cursor-pointer px-4 uppercase"
+                className='cursor-pointer px-4 uppercase'
                 onClick={() => smoothScroll('contact')}
               >
                 {t('menu.Contact')}
               </a>
             </div>
 
-            <div className="flex flex-col items-center gap-4">
-              <div className="relative flex  items-center gap-2">
+            <div className='flex flex-col items-center gap-4'>
+              <div className='relative flex  items-center gap-2'>
                 <select
-                  name="language"
-                  id="language"
+                  name='language'
+                  id='language'
                   onChange={handleLanguageChange}
-                  className="relative h-8 bg-black text-sm font-normal uppercase"
+                  className='relative h-8 bg-black text-sm font-normal uppercase'
                   value={i18n.language}
                 >
-                  <option value="en">En</option>
-                  <option value="gl">Gl</option>
-                  <option value="es">Es</option>
+                  <option value='en'>En</option>
+                  <option value='gl'>Gl</option>
+                  <option value='es'>Es</option>
                 </select>
 
                 {showModal && (
-                  <Modal className="absolute top-4"> {modalData}</Modal>
+                  <Modal className='absolute top-4'> {modalData}</Modal>
                 )}
 
                 <select
                   onChange={handleThemeChange}
-                  className=" relative h-8  bg-black text-sm font-normal uppercase"
-                  id="theme"
-                  name="theme"
+                  className=' relative h-8  bg-black text-sm font-normal uppercase'
+                  id='theme'
+                  name='theme'
                   value={selectedTheme}
                 >
                   <option>Light</option>
@@ -175,7 +175,7 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
                 </select>
 
                 {showModal && (
-                  <Modal className="absolute top-4"> {modalData}</Modal>
+                  <Modal className='absolute top-4'> {modalData}</Modal>
                 )}
               </div>
             </div>
