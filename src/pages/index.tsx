@@ -12,12 +12,12 @@ export default function App() {
   };
 
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className='flex min-h-screen flex-col'>
       <Head>
-        <title>DPDEV</title>
-        <meta name="description" content="Frontend Software Engineer" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/code2.png" />
+        <title>DPEREIRA.ES</title>
+        <meta name='description' content='Frontend Software Engineer' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <link rel='icon' href='/code2.png' />
       </Head>
       <Header ischecked={ischecked} onToggleThemeMode={HandletoggleThemeMode} />
       <Main />
