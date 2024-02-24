@@ -27,6 +27,11 @@ const CV: React.FC = () => {
 
   const education: Education[] = [
     {
+      degree: t('cv.university'),
+      school: 'Universidad de León',
+      date: '2015-06-19',
+    },
+    {
       degree: t('cv.highschool'),
       school: 'I.E.S Do Castro (Vigo, GAL)',
       date: '2001-09-01 / 2005-06-01',

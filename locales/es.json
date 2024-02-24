@@ -10,13 +10,14 @@
     "modalThemeLight": "Estoy trabajando en un tema mas claro! Por el momento dejemos las luces apagadas"
   },
   "homeBanner": {
-    "title": "Desarrollador web frontend",
+    "title": "Desarrollador de Software Frontend",
     "description": "Estoy trabajando en mi nuevo portfolio y muy pronto estaré de vuelta con nuevos proyectos!"
   },
   "cv": {
     "title": "Curriculum",
     "education": "Estudios",
     "highschool": "Instituto E.S.O",
+    "university": "Universidad (+25)",
     "workExperienceTitle": "Experiencia Laboral",
     "workExperience": {
       "title1": "Desarrollador de Software Frontend",

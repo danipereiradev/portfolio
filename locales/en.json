@@ -10,13 +10,14 @@
     "modalThemeLight": "I'm working on a lighter theme, meanwhile, let's keep the lights off"
   },
   "homeBanner": {
-    "title": "Frontend Web Developer",
+    "title": "Frontend Software Developer",
     "description": "I am working on my new portfolio and I will be back with brand new styles very soon!"
   },
   "cv": {
     "title": "Resume",
     "education": "Education",
     "highschool": "Highschool",
+    "university": "University (+25)",
     "workExperienceTitle": "Work experience",
     "workExperience": {
       "title1": "Frontend Software Developer",
