@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { FaRegFilePdf } from 'react-icons/fa6';
 
 const CV: React.FC = () => {
   const { t } = useTranslation();
@@ -142,9 +143,19 @@ const CV: React.FC = () => {
       id='cv'
       className='container mx-auto flex  w-5/6  flex-col justify-evenly  py-28 text-white'
     >
+      {' '}
       <h2 className='font- text-center text-2xl tracking-widest '>
         {t('cv.title').toUpperCase()}
       </h2>
+      <div>
+        <a
+          className='flex items-center justify-center gap-2 text-[#2dd4bf] underline'
+          href='/dani_pereira_cv_24.pdf'
+          download
+        >
+          <FaRegFilePdf /> Download
+        </a>
+      </div>
       <h3 className='mt-6 mb-2 text-lg font-bold text-slate-200'>
         {t('cv.education')}
       </h3>
@@ -192,7 +203,6 @@ const CV: React.FC = () => {
           </div>
         ))}
       </div>
-
       <h2 className='mt-6 mb-2 text-lg font-bold text-slate-200'>
         {t('cv.skills.title')}
       </h2>
