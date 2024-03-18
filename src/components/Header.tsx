@@ -145,8 +145,8 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
               </a>
             </div>
 
-            <div className='flex flex-col items-center gap-4'>
-              <div className='relative flex  items-center gap-2'>
+            {/* <div className='relative flex flex-col items-center gap-4'>
+              <div className=' flex  items-center gap-2'>
                 <select
                   name='language'
                   id='language'
@@ -160,7 +160,10 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
                 </select>
 
                 {showModal && (
-                  <Modal className='absolute top-4'> {modalData}</Modal>
+                  <Modal className='absolute inset-0 top-0 left-[50px]'>
+                    {' '}
+                    {modalData}
+                  </Modal>
                 )}
 
                 <select
@@ -178,7 +181,7 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
                   <Modal className='absolute top-4'> {modalData}</Modal>
                 )}
               </div>
-            </div>
+            </div> */}
           </nav>
         </div>
       </div>

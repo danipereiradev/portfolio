@@ -17,6 +17,7 @@ const CV: React.FC = () => {
     date: string;
     endDate: string;
     responsibilities: string;
+    responsibilities2?: string;
     link?: string;
   }
 
@@ -46,6 +47,7 @@ const CV: React.FC = () => {
       date: '2022-07-01',
       endDate: '2024-01-12',
       responsibilities: t('cv.workExperience.desc1'),
+      responsibilities2: t('cv.workExperience.desc1-2'),
       link: 'https://www.babelgroup.com/',
     },
     {
@@ -54,6 +56,7 @@ const CV: React.FC = () => {
       date: '2022-03-01',
       endDate: '2022-06-01',
       responsibilities: t('cv.workExperience.desc2'),
+      responsibilities2: t('cv.workExperience.desc2-2'),
       link: 'https://www.linkedin.com/company/grupo-reprogalicia/about/',
     },
     {
@@ -62,6 +65,7 @@ const CV: React.FC = () => {
       date: '2015-01-01',
       endDate: '2021-06-01',
       responsibilities: t('cv.workExperience.desc3'),
+      responsibilities2: t('cv.workExperience.desc3-2'),
     },
   ];
 
@@ -149,7 +153,7 @@ const CV: React.FC = () => {
       </h2>
       <div>
         <a
-          className='flex items-center justify-center gap-2 text-[#2dd4bf] underline'
+          className='flex items-center justify-center text-[#2dd4bf] underline'
           href='/dani_pereira_cv_24.pdf'
           download
         >
@@ -200,6 +204,7 @@ const CV: React.FC = () => {
             </h3>
 
             <p className='mt-4 list-none '>{job.responsibilities}</p>
+            <p className='mt-4 list-none '>{job.responsibilities2}</p>
           </div>
         ))}
       </div>
@@ -217,8 +222,8 @@ const CV: React.FC = () => {
             </h3>
             <ul className='flex flex-wrap'>
               {skillCategory.skills
-                .slice() // Create a copy of the skills array
-                .sort((a, b) => a.length - b.length) // Sort the skills within the array based on length
+                .slice()
+                .sort((a, b) => a.length - b.length)
                 .map((skill) => (
                   <li
                     className={

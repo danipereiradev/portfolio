@@ -21,11 +21,16 @@
     "workExperienceTitle": "Work experience",
     "workExperience": {
       "title1": "Frontend Software Developer",
-      "desc1": "Developed and maintained user-friendly and responsive web applications using React.js, Typescript and Vanilla Js. Collaborated closely with designers and backend developers to implement seamless user experiences.",
+      "desc1": "Achievements: Collaborated with senior developers to refactor and optimize codebase, resulting in a notable reduction in page load times and improved overall user experience.",
+      "desc1-2": "Implemented responsive design features and accessibility improvements, leading to a big increase in mobile user engagement and positive user feedback on usability.",
       "title2": "Frontend Software Developer",
-      "desc2": "Hired for a limited duration for the migration from jQuery to React for an entire E-commerce App. Ensuring project completion with enhanced efficiency and sustainability.",
+      "desc2": "Achievements: Worked closely with the development team to migrate UI components from jQuery to React, contributing to a modernized codebase and enhanced maintainability.",
+      "desc2-2": "Assisted in the integration of RESTful APIs into frontend components, improving data fetching processes and contributing to a more seamless user experience.",
+
       "title3": "Web designer",
-      "desc3": "Designed and developed websites and e-commerce sites using WordPress and PrestaShop. Ensured cross-browser compatibility and responsiveness in site designs. Collaborated with clients to gather requirements and provide solutions for their online presence needs."
+      "desc3": "Achievements: Designed and implemented responsive website layouts using HTML5, CSS3 (including Sass), and Bootstrap, ensuring cross-browser compatibility and mobile responsiveness.",
+
+      "desc3-2": "Collaborated with clients to understand their design preferences and requirements, delivering visually appealing and functional websites that met their needs and received positive feedback."
     },
     "skills": {
       "title": "Skills",
@@ -46,7 +51,7 @@
     "degrees": {
       "title": "Degrees & Certificates",
       "subtitle1": "International English Language Testing System (2012) ",
-      "subtitle2": "Fullstack Mern bootcamp (480 hours)",
+      "subtitle2": "Fullstack BootCamp width NodeJs and Express (480 hours)",
       "subtitle3": "Using TypeScript with React by Dmytro Danylov",
       "subtitle4": "The Ultimate React Course 2023: React, Redux & More by Jonas Schmedtmann (160 hours)"
     },
@@ -76,6 +81,9 @@
       },
       "fitness": {
         "description": ""
+      },
+      "elefantes": {
+        "description": "Customized Genesis Framework: Utilizing the Genesis framework allowed for the creation of a bespoke and lightweight design without themes or page builders, optimizing performance and ensuring a seamless user experience across various devices.\n\nUnique Design Elements: Designed captivating hero sections showcasing memorable travel moments and crafted navigation menus that guide users through enchanting destinations, reflecting the adventurous spirit of the family's journeys.\n\nInteractive Maps and Location Insights: Implemented interactive maps highlighting the family's global travels, accompanied by travel tips and location-based anecdotes to engage and inspire visitors.\n\nDynamic Custom Fields: Integrated dynamic custom fields using PHP to facilitate content management, enabling the family bloggers to effortlessly curate and share their immersive travel stories.\n\nWordPress REST API Integration: Leveraged the WordPress REST API to enhance the blog's functionality, enabling real-time updates, improved search capabilities, and efficient data retrieval for an enriched user experience.\n\nPerformance Optimization: Optimized website performance to ensure fast loading times, seamless navigation, and impeccable responsiveness, providing a delightful browsing experience for visitors worldwide.\n\nEngaging Multimedia Experiences: Created captivating travel narratives with stunning visuals, immersive galleries, and compelling videos, transporting visitors to unique destinations and memorable adventures."
       }
     }
   },

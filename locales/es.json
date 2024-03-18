@@ -76,6 +76,9 @@
       },
       "fitness": {
         "description": ""
+      },
+      "elefantes": {
+        "description": "Customized Genesis Framework: Utilizing the Genesis framework allowed for the creation of a bespoke and lightweight design without themes or page builders, optimizing performance and ensuring a seamless user experience across various devices.\n\nUnique Design Elements: Designed captivating hero sections showcasing memorable travel moments and crafted navigation menus that guide users through enchanting destinations, reflecting the adventurous spirit of the family's journeys.\n\nInteractive Maps and Location Insights: Implemented interactive maps highlighting the family's global travels, accompanied by travel tips and location-based anecdotes to engage and inspire visitors.\n\nDynamic Custom Fields: Integrated dynamic custom fields using PHP to facilitate content management, enabling the family bloggers to effortlessly curate and share their immersive travel stories.\n\nWordPress REST API Integration: Leveraged the WordPress REST API to enhance the blog's functionality, enabling real-time updates, improved search capabilities, and efficient data retrieval for an enriched user experience.\n\nPerformance Optimization: Optimized website performance to ensure fast loading times, seamless navigation, and impeccable responsiveness, providing a delightful browsing experience for visitors worldwide.\n\nEngaging Multimedia Experiences: Created captivating travel narratives with stunning visuals, immersive galleries, and compelling videos, transporting visitors to unique destinations and memorable adventures."
       }
     }
   },
