@@ -81,12 +81,12 @@ export const DropdownMenu: React.FC<dropdownProps> = ({ onShowDropDown }) => {
   };
 
   return (
-    <div className="my-dropdown absolute left-0 top-24 z-10 flex h-screen w-screen flex-col items-center justify-start  bg-black py-12  ">
+    <div className='my-dropdown absolute left-0 top-24 z-10 flex h-screen w-screen flex-col items-center justify-start  bg-black py-12  '>
       <OutsideClickHandler onOutsideClick={handleOutsideClick}>
-        <div className="flex flex-col items-center">
-          <nav className="my-dropdown2 flex flex-col gap-6 text-center text-2xl font-bold text-slate-200">
+        <div className='flex flex-col items-center'>
+          <nav className='my-dropdown2 flex flex-col gap-6 text-center text-2xl font-bold text-slate-200'>
             <a
-              className="font- w-screen cursor-pointer py-8 uppercase"
+              className='font- w-screen cursor-pointer py-8 uppercase'
               onClick={() => {
                 smoothScroll('cv');
                 handleOutsideClick();
@@ -95,7 +95,7 @@ export const DropdownMenu: React.FC<dropdownProps> = ({ onShowDropDown }) => {
               {t('menu.cv')}
             </a>
             <a
-              className="font- w-screen cursor-pointer   items-center py-8 uppercase"
+              className='font- w-screen cursor-pointer   items-center py-8 uppercase'
               onClick={() => {
                 smoothScroll('portfolio');
                 handleOutsideClick();
@@ -104,7 +104,7 @@ export const DropdownMenu: React.FC<dropdownProps> = ({ onShowDropDown }) => {
               {t('menu.Portfolio')}
             </a>
             <a
-              className="font- w-screen  cursor-pointer py-8 uppercase"
+              className='font- w-screen  cursor-pointer py-8 uppercase'
               onClick={() => {
                 smoothScroll('contact');
                 handleOutsideClick();
@@ -113,33 +113,33 @@ export const DropdownMenu: React.FC<dropdownProps> = ({ onShowDropDown }) => {
               {t('menu.Contact')}
             </a>
           </nav>
-          <div className="flex w-screen cursor-pointer items-center justify-center gap-4 py-8 py-8 uppercase">
+          <div className='flex w-screen cursor-pointer items-center justify-center gap-4 py-8 py-8 uppercase'>
             {showModal && (
-              <Modal className="absolute top-12"> {modalData}</Modal>
+              <Modal className='absolute top-12'> {modalData}</Modal>
             )}
             <div
-              className="flex items-center
-            "
+              className='flex items-center
+            '
             >
               <select
-                name="language"
-                id="language"
+                name='language'
+                id='language'
                 onChange={handleLanguageChange}
-                className="relative h-8 bg-black text-sm font-normal uppercase"
+                className='relative h-8 bg-black text-sm font-normal uppercase'
                 value={i18n.language}
               >
-                <option value="es">Es</option>
-                <option value="gl">Gl</option>
-                <option value="en">En</option>
+                <option value='es'>Es</option>
+                <option value='gl'>Gl</option>
+                <option value='en'>En</option>
               </select>
             </div>
 
-            <div className="flex items-center">
+            <div className='flex items-center'>
               <select
                 onChange={handleThemeChange}
-                className=" h-8 bg-black"
-                id="theme"
-                name="theme"
+                className=' h-8 bg-black'
+                id='theme'
+                name='theme'
                 value={selectedTheme}
               >
                 <option>Light</option>

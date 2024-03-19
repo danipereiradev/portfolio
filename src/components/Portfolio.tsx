@@ -70,6 +70,7 @@ export const Portfolio = () => {
       <h3 className='mt-6 mb-2 text-center text-lg font-bold text-slate-200'>
         {t('portfolio.desc')}
       </h3>
+
       {/*  <Loader /> */}
       <div className='portfolio-container flex flex-col  p-8 md:flex-row md:gap-8'>
         {thingsToMap}
