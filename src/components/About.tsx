@@ -26,7 +26,7 @@ export const About = () => {
       <div className=' flex flex-col items-center  md:flex-row-reverse md:gap-16'>
         <div className=' mb-8 flex flex-col gap-4  rounded md:w-[30%] md:items-center'>
           <Image
-            className='about-image cover pointer-events-none z-20 scale-x-[-1] transform object-cover  opacity-70'
+            className='about-image cover pointer-events-none scale-x-[-1] transform object-cover  opacity-70'
             src='/dani-bob-falla3.png'
             width={500}
             height={300}
