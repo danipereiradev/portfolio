@@ -154,7 +154,7 @@ const CV: React.FC = () => {
       <div>
         <a
           className='flex items-center justify-center text-[#2dd4bf] underline'
-          href='/DANI_CV.pdf'
+          href='/DANI_CV_2024.pdf'
           download
         >
           <FaRegFilePdf /> Download
