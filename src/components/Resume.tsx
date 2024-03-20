@@ -173,7 +173,7 @@ const CV: React.FC = () => {
             <h3
               className='bg-clip-text
                     pt-2 uppercase
-          tracking-widest text-teal-300 '
+          tracking-widest text-teal-200 '
             >
               <span className='text-lg '>{educ.degree}</span> <br></br>
               {educ.school} <br></br>
@@ -196,7 +196,7 @@ const CV: React.FC = () => {
             <h3
               className='bg-clip-text
                     pt-2 uppercase
-          tracking-widest text-teal-300 '
+          tracking-widest text-teal-200 '
             >
               {' '}
               <span className='text-lg'>{job.title}</span>
@@ -240,7 +240,7 @@ const CV: React.FC = () => {
                   <li
                     className={`pt-2
                      uppercase
-          tracking-widest text-teal-300
+          tracking-widest text-teal-200
                       ${skillCategory.border}
                         ? 'mr-4 text-gray-400' : 'mr-4 text-gray-400' mb-2 mb-2 min-w-[3rem] list-none
                         list-none border border-slate-900 px-4 py-[4px] py-[4px]
