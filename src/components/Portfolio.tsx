@@ -64,7 +64,11 @@ export const Portfolio = () => {
       id='portfolio'
       className='lg:w-3/3 container mx-auto flex flex-col items-center justify-center'
     >
-      <h2 className='font- text-center text-2xl tracking-widest'>
+      <h2
+        className='items-center bg-gradient-to-r from-white
+              to-teal-400 bg-clip-text pt-2
+  text-center font-Arcade  text-4xl uppercase tracking-widest text-transparent'
+      >
         {t('portfolio.title').toUpperCase()}
       </h2>
       <h3 className='mt-6 mb-2 text-center text-lg font-bold text-slate-200'>

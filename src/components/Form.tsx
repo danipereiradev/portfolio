@@ -29,18 +29,18 @@ export const Form = () => {
 
   if (state.succeeded && showSuccess) {
     return (
-      <section className="container mx-auto flex w-5/6 flex-col justify-center py-28">
-        <h2 className="text-center text-2xl tracking-widest">
+      <section className='container mx-auto flex w-5/6 flex-col justify-center py-28'>
+        <h2 className='text-center text-2xl tracking-widest'>
           Thanks! Your message was sent successfully
         </h2>
-        <h3 className="mt-6 mb-2 text-center text-lg font-bold text-slate-200">
+        <h3 className='mt-6 mb-2 text-center text-lg font-bold text-slate-200'>
           I will get back to you as soon as possible.
         </h3>
       </section>
     );
   } else if (state.errors) {
-    <section className="container mx-auto flex w-5/6 flex-col justify-center py-28">
-      <h2 className="text-center text-3xl tracking-widest">
+    <section className='container mx-auto flex w-5/6 flex-col justify-center py-28'>
+      <h2 className='text-center text-3xl tracking-widest'>
         There was an error, please try again in a few minutes.
       </h2>
     </section>;
@@ -48,39 +48,43 @@ export const Form = () => {
 
   return (
     <section
-      id="contact"
-      className="container mx-auto flex w-5/6 flex-col justify-center py-28"
+      id='contact'
+      className='container mx-auto flex w-5/6 flex-col justify-center py-28'
     >
-      <h2 className="font- text-center text-2xl tracking-widest">
+      <h2
+        className='items-center bg-gradient-to-r from-white
+              to-teal-400 bg-clip-text pt-2
+  text-center font-Arcade  text-4xl uppercase tracking-widest text-transparent'
+      >
         {t('contact.title').toUpperCase()}
       </h2>
-      <h3 className="mt-6 mb-2 text-center text-lg font-bold text-slate-200">
+      <h3 className='mt-6 mb-2 text-center text-lg font-bold text-slate-200'>
         {t('contact.desc')}
       </h3>
-      <div className="form-container py-8 ">
+      <div className='form-container py-8 '>
         <form
           onSubmit={handleSubmitForm}
-          className=" justify-center-center container flex flex-1 flex-col items-center  gap-4 "
+          className=' justify-center-center container flex flex-1 flex-col items-center  gap-4 '
         >
-          <div className="name flex w-full grow flex-col  text-center md:w-4/6">
+          <div className='name flex w-full grow flex-col  text-center md:w-4/6'>
             <input
-              id="name"
-              name="name"
-              type="text"
-              className=" border border-slate-900 bg-black py-4 px-2 placeholder-gray-700"
+              id='name'
+              name='name'
+              type='text'
+              className=' border border-slate-900 bg-black py-4 px-2 placeholder-gray-700'
               placeholder={t('contact.form.name')}
               required
             />
-            <ValidationError prefix="name" field="name" errors={state.errors} />
+            <ValidationError prefix='name' field='name' errors={state.errors} />
           </div>
-          <div className="tel flex w-full grow flex-col  text-center md:w-4/6">
+          <div className='tel flex w-full grow flex-col  text-center md:w-4/6'>
             <div
-              className="
-           flex"
+              className='
+           flex'
             >
               <select
-                className="w-1/4 appearance-none border border-slate-900 bg-black py-4 px-2 placeholder-slate-700"
-                name="areaCode"
+                className='w-1/4 appearance-none border border-slate-900 bg-black py-4 px-2 placeholder-slate-700'
+                name='areaCode'
                 required
                 defaultValue={countriesEU.findIndex(
                   (country) => country.countryCode === 'ES'
@@ -95,66 +99,66 @@ export const Form = () => {
                 ))}
               </select>
               <input
-                id="phone"
-                name="phone"
-                type="tel"
-                className="border border-slate-900 bg-black py-4 px-2 placeholder-slate-700 md:w-[85%]"
+                id='phone'
+                name='phone'
+                type='tel'
+                className='border border-slate-900 bg-black py-4 px-2 placeholder-slate-700 md:w-[85%]'
                 placeholder={t('contact.form.phone')}
                 required
               />
             </div>
             <ValidationError
-              prefix="phone"
-              field="phone"
+              prefix='phone'
+              field='phone'
               errors={state.errors}
             />
           </div>
-          <div className="email flex w-full grow flex-col text-center md:w-4/6">
+          <div className='email flex w-full grow flex-col text-center md:w-4/6'>
             <input
-              id="email"
-              name="email"
-              className="border border-slate-900 bg-black py-4 px-2 placeholder-slate-700"
-              type="email"
+              id='email'
+              name='email'
+              className='border border-slate-900 bg-black py-4 px-2 placeholder-slate-700'
+              type='email'
               placeholder={t('contact.form.mail')}
               required
             />
             <ValidationError
-              prefix="email"
-              field="email"
+              prefix='email'
+              field='email'
               errors={state.errors}
             />
           </div>
-          <div className="message flex w-full grow flex-col text-center md:w-4/6">
+          <div className='message flex w-full grow flex-col text-center md:w-4/6'>
             <textarea
-              className="border border-slate-900 bg-black py-4 px-2 placeholder-slate-700"
+              className='border border-slate-900 bg-black py-4 px-2 placeholder-slate-700'
               rows={4}
               cols={50}
               placeholder={t('contact.form.message')}
-              id="message"
-              name="message"
+              id='message'
+              name='message'
               required
             ></textarea>
             <ValidationError
-              prefix="message"
-              field="message"
+              prefix='message'
+              field='message'
               errors={state.errors}
             />
           </div>
-          <div className="policy flex">
+          <div className='policy flex'>
             <input
-              type="checkbox"
-              id="privacyPolicy"
-              name="privacyPolicy"
-              className="mr-2"
+              type='checkbox'
+              id='privacyPolicy'
+              name='privacyPolicy'
+              className='mr-2'
               required
               onChange={handlePrivacyCheckboxChange}
             />
 
-            <label htmlFor="privacyPolicy" className="text-slate-200">
+            <label htmlFor='privacyPolicy' className='text-slate-200'>
               {t('contact.form.privacy') + ' '}
               <span
-                className="text-slate-600
-"
+                className='text-slate-600
+'
               >
                 {!isPrivacyChecked && '*'}
               </span>
@@ -166,7 +170,7 @@ export const Form = () => {
               !isPrivacyChecked ? 'line-through' : ''
             } border border-slate-900 bg-slate-900 py-4 px-8 hover:bg-slate-200 hover:text-slate-900`}
             disabled={!isPrivacyChecked}
-            type="submit"
+            type='submit'
           >
             {t('contact.form.send')}
           </button>

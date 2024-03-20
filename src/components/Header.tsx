@@ -78,28 +78,41 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
   }, [showDropdown]);
 
   return (
-    <header className='fixed top-0 z-20 flex w-screen items-center justify-center bg-black px-12 lg:px-0'>
-      <div className='container flex w-5/6 items-center justify-between py-7 lg:py-5'>
+    <header className='absolute top-0 z-20 flex w-screen items-center justify-center bg-[#00000059]  px-12 lg:px-0'>
+      <div className='container flex w-5/6 items-center justify-center py-7 lg:py-5'>
         <Link href='/'>
-          <div className='flex items-center gap-2'>
-            <Image
-              style={{ filter: 'invert(1)' }}
-              src='/code.png'
-              alt='icon Logo danipereira.dev'
-              width={25}
-              height={25}
-              priority
-            />
-            <h1
-              className='font-
+          <div className='flex flex-col items-center gap-2'>
+            <div className='rounded-full bg-gradient-to-r from-[#2dd4bf] via-[#0f7467] to-white p-1'>
+              <Image
+                className='rounded-full'
+                src='/danipereira-avatar.png'
+                alt='icon Logo danipereira.dev'
+                width={150}
+                height={150}
+                priority
+              />
+            </div>
+
+            <div className='flex items-center justify-center gap-4'>
+              <Image
+                style={{ filter: 'invert(1)' }}
+                src='/code.png'
+                alt='icon Logo danipereira.dev'
+                width={25}
+                height={25}
+                priority
+              />
+              <h1
+                className='font-
               items-center bg-gradient-to-r from-white
   to-teal-400 bg-clip-text pt-2 font-Arcade text-3xl uppercase tracking-wider text-transparent '
-            >
-              DPEREIRA.ES
-            </h1>
+              >
+                DPEREIRA.ES
+              </h1>
+            </div>
           </div>
         </Link>
-
+        {/* 
         <div className='flex flex-col items-center justify-center'>
           {!showDropdown ? (
             <GiHamburgerMenu
@@ -145,7 +158,7 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
               </a>
             </div>
 
-            {/* <div className='relative flex flex-col items-center gap-4'>
+            <div className='relative flex flex-col items-center gap-4'>
               <div className=' flex  items-center gap-2'>
                 <select
                   name='language'
@@ -181,9 +194,11 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
                   <Modal className='absolute top-4'> {modalData}</Modal>
                 )}
               </div>
-            </div> */}
+            </div> 
           </nav>
+         
         </div>
+         */}
       </div>
     </header>
   );

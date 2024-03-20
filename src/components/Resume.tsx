@@ -148,25 +148,33 @@ const CV: React.FC = () => {
       className='container mx-auto flex  w-5/6  flex-col justify-evenly  py-28 text-white'
     >
       {' '}
-      <h2 className='font- text-center text-2xl tracking-widest '>
+      <h2
+        className='items-center bg-gradient-to-r from-white
+              to-teal-400 bg-clip-text pt-2
+  text-center font-Arcade  text-4xl uppercase tracking-widest text-transparent '
+      >
         {t('cv.title').toUpperCase()}
       </h2>
       <div>
         <a
-          className='flex items-center justify-center text-[#2dd4bf] underline'
+          className='flex items-center justify-center gap-2 text-white underline'
           href='/DANI_CV_2024.pdf'
           download
         >
           <FaRegFilePdf /> Download
         </a>
       </div>
-      <h3 className='mt-6 mb-2 text-lg font-bold text-slate-200'>
+      <h3 className='mt-6 mb-2 text-2xl font-bold uppercase text-slate-200'>
         {t('cv.education')}
       </h3>
       <div className='grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2'>
         {education.map((educ, index) => (
           <div key={index} className='rounded-lg border-2 border-slate-900 p-4'>
-            <h3 className='text-md mb-2 font-semibold'>
+            <h3
+              className='bg-clip-text
+                    pt-2 uppercase
+          tracking-widest text-teal-300 '
+            >
               <span className='text-lg '>{educ.degree}</span> <br></br>
               {educ.school} <br></br>
               <span className='text-zinc-500'> {educ.date}</span>{' '}
@@ -174,7 +182,7 @@ const CV: React.FC = () => {
           </div>
         ))}
       </div>
-      <h3 className='mt-6 mb-2 text-lg font-bold text-slate-200'>
+      <h3 className='mt-6 mb-2 text-2xl font-bold uppercase text-slate-200'>
         {t('cv.workExperienceTitle')}
         {' (' +
           totalYearsOfExperience.toFixed(0) +
@@ -185,7 +193,11 @@ const CV: React.FC = () => {
       <div className='grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2'>
         {workExperience.map((job, index) => (
           <div key={index} className='rounded-lg border-2 border-slate-900 p-4'>
-            <h3 className='text-md mb-2 font-semibold'>
+            <h3
+              className='bg-clip-text
+                    pt-2 uppercase
+          tracking-widest text-teal-300 '
+            >
               {' '}
               <span className='text-lg'>{job.title}</span>
               <br></br>
@@ -208,7 +220,7 @@ const CV: React.FC = () => {
           </div>
         ))}
       </div>
-      <h2 className='mt-6 mb-2 text-lg font-bold text-slate-200'>
+      <h2 className='mt-6 mb-2 text-2xl font-bold uppercase text-slate-200'>
         {t('cv.skills.title')}
       </h2>
       <div className='grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2'>
@@ -217,7 +229,7 @@ const CV: React.FC = () => {
             key={index}
             className='transform rounded-lg border-2 border-slate-900 p-4'
           >
-            <h3 className='text-md mb-2 font-semibold'>
+            <h3 className='text-md mb-2 text-xl font-semibold uppercase '>
               {skillCategory.category}
             </h3>
             <ul className='flex flex-wrap'>
@@ -226,11 +238,13 @@ const CV: React.FC = () => {
                 .sort((a, b) => a.length - b.length)
                 .map((skill) => (
                   <li
-                    className={
-                      skillCategory.border
-                        ? 'mr-4 mb-2 min-w-[3rem] list-none border border-slate-900 px-4 py-[4px] text-gray-400'
-                        : 'mr-4 mb-2 list-none py-[4px] text-gray-400'
-                    }
+                    className={`pt-2
+                     uppercase
+          tracking-widest text-teal-300
+                      ${skillCategory.border}
+                        ? 'mr-4 text-gray-400' : 'mr-4 text-gray-400' mb-2 mb-2 min-w-[3rem] list-none
+                        list-none border border-slate-900 px-4 py-[4px] py-[4px]
+                    `}
                     key={skill}
                   >
                     {skill}

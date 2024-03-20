@@ -20,20 +20,15 @@ export const About = () => {
       id='about'
       className='container mx-auto flex w-5/6 flex-col items-center justify-center gap-16 py-28 '
     >
-      <h2 className='font- text-center text-2xl tracking-widest '>
+      <h2
+        className='items-center bg-gradient-to-r from-white
+              to-teal-400 bg-clip-text pt-2
+  text-center font-Arcade  text-4xl uppercase tracking-widest tracking-wider text-transparent '
+      >
         {t('about.title').toUpperCase()}
       </h2>
-      <div className=' flex flex-col items-center  md:flex-row-reverse md:gap-16'>
-        <div className=' mb-8 flex flex-col gap-4  rounded md:w-[30%] md:items-center'>
-          <Image
-            className='about-image cover pointer-events-none scale-x-[-1] transform object-cover  opacity-70'
-            src='/dani-bob-falla3.png'
-            width={500}
-            height={300}
-            alt='dani pereira picture'
-          />
-        </div>
-        <div className='flex flex-col text-center text-white  md:w-[70%]'>
+      <div className=' flex flex-col items-center md:flex-row-reverse  md:justify-center md:gap-16'>
+        <div className='flex flex-col text-center text-white md:max-w-[75%]'>
           {textWithLineBreaks}
         </div>
       </div>
