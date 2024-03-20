@@ -1,6 +1,6 @@
 {
   "menu": {
-    "cv": "Currículo",
+    "cv": "Curriculo",
     "Portfolio": "Portafolio",
     "Contact": "Contacto",
     "about": "Sobre min"
@@ -14,7 +14,7 @@
     "description": "Estou a traballar no meu novo portafolio e moi pronto estarei de volta con novos proxectos!"
   },
   "cv": {
-    "title": "Currículo",
+    "title": "Curriculo",
     "education": "Estudos",
     "highschool": "Instituto E.S.O.",
     "university": "Universidade (+25 anos)",
@@ -57,7 +57,7 @@
       "lang3": "Castelán (Nativo)"
     },
     "about": {
-      "title": "Máis sobre min",
+      "title": "Mais sobre min",
       "desc1": "Con moita sede de coñecemento e sempre moi interesado en traballar con compañeiros e compañeiras para resolver todo tipo de problemas. Sen dúbida, xogo mellor en equipo. Sempre voluntario para axudar a calquera ser vivo."
     }
   },
