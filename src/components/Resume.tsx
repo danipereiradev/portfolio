@@ -169,10 +169,11 @@ const CV: React.FC = () => {
       </h3>
       <div className='grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2'>
         {education.map((educ, index) => (
-          <div key={index} className='rounded-lg border-2 border-slate-900 p-4'>
+          <div key={index} className='rounded-lg border-2 border-gray-700 p-4'>
             <h3
               className='bg-clip-text
                     pt-2 uppercase
+
           tracking-widest text-teal-200 '
             >
               <span className='text-lg '>{educ.degree}</span> <br></br>
@@ -192,7 +193,7 @@ const CV: React.FC = () => {
       </h3>
       <div className='grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2'>
         {workExperience.map((job, index) => (
-          <div key={index} className='rounded-lg border-2 border-slate-900 p-4'>
+          <div key={index} className='rounded-lg border-2 border-gray-700 p-4'>
             <h3
               className='bg-clip-text
                     pt-2 uppercase
@@ -227,7 +228,7 @@ const CV: React.FC = () => {
         {skills.map((skillCategory, index) => (
           <div
             key={index}
-            className='transform rounded-lg border-2 border-slate-900 p-4'
+            className='transform rounded-lg border-2 border-gray-700 p-4'
           >
             <h3 className='text-md mb-2 text-xl font-semibold uppercase '>
               {skillCategory.category}
@@ -243,7 +244,7 @@ const CV: React.FC = () => {
           tracking-widest text-teal-200
                       ${skillCategory.border}
                         ? 'mr-4 text-gray-400' : 'mr-4 text-gray-400' mb-2 mb-2 min-w-[3rem] list-none
-                        list-none border border-slate-900 px-4 py-[4px] py-[4px]
+                        list-none border-0 px-4 py-[4px] py-[4px]
                     `}
                     key={skill}
                   >
