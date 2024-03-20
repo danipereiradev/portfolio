@@ -109,9 +109,21 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
               >
                 DPEREIRA.ES
               </h1>
+              <select
+                name='language'
+                id='language'
+                onChange={handleLanguageChange}
+                className=' h-8 bg-black text-sm font-normal uppercase'
+                value={i18n.language}
+              >
+                <option value='en'>En</option>
+                <option value='gl'>Gl</option>
+                <option value='es'>Es</option>
+              </select>
             </div>
           </div>
         </Link>
+
         {/* 
         <div className='flex flex-col items-center justify-center'>
           {!showDropdown ? (
@@ -160,17 +172,7 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
 
             <div className='relative flex flex-col items-center gap-4'>
               <div className=' flex  items-center gap-2'>
-                <select
-                  name='language'
-                  id='language'
-                  onChange={handleLanguageChange}
-                  className='relative h-8 bg-black text-sm font-normal uppercase'
-                  value={i18n.language}
-                >
-                  <option value='en'>En</option>
-                  <option value='gl'>Gl</option>
-                  <option value='es'>Es</option>
-                </select>
+                
 
                 {showModal && (
                   <Modal className='absolute inset-0 top-0 left-[50px]'>

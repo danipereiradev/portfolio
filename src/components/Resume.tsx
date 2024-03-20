@@ -230,7 +230,7 @@ const CV: React.FC = () => {
             key={index}
             className='transform rounded-lg border-2 border-gray-700 p-4'
           >
-            <h3 className='text-md mb-2 text-xl font-semibold uppercase '>
+            <h3 className='text-md mb-2 text-xl font-semibold uppercase text-teal-200 '>
               {skillCategory.category}
             </h3>
             <ul className='flex flex-wrap'>
@@ -239,12 +239,12 @@ const CV: React.FC = () => {
                 .sort((a, b) => a.length - b.length)
                 .map((skill) => (
                   <li
-                    className={`pt-2
-                     uppercase
-          tracking-widest text-teal-200
+                    className={`mr-[1rem] pt-2
+                     
+          tracking-widest text-slate-200
                       ${skillCategory.border}
-                        ? 'mr-4 text-gray-400' : 'mr-4 text-gray-400' mb-2 mb-2 min-w-[3rem] list-none
-                        list-none border-0 px-4 py-[4px] py-[4px]
+                        ? 'text-gray-400' : ' text-gray-400' mb-2 mb-2 min-w-[3rem] list-none
+                        list-none border-0
                     `}
                     key={skill}
                   >
