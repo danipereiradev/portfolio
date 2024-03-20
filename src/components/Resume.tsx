@@ -125,7 +125,7 @@ const CV: React.FC = () => {
     },
   ];
 
-  const calculateTotalExperience = () => {
+  /*  const calculateTotalExperience = () => {
     const totalMilliseconds = workExperience.reduce((total, job) => {
       const startDateObject = new Date(job.date);
       const endDateObject = new Date(job.endDate);
@@ -138,9 +138,9 @@ const CV: React.FC = () => {
     const totalYears = totalMilliseconds / (365 * 24 * 60 * 60 * 1000);
 
     return totalYears;
-  };
+  }; */
 
-  const totalYearsOfExperience = calculateTotalExperience();
+  /* const totalYearsOfExperience = calculateTotalExperience(); */
 
   return (
     <section
@@ -185,11 +185,11 @@ const CV: React.FC = () => {
       </div>
       <h3 className='mt-6 mb-2 text-2xl font-bold uppercase text-slate-200'>
         {t('cv.workExperienceTitle')}
-        {' (' +
+        {/* {' (' +
           totalYearsOfExperience.toFixed(0) +
           ' ' +
           t('others.years') +
-          ')'}
+          ')'} */}
       </h3>
       <div className='grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2'>
         {workExperience.map((job, index) => (
