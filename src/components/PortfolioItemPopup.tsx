@@ -39,7 +39,7 @@ export const PortfolioItemPopup = ({
         className='absolute inset-0 cursor-pointer bg-black opacity-50'
         onClick={onClosePopup}
       ></div>
-      <div className='fixed flex h-[90vh] w-[90vw] flex-col items-center justify-start gap-4 overflow-y-auto rounded-lg border border-slate-200 bg-black p-16 p-4 text-center shadow-lg lg:p-4'>
+      <div className='fixed flex h-[90vh] w-[90vw] flex-col items-center justify-start gap-4 overflow-y-auto rounded-lg border border-gray-200 bg-black p-16 p-4 text-center shadow-lg lg:p-4'>
         {/* Your popup content goes here */}
         <div className='flex w-full flex-col items-center justify-evenly gap-8 '>
           <h1 className='text-3xl'>{title}</h1>

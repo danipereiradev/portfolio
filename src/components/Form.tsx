@@ -71,7 +71,7 @@ export const Form = () => {
               id='name'
               name='name'
               type='text'
-              className=' border border-slate-900 bg-black py-4 px-2 placeholder-gray-700'
+              className=' border border-gray-900 bg-black py-4 px-2 placeholder-gray-700'
               placeholder={t('contact.form.name')}
               required
             />
@@ -83,7 +83,7 @@ export const Form = () => {
            flex'
             >
               <select
-                className='w-1/4 appearance-none border border-slate-900 bg-black py-4 px-2 placeholder-slate-700'
+                className='w-1/4 appearance-none border border-gray-900 bg-black py-4 px-2 placeholder-slate-700'
                 name='areaCode'
                 required
                 defaultValue={countriesEU.findIndex(
@@ -102,7 +102,7 @@ export const Form = () => {
                 id='phone'
                 name='phone'
                 type='tel'
-                className='border border-slate-900 bg-black py-4 px-2 placeholder-slate-700 md:w-[85%]'
+                className='border border-gray-900 bg-black py-4 px-2 placeholder-slate-700 md:w-[85%]'
                 placeholder={t('contact.form.phone')}
                 required
               />
@@ -117,7 +117,7 @@ export const Form = () => {
             <input
               id='email'
               name='email'
-              className='border border-slate-900 bg-black py-4 px-2 placeholder-slate-700'
+              className='border border-gray-900 bg-black py-4 px-2 placeholder-slate-700'
               type='email'
               placeholder={t('contact.form.mail')}
               required
@@ -130,7 +130,7 @@ export const Form = () => {
           </div>
           <div className='message flex w-full grow flex-col text-center md:w-4/6'>
             <textarea
-              className='border border-slate-900 bg-black py-4 px-2 placeholder-slate-700'
+              className='border border-gray-900 bg-black py-4 px-2 placeholder-slate-700'
               rows={4}
               cols={50}
               placeholder={t('contact.form.message')}
@@ -168,7 +168,7 @@ export const Form = () => {
           <button
             className={`${
               !isPrivacyChecked ? 'line-through' : ''
-            } border border-slate-900 bg-slate-900 py-4 px-8 hover:bg-slate-200 hover:text-slate-900`}
+            } border border-gray-900 bg-slate-900 py-4 px-8 hover:bg-slate-200 hover:text-slate-900`}
             disabled={!isPrivacyChecked}
             type='submit'
           >
