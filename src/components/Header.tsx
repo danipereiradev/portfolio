@@ -78,7 +78,7 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
   }, [showDropdown]);
 
   return (
-    <header className='absolute top-0 z-20 flex w-screen items-center justify-center bg-[#00000059]  px-12 lg:px-0'>
+    <header className='absolute top-0 z-20 flex w-screen items-center justify-center bg-[#00000059] px-12  py-4 lg:px-0'>
       <div className='container flex w-5/6 items-center justify-center py-7 lg:py-5'>
         <Link href='/'>
           <div className='flex flex-col items-center gap-2'>
