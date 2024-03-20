@@ -7,10 +7,6 @@ import React, { useState } from 'react';
 export default function App() {
   const [ischecked, setIsChecked] = useState(false);
 
-  const HandletoggleThemeMode = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setIsChecked(e.target.checked);
-  };
-
   return (
     <div className='flex min-h-screen flex-col'>
       <Head>
@@ -19,7 +15,7 @@ export default function App() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/code2.png' />
       </Head>
-      <Header ischecked={ischecked} onToggleThemeMode={HandletoggleThemeMode} />
+
       <Main />
       <Footer ischecked={ischecked} />
     </div>
