@@ -113,7 +113,7 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
                 name='language'
                 id='language'
                 onChange={handleLanguageChange}
-                className=' h-8 bg-black text-sm font-normal uppercase'
+                className=' h-8 bg-transparent text-sm font-normal uppercase'
                 value={i18n.language}
               >
                 <option value='en'>En</option>
