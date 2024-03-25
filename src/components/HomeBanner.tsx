@@ -71,9 +71,8 @@ export const HomeBanner: React.FC = () => {
                 <h1 className='animated-title py-12 text-4xl font-extrabold text-slate-200 lg:text-6xl'>
                   {element.heading}
                 </h1>
-                <h2 className='animated-title text-2xl font-bold text-slate-100 md:text-3xl'>
-                  {element.paragraph}
-                </h2>
+
+                {element.paragraph}
               </div>
             );
           })}
