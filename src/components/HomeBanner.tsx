@@ -63,7 +63,11 @@ export const HomeBanner: React.FC = () => {
         {data &&
           data.map((element) => {
             return (
-              <div key={element.id} className='lg:max-w-3/4 w-5/6 text-center'>
+              <div
+                key={element.id}
+                id='banner-data'
+                className='lg:max-w-3/4 w-5/6 text-center'
+              >
                 <h1 className='animated-title py-12 text-4xl font-extrabold text-slate-200 lg:text-6xl'>
                   {element.heading}
                 </h1>
