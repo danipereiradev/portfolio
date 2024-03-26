@@ -109,7 +109,7 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
               >
                 DPEREIRA.ES
               </h1>
-              {/*  <select
+              {/* <select
                 name='language'
                 id='language'
                 onChange={handleLanguageChange}
