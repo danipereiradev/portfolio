@@ -1,0 +1,101 @@
+{
+  "menu": {
+    "cv": "Curriculum",
+    "Portfolio": "Portafolio",
+    "Contact": "Contacto",
+    "about": "Sobre mi"
+  },
+  "others": {
+    "years": "años",
+    "modalThemeLight": "Estoy trabajando en un tema mas claro! Por el momento dejemos las luces apagadas"
+  },
+  "homeBanner": {
+    "title": "Desarrollador de Software Frontend",
+    "description": "Estoy trabajando en mi nuevo portfolio y muy pronto estaré de vuelta con nuevos proyectos!"
+  },
+  "cv": {
+    "title": "Curriculum",
+    "education": "Estudios",
+    "highschool": "Instituto E.S.O",
+    "university": "Universidad (+25)",
+    "workExperienceTitle": "Experiencia Laboral",
+    "workExperience": {
+      "title1": "Desarrollador de Software Frontend",
+      "desc1": "Desarrollar y mantener interfaces de usuario y aplicaciones web responsivas utilizando Javascript, typescript y librerias frontend como ReactJS, colaborando de forma cercana con diseñadores UX/UI y desarrolladores back-end para implementar firmes y eficientes experiencias de usuario.",
+      "title2": "Desarrollador de Software Frontend",
+      "desc2": "Contratado por tiempo limitado para la migración de jQuery a React para toda una aplicación de comercio electrónico. Garantizando la finalización del proyecto con una mayor eficiencia y sostenibilidad.",
+      "title3": "Diseñador web",
+      "desc3": "Diseñar y desarrollar páginas web con Wordpress y Prestashop, garantizando la compatibilidad entre navegadores y la capacidad de respuesta de los sitios web, colaborando con el cliente para recopilar los requisitos y brindar soluciones para sus necesidades y mejorar su presencia online"
+    },
+    "skills": {
+      "title": "Habilidades",
+      "subtitle1": {
+        "title": "Habilidades técnicas",
+        "test": "Testing unitario con Jest",
+        "responsive": "Diseño web responsivo",
+        "git": "Control de versiones con Git"
+      },
+      "subtitle2": {
+        "title": "Habilidades blandas",
+        "skill1": "Trabajo en equipo",
+        "skill2": "Adaptabilidad",
+        "skill3": "Comunicación",
+        "skill4": "Resolución de problemas"
+      }
+    },
+    "degrees": {
+      "title": "Certificaciones de estudios",
+      "subtitle1": "International English Language Testing System (2012) ",
+      "subtitle2": "Bootcamp de 480h Fullstack Mern (2021)",
+      "subtitle3": "Utilizando TypeScript con React de Dmytro Danylov",
+      "subtitle4": "El curso final de React 2023: React, Redux y más de Jonas Schmedtmann (160 horas)"
+    },
+    "languages": {
+      "title": "Idiomas",
+      "lang1": "Castellano (Nativo)",
+      "lang2": "Inglés (Fluido)",
+      "lang3": "Galego (Nativo)"
+    },
+    "about": {
+      "title": "Algo más sobre mi",
+      "desc1": "Con mucha sed de conocimiento y siempre muy interesado en trabajar con compañeras y compañeros para resolver todo tipo de problemas. Sin duda juego mejor en equipo. Siempre voluntario para ayudar a cualquier ser vivo."
+    }
+  },
+  "portfolio": {
+    "title": "Portafolio",
+    "desc": "Nuevos projectos muy pronto...",
+    "buttons": {
+      "live": "Ver online",
+      "code": "código",
+      "info": "Mas info",
+      "close": "Cerrar"
+    },
+    "projects": {
+      "balloon": {
+        "description": "Es una aplicación web de comercio electrónico desarrollada con tecnologías de vanguardia. Esta plataforma, construida con React.js para el frontend y Node.js con Express.js para el backend, representa un hito en mi carrera como desarrollador.\n\nLa aplicación ofrece a los usuarios la posibilidad de reservar experiencias únicas en toda la península. Nuestro enfoque principal fue brindar una experiencia de reserva fluida y personalizada. Implementamos una amplia gama de características, desde un sistema de reserva por tickets hasta un filtro avanzado que permite a los usuarios buscar actividades por categoría, ciudad, rango de precio y fechas disponibles.\n\nPara mejorar la experiencia del usuario, integramos bibliotecas como React Date Picker para facilitar la selección de fechas y React Responsive Carousel para presentar imágenes y detalles de las actividades de manera atractiva.\n\nEste proyecto fue un desafío emocionante que nos permitió demostrar nuestras habilidades en desarrollo web y crear una aplicación que simplifica la búsqueda y reserva de experiencias."
+      },
+      "fitness": {
+        "description": ""
+      },
+      "elefantes": {
+        "description": "Customized Genesis Framework: Utilizing the Genesis framework allowed for the creation of a bespoke and lightweight design without themes or page builders, optimizing performance and ensuring a seamless user experience across various devices.\n\nUnique Design Elements: Designed captivating hero sections showcasing memorable travel moments and crafted navigation menus that guide users through enchanting destinations, reflecting the adventurous spirit of the family's journeys.\n\nInteractive Maps and Location Insights: Implemented interactive maps highlighting the family's global travels, accompanied by travel tips and location-based anecdotes to engage and inspire visitors.\n\nDynamic Custom Fields: Integrated dynamic custom fields using PHP to facilitate content management, enabling the family bloggers to effortlessly curate and share their immersive travel stories.\n\nWordPress REST API Integration: Leveraged the WordPress REST API to enhance the blog's functionality, enabling real-time updates, improved search capabilities, and efficient data retrieval for an enriched user experience.\n\nPerformance Optimization: Optimized website performance to ensure fast loading times, seamless navigation, and impeccable responsiveness, providing a delightful browsing experience for visitors worldwide.\n\nEngaging Multimedia Experiences: Created captivating travel narratives with stunning visuals, immersive galleries, and compelling videos, transporting visitors to unique destinations and memorable adventures."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contactame",
+    "desc": "Rellena el formulario de abajo y te contestaré lo antes posible",
+    "form": {
+      "name": "Tu nombre",
+      "phone": "Tu teléfono",
+      "mail": "Tu email",
+      "message": "Escribe tu mensaje",
+      "privacy": "He leído y acepto la política de privacidad",
+      "send": "Enviar"
+    }
+  },
+  "about": {
+    "title": "Sobre mi",
+    "desc": "Comencé esta travesía en 2011 cuando me sumergí en el mundo del desarrollo web, creando un sitio de comercio electrónico para mi empresa utilizando Prestashop. Durante este tiempo, profundicé en los ámbitos de HTML, CSS y los fundamentos de JavaScript para hacer que mis sitios web fueran más inteligentes y eficientes.\n Después de tomar la decisión de cerrar mi empresa, redirigí mi enfoque hacia mi pasión, ofreciendo servicios de desarrollo web a quienes los necesitan.\nTambién comencé a construir sitios web para todos los demás que los necesitaban después de cerrar mi empresa para poder centrarme a tiempo completo en mi pasión.\nEn 2021, me inscribí en un completo curso de JavaScript que abarcaba tanto el desarrollo front-end como el back-end con React, Express JS, GIT y SQL. Fue durante este curso que desarrollé un profundo aprecio por la biblioteca React y su rico ecosistema, decidiendo finalmente especializarme en ella y perfeccionar mis habilidades aún más.\nCon una sed insaciable de conocimiento y un fuerte deseo de colaborar con otros para resolver diversos desafíos, me identifico como un jugador de equipo dedicado. Siempre estoy ansioso por ofrecerme como voluntario y extender una mano amiga a todos los seres vivos."
+  }
+}

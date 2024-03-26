@@ -3,73 +3,132 @@
 @tailwind utilities;
 
 * {
-  padding:0;
-  margin:0;
-  box-sizing: content-box;
-  
- 
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-
-.glasses {
-  position: absolute;
-  
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -85%);
-}
-
-
-  @media (max-width:640px)   {
-    .glasses {
-     max-width:10rem;
-     transform: translate(-50%, -90%);
-    }
-  }
-
-
-@media (min-width:640px) and (max-width:1040px)  {
-  .glasses {
-   width:9rem;
-   transform: translate(-50%, -80%);
-  }
-}
-
-@media (min-width:375px) and (max-width:640px)   {
-  .glasses {
-   max-width:4rem;
-   transform: translate(-50%, -105%);
-  }
-}
-
-@media (max-width:375px)  {
-  .glasses {
-   width:4rem;
-   transform: translate(-50%, -105%);
-  }
-}
-
-
-
-
-
-@font-face {
-  font-family: "WarowniaBd";
-  src: url("/public\fonts\Warownia\WarowniaBd.otf");
+.no-scroll {
+  overflow: hidden;
 }
 
 @font-face {
-  font-family: "Brooklyn";
-  src: url("/public\fonts\Brooklyn\Brooklyn-Bold-1.otf");
+  font-family: 'WarowniaBd';
+  src: url('/public\fonts\Warownia\WarowniaBd.otf');
+}
+
+@font-face {
+  font-family: 'Brooklyn';
+  src: url('/public\fonts\Brooklyn\Brooklyn-Bold-1.otf');
 }
 
 @layer base {
   @font-face {
-    font-family: "Arcade";
-    
-    src: url("/fonts/Arcade.woff2") format("woff2");
-  }
+    font-family: 'Arcade';
 
-  
+    src: url('/fonts/Arcade.woff2') format('woff2');
+  }
 }
 
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+.animated-title {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* DROPDOWN MENU CSS */
+
+@keyframes fadeInDown {
+  from {
+    transform: translateY(-400px); /* Move up by 20px initially */
+    z-index: -1;
+  }
+  to {
+    transform: translateY(0); /* Move down to original position */
+    z-index: 10;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.my-dropdown {
+  animation: fadeInDown 0.3s ease-in-out; /* Apply fadeIn animation */
+}
+
+.my-dropdown2 {
+  animation: fadeIn 0.8s ease-in; /* Apply fadeIn animation */
+}
