@@ -1,44 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
+import React from 'react';
+import UseResumeData from '@/hooks/useResumeData';
+
 import { useTranslation } from 'react-i18next';
 
-const headers = new Headers();
-headers.append('Content-Type', 'application/json');
-headers.append(
-  'Authorization',
-  `Bearer ${process.env.NEXT_PUBLIC_SUPABASE_KEY}`
-);
-headers.append('apikey', `${process.env.NEXT_PUBLIC_SUPABASE_KEY}`);
-
-const fetchOptions = {
-  method: 'GET',
-  headers: new Headers(headers),
-};
-
-console.log(process.env.NEXT_PUBLIC_SUPABASE_KEY);
-
 export const About = () => {
-  const [data, setData] = useState<any[]>([]);
+  const { data } = UseResumeData([
+    `https://wajrqdbpukfrgzsdqzmg.supabase.co/rest/v1/ABOUT_TABLE?select="*"`,
+  ]);
 
-  useEffect(() => {
-    fetch(
-      'https://wajrqdbpukfrgzsdqzmg.supabase.co/rest/v1/ABOUT_TABLE?select="*"',
-      fetchOptions
-    )
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setData(data);
-        console.log('Data fetched successfully:', data);
-      })
-      .catch((error) => {
-        console.error('There was a problem with your fetch operation:', error);
-      });
-  }, []);
+  const [aboutData] = data;
 
   const { t } = useTranslation();
 
@@ -63,14 +33,16 @@ export const About = () => {
         {t('about.title').toUpperCase()}
       </h2>
       <div className=' flex flex-col items-center md:flex-row-reverse  md:justify-center md:gap-16'>
-        <div className='flex flex-col text-center text-white md:max-w-[75%]'>
-          {data &&
-            data.map((element) => (
-              <div key={element.id}>
-                {splitText(element.text_data.description)}
-              </div>
-            ))}
-        </div>
+        {
+          <div className='flex flex-col text-center text-white md:max-w-[75%]'>
+            {aboutData &&
+              aboutData.map(
+                (element: { id: number | null; text_data: string }) => (
+                  <div key={element.id}>{splitText(element.text_data)}</div>
+                )
+              )}
+          </div>
+        }
       </div>
     </section>
   );

@@ -1,14 +1,23 @@
+import UseResumeData from '@/hooks/useResumeData';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { FaRegFilePdf } from 'react-icons/fa6';
 
 const CV: React.FC = () => {
   const { t } = useTranslation();
+  const { data } = UseResumeData([
+    `https://wajrqdbpukfrgzsdqzmg.supabase.co/rest/v1/RESUME_EDUCATION?select="*"`,
+    `https://wajrqdbpukfrgzsdqzmg.supabase.co/rest/v1/RESUME_WORK_EXPERIENCE?select="*"`,
+  ]);
+
+  const [resumeData, workExperienceData] = data;
+
+  console.log(data, 'resume');
 
   interface Education {
     degree: string;
-    school: string;
-    date: string;
+    place: string;
+    year: string;
   }
 
   interface WorkExperience {
@@ -30,13 +39,13 @@ const CV: React.FC = () => {
   const education: Education[] = [
     {
       degree: t('cv.university'),
-      school: 'Universidad de León',
-      date: '2015-06-19',
+      place: 'Universidad de León',
+      year: '2015-06-19',
     },
     {
       degree: t('cv.highschool'),
-      school: 'I.E.S Do Castro (Vigo, GAL)',
-      date: '2001-09-01 / 2005-06-01',
+      place: 'I.E.S Do Castro (Vigo, GAL)',
+      year: '2001-09-01 / 2005-06-01',
     },
   ];
 
@@ -142,6 +151,14 @@ const CV: React.FC = () => {
 
   /* const totalYearsOfExperience = calculateTotalExperience(); */
 
+  const splitText = (text: string) => {
+    return text.split('\n').map((text: string, i: number) => (
+      <p key={i} className='py-2'>
+        {text}
+      </p>
+    ));
+  };
+
   return (
     <section
       id='cv'
@@ -168,20 +185,31 @@ const CV: React.FC = () => {
         {t('cv.education')}
       </h3>
       <div className='grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2'>
-        {education.map((educ, index) => (
-          <div key={index} className='rounded-lg border-2 border-gray-700 p-4'>
-            <h3
-              className='bg-clip-text
-                    pt-2 uppercase
+        {resumeData &&
+          resumeData.map(
+            (element: {
+              id: number | null;
+              degree: string;
+              place: string;
+              year: string | null;
+            }) => (
+              <div
+                key={element.id}
+                className='rounded-lg border-2 border-gray-700 p-4'
+              >
+                <h3
+                  className='bg-clip-text
+                    pt-2 
 
           tracking-widest text-teal-200 '
-            >
-              <span className='text-lg '>{educ.degree}</span> <br></br>
-              {educ.school} <br></br>
-              <span className='text-zinc-500'> {educ.date}</span>{' '}
-            </h3>
-          </div>
-        ))}
+                >
+                  <span className='text-lg '>{element.degree}</span> <br></br>
+                  {element.place} <br></br>
+                  <span className='text-zinc-500'> {element.year}</span>{' '}
+                </h3>
+              </div>
+            )
+          )}
       </div>
       <h3 className='mt-6 mb-2 text-2xl font-bold uppercase text-slate-200'>
         {t('cv.workExperienceTitle')}
@@ -192,34 +220,40 @@ const CV: React.FC = () => {
           ')'} */}
       </h3>
       <div className='grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2'>
-        {workExperience.map((job, index) => (
-          <div key={index} className='rounded-lg border-2 border-gray-700 p-4'>
-            <h3
-              className='bg-clip-text
-                    pt-2 uppercase
-          tracking-widest text-teal-200 '
+        {workExperienceData &&
+          workExperienceData.map((element) => (
+            <div
+              key={element.id}
+              className='rounded-lg border-2 border-gray-700 p-4 '
             >
-              {' '}
-              <span className='text-lg'>{job.title}</span>
-              <br></br>
-              <a
-                href={job.link}
-                target='blank'
-                className='hover:text-[#2dd4bf]'
+              <h3
+                className='bg-clip-text
+                    pt-2 
+          tracking-widest text-teal-200 '
               >
-                {job.company}{' '}
-              </a>
-              <br></br>
-              <span className='text-zinc-500'>
                 {' '}
-                {job.date} / {job.endDate}
-              </span>{' '}
-            </h3>
+                <span className='text-lg capitalize'>{element.position}</span>
+                <br></br>
+                <a
+                  href={''}
+                  target='blank'
+                  className=' capitalize hover:text-[#2dd4bf]'
+                >
+                  {element.company_name}{' '}
+                </a>
+                <br></br>
+                <span className='text-zinc-500'>
+                  {' '}
+                  {element.date_start} / {element.date_end}
+                </span>{' '}
+              </h3>
 
-            <p className='mt-4 list-none '>{job.responsibilities}</p>
-            <p className='mt-4 list-none '>{job.responsibilities2}</p>
-          </div>
-        ))}
+              <p className='mt-4 list-none '>
+                <span className='text-teal-200'>Achievements:</span>
+                {splitText(element.achievements)}
+              </p>
+            </div>
+          ))}
       </div>
       <h2 className='mt-6 mb-2 text-2xl font-bold uppercase text-slate-200'>
         {t('cv.skills.title')}
