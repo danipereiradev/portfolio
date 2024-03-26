@@ -28,7 +28,7 @@ export const HomeBanner: React.FC = () => {
           </h1>
           <h2 className='animated-title text-2xl font-bold text-slate-100 md:text-3xl'>
             I am starting the move to{' '}
-            <span className='text-[#3ecf8e]'>Supabase</span> so apologies for
+            <span className='text-[#2dd4bf]'>Supabase</span> so apologies for
             any disruption!
           </h2>
         </div>
