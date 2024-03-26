@@ -221,39 +221,39 @@ const CV: React.FC = () => {
       </h3>
       <div className='grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2'>
         {workExperienceData &&
-          workExperienceData.map((element) => (
-            <div
-              key={element.id}
-              className='rounded-lg border-2 border-gray-700 p-4 '
-            >
-              <h3
-                className='bg-clip-text
-                    pt-2 
-          tracking-widest text-teal-200 '
+          workExperienceData.map(
+            (element: {
+              id: number | null;
+              position: string;
+              company_name: string;
+              date_start: string;
+              date_end: string | null;
+              achievements: string;
+            }) => (
+              <div
+                key={element.id}
+                className='rounded-lg border-2 border-gray-700 p-4 '
               >
-                {' '}
-                <span className='text-lg capitalize'>{element.position}</span>
-                <br></br>
-                <a
-                  href={''}
-                  target='blank'
-                  className=' capitalize hover:text-[#2dd4bf]'
+                <h3
+                  className='bg-clip-text
+                    pt-2 
+          capitalize tracking-widest text-teal-200'
                 >
-                  {element.company_name}{' '}
-                </a>
-                <br></br>
-                <span className='text-zinc-500'>
                   {' '}
-                  {element.date_start} / {element.date_end}
-                </span>{' '}
-              </h3>
+                  <span className='text-lg capitalize'>{element.position}</span>
+                  <br></br>
+                  {element.company_name} <br></br>
+                  <span className='mt-8 text-zinc-500'>
+                    {' '}
+                    {element.date_start} / {element.date_end}
+                  </span>{' '}
+                </h3>
 
-              <p className='mt-4 list-none '>
-                <span className='text-teal-200'>Achievements:</span>
+                <h3 className='text-teal-200'>Achievements:</h3>
                 {splitText(element.achievements)}
-              </p>
-            </div>
-          ))}
+              </div>
+            )
+          )}
       </div>
       <h2 className='mt-6 mb-2 text-2xl font-bold uppercase text-slate-200'>
         {t('cv.skills.title')}
