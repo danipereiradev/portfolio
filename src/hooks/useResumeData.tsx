@@ -13,22 +13,20 @@ const fetchOptions = {
   headers: new Headers(headers),
 };
 
-const UseResumeData = (fetchUrl: string[]) => {
-  const [data, setData] = useState<any>([]);
+const UseResumeData = (fetchUrl: string) => {
+  const [data, setData] = useState<any[]>([]);
 
   useEffect(() => {
-    Promise.all(fetchUrl.map((url: string) => fetch(url, fetchOptions)))
-      .then((responses) => {
-        const errorResponses = responses.filter((response) => !response.ok);
-        if (errorResponses.length > 0) {
-          throw new Error('One or more network responses were not ok');
+    fetch(fetchUrl, fetchOptions)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
         }
-
-        return Promise.all(responses.map((response) => response.json()));
+        return response.json();
       })
-      .then((dataArray) => {
-        setData(dataArray);
-        console.log('Data fetched successfully:', dataArray);
+      .then((data) => {
+        setData(data);
+        console.log('Data fetched successfully:', data);
       })
       .catch((error) => {
         console.error('There was a problem with your fetch operation:', error);

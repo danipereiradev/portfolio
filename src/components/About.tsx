@@ -4,11 +4,9 @@ import UseResumeData from '@/hooks/useResumeData';
 import { useTranslation } from 'react-i18next';
 
 export const About = () => {
-  const { data } = UseResumeData([
-    `https://wajrqdbpukfrgzsdqzmg.supabase.co/rest/v1/ABOUT_TABLE?select="*"`,
-  ]);
-
-  const [aboutData] = data;
+  const { data } = UseResumeData(
+    `https://wajrqdbpukfrgzsdqzmg.supabase.co/rest/v1/ABOUT_TABLE?select="*"`
+  );
 
   const { t } = useTranslation();
 
@@ -35,12 +33,10 @@ export const About = () => {
       <div className=' flex flex-col items-center md:flex-row-reverse  md:justify-center md:gap-16'>
         {
           <div className='flex flex-col text-center text-white md:max-w-[75%]'>
-            {aboutData &&
-              aboutData.map(
-                (element: { id: number | null; text_data: string }) => (
-                  <div key={element.id}>{splitText(element.text_data)}</div>
-                )
-              )}
+            {data &&
+              data.map((element: { id: number | null; text_data: string }) => (
+                <div key={element.id}>{splitText(element.text_data)}</div>
+              ))}
           </div>
         }
       </div>
