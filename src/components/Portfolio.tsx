@@ -71,7 +71,7 @@ export const Portfolio = () => {
       >
         {t('portfolio.title').toUpperCase()}
       </h2>
-      <p className='text-xl font-light text-slate-100'>
+      <p className='text-center text-xl font-light text-slate-100'>
         These are my latest projects
       </p>
 

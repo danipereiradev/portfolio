@@ -49,7 +49,7 @@ export const Form = () => {
   return (
     <section
       id='contact'
-      className='container mx-auto flex w-5/6 flex-col justify-center py-28'
+      className='container mx-auto flex w-5/6 flex-col justify-center py-28 text-center'
     >
       <h2
         className='items-center bg-gradient-to-r from-white

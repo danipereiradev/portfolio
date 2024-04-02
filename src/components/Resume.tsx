@@ -57,7 +57,7 @@ const CV: React.FC = () => {
       >
         {t('cv.title').toUpperCase()}
       </h2>
-      <div className='mx-auto text-xl font-light text-slate-100'>
+      <div className='mx-auto text-center text-xl font-light text-slate-100'>
         You can download my up to date resume by clicking the link below.{' '}
         {`(${formattedDate})`}
         <a

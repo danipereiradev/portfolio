@@ -27,7 +27,7 @@ export const HomeBanner: React.FC = () => {
             Frontend Software Developer
           </h1>
           <h2 className='animated-title m-auto text-xl font-light text-slate-100 md:max-w-[75] md:text-2xl'>
-            I&apos;m doing a colossal clean-up in my portfolio and GitHub
+            ⚠ I&apos;m doing a colossal clean-up in my portfolio and GitHub
             account, but please don&apos;t hesitate to ask for more projects.
           </h2>
         </div>
