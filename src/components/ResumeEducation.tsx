@@ -20,7 +20,7 @@ const ResumeEducation = () => {
               place: string;
               year: string | null;
             }) => (
-              <div key={element.id} className='rounded-lg bg-gray-800 p-4'>
+              <div key={element.id} className='rounded-lg bg-gray-900 p-4'>
                 <h3
                   className='bg-clip-text
                     pt-2 

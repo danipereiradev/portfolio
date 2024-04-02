@@ -15,7 +15,7 @@ const ResumeSoftSkills = () => {
           data.map((element: any) => (
             <div
               key={element.soft_skills.id}
-              className='min-h-[200px] transform rounded-lg bg-gray-800 p-4'
+              className='min-h-[200px] transform rounded-lg bg-gray-900 p-4'
             >
               <h3 className='text-md w-full text-xl font-semibold uppercase text-teal-200 '>
                 {element.soft_skills.category}

@@ -47,7 +47,7 @@ const CV: React.FC = () => {
   return (
     <section
       id='cv'
-      className='container mx-auto flex  w-5/6  flex-col justify-evenly  py-28 text-white'
+      className='container mx-auto flex w-5/6  flex-col  justify-evenly gap-4  py-28 text-white'
     >
       {' '}
       <h2

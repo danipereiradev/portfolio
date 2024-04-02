@@ -71,7 +71,7 @@ export const Form = () => {
               id='name'
               name='name'
               type='text'
-              className=' border border-gray-900 bg-black py-4 px-2 placeholder-gray-700'
+              className=' border border-gray-800 bg-gray-900 py-4 px-2 text-white placeholder-white'
               placeholder={t('contact.form.name')}
               required
             />
@@ -83,7 +83,7 @@ export const Form = () => {
            flex'
             >
               <select
-                className='w-1/4 appearance-none border border-gray-900 bg-black py-4 px-2 placeholder-slate-700'
+                className='w-[10%] appearance-none border border-gray-800 bg-gray-900 py-4 px-2 text-white placeholder-white'
                 name='areaCode'
                 required
                 defaultValue={countriesEU.findIndex(
@@ -102,7 +102,7 @@ export const Form = () => {
                 id='phone'
                 name='phone'
                 type='tel'
-                className='border border-gray-900 bg-black py-4 px-2 placeholder-slate-700 md:w-[85%]'
+                className='border border-gray-800 bg-gray-900 py-4 px-2 text-white placeholder-white md:w-[90%]'
                 placeholder={t('contact.form.phone')}
                 required
               />
@@ -117,7 +117,7 @@ export const Form = () => {
             <input
               id='email'
               name='email'
-              className='border border-gray-900 bg-black py-4 px-2 placeholder-slate-700'
+              className='border border-gray-800 bg-gray-900 py-4 px-2 text-white placeholder-white'
               type='email'
               placeholder={t('contact.form.mail')}
               required
@@ -130,7 +130,7 @@ export const Form = () => {
           </div>
           <div className='message flex w-full grow flex-col text-center md:w-4/6'>
             <textarea
-              className='border border-gray-900 bg-black py-4 px-2 placeholder-slate-700'
+              className='border border-gray-800 bg-gray-900 py-4 px-2 text-white placeholder-white'
               rows={4}
               cols={50}
               placeholder={t('contact.form.message')}

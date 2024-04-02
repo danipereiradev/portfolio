@@ -13,7 +13,7 @@ const ResumeSkills = () => {
           data.map((element: any) => (
             <div
               key={element.tech_skills.id}
-              className=' min-h-[200px] transform rounded-lg bg-gray-800 p-4'
+              className=' min-h-[200px] transform rounded-lg bg-gray-900 p-4'
             >
               <h3 className='text-md mb-2 text-xl font-semibold uppercase text-teal-200 '>
                 {element.tech_skills.category}
