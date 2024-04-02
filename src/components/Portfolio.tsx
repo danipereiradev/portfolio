@@ -71,9 +71,9 @@ export const Portfolio = () => {
       >
         {t('portfolio.title').toUpperCase()}
       </h2>
-      <h3 className='mt-6 mb-2 text-center text-lg font-bold text-slate-200'>
-        {t('portfolio.desc')}
-      </h3>
+      <p className='text-xl font-light text-slate-100'>
+        These are my latest projects
+      </p>
 
       {/*  <Loader /> */}
       <div className='portfolio-container flex flex-col  p-8 md:flex-row md:gap-8'>
