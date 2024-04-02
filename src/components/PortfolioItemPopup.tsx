@@ -45,10 +45,7 @@ export const PortfolioItemPopup = ({
           <h1 className='text-3xl'>{title}</h1>
           <Image src={imageUrl} alt={title} width={500} height={500} />
           <ul className='flex gap-8'>{mappedTechnologies}</ul>
-          <div className='lg:max-w-[50%]'>
-            {textWithLineBreaks}
-            <p>{t('portfolio.projects.fitness.status')}</p>
-          </div>
+          <div className='lg:max-w-[50%]'>{textWithLineBreaks}</div>
         </div>
 
         <div className='py-4'>
