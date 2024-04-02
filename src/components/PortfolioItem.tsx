@@ -58,7 +58,7 @@ export const PortfolioItem: React.FC<PortfolioItemProps> = (props) => {
   };
 
   return (
-    <div className='portfolio-item h-1/3 grow items-start justify-center rounded-lg  bg-gray-900 py-8'>
+    <div className='portfolio-item h-1/3 grow items-start justify-center rounded-lg  bg-gray-900 pb-8'>
       <a href={linkLive} target='blank'>
         <div className='image-container relative h-full w-full rounded-lg'>
           <Image
@@ -67,6 +67,7 @@ export const PortfolioItem: React.FC<PortfolioItemProps> = (props) => {
             width={600}
             height={200}
             priority
+            className='rounded-t-lg'
           />
           <div
             className={`popup absolute inset-0 flex items-center justify-center opacity-80  ${
