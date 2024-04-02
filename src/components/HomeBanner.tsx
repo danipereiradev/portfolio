@@ -26,10 +26,9 @@ export const HomeBanner: React.FC = () => {
           <h1 className='animated-title py-12 text-4xl font-extrabold text-slate-200 lg:text-6xl'>
             Frontend Software Developer
           </h1>
-          <h2 className='animated-title text-2xl font-bold text-slate-100 md:text-3xl'>
-            I am starting the move to{' '}
-            <span className='text-[#3ecf8e]'>Supabase</span> so apologies for
-            any disruption!
+          <h2 className='animated-title m-auto text-xl font-light text-slate-100 md:max-w-[75] md:text-2xl'>
+            I&apos;m doing a colossal clean-up in my portfolio and GitHub
+            account, but please don&apos;t hesitate to ask for more projects.
           </h2>
         </div>
       </div>

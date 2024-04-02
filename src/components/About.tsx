@@ -12,7 +12,7 @@ export const About = () => {
 
   const splitText = (text: string) => {
     return text.split('\n').map((text: string, i: number) => (
-      <p key={i} className='py-2'>
+      <p key={i} className='py-2 text-xl font-light text-slate-100'>
         {text}
       </p>
     ));
@@ -21,7 +21,7 @@ export const About = () => {
   return (
     <section
       id='about'
-      className='container mx-auto flex w-5/6 flex-col items-center justify-center gap-16 py-28 '
+      className='container mx-auto flex h-auto w-5/6 flex-col items-center justify-center gap-16 py-28 '
     >
       <h2
         className='items-center bg-gradient-to-r from-white

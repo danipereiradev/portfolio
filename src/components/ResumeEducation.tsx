@@ -20,19 +20,24 @@ const ResumeEducation = () => {
               place: string;
               year: string | null;
             }) => (
-              <div
-                key={element.id}
-                className='rounded-lg border-2 border-gray-700 p-4'
-              >
+              <div key={element.id} className='rounded-lg bg-gray-800 p-4'>
                 <h3
                   className='bg-clip-text
                     pt-2 
 
           tracking-widest text-teal-200 '
                 >
-                  <span className='text-lg '>{element.degree}</span> <br></br>
-                  {element.place} <br></br>
-                  <span className='text-zinc-500'> {element.year}</span>{' '}
+                  <span className='text-xl uppercase '>{element.degree}</span>{' '}
+                  <br></br>
+                  <span className='text-lg text-white'>
+                    {' '}
+                    {element.place}
+                  </span>{' '}
+                  <br></br>
+                  <span className='text-xs text-white'>
+                    {' '}
+                    {element.year}
+                  </span>{' '}
                 </h3>
               </div>
             )

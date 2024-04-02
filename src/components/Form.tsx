@@ -58,9 +58,9 @@ export const Form = () => {
       >
         {t('contact.title').toUpperCase()}
       </h2>
-      <h3 className='mt-6 mb-2 text-center text-lg font-bold text-slate-200'>
-        {t('contact.desc')}
-      </h3>
+      <h2 className=' m-auto text-xl font-light text-slate-100 md:max-w-[75] md:text-2xl'>
+        Fill the form below and I will get back to you ASAP.
+      </h2>
       <div className='form-container py-8 '>
         <form
           onSubmit={handleSubmitForm}

@@ -6,6 +6,16 @@ import ResumeEducation from './ResumeEducation';
 import ResumeWorkExp from './ResumeWorkExp';
 import ResumeSkills from './ResumeSkills';
 import ResumeSoftSkills from './ResumeSoftSkills';
+import ResumeLang from './ResumeLang';
+import ResumeDegrees from './ResumeDegrees';
+
+const currentDate = new Date();
+
+const month = currentDate.getMonth() + 1;
+const day = currentDate.getDate();
+const year = currentDate.getFullYear();
+
+const formattedDate = `${month}/${day}/${year}`;
 
 const CV: React.FC = () => {
   const { t } = useTranslation();
@@ -47,9 +57,11 @@ const CV: React.FC = () => {
       >
         {t('cv.title').toUpperCase()}
       </h2>
-      <div>
+      <div className='mx-auto text-xl font-light text-slate-100'>
+        You can download my up to date resume by clicking the link below.{' '}
+        {`(${formattedDate})`}
         <a
-          className='flex items-center justify-center gap-2 text-white underline'
+          className=' mx-auto flex w-[150px] items-center justify-center gap-2 text-white underline'
           href='/DANI_CV_2024.pdf'
           download
         >
@@ -59,13 +71,16 @@ const CV: React.FC = () => {
       <ResumeEducation />
       <ResumeWorkExp />
       {/*TODO:  FIX STYLES HERE */}
-      <article className='flex flex-col gap-4'>
-        <h3 className='mt-6 mb-2 text-2xl font-bold uppercase text-slate-200'>
-          Skills
-        </h3>
+      <h3 className='mt-6 mb-2 text-2xl font-bold uppercase text-slate-200'>
+        Skills
+      </h3>
+      <div className='grid grid-cols-1 gap-4 text-slate-200 md:grid-cols-2 '>
         <ResumeSkills />
         <ResumeSoftSkills />
-      </article>
+        <ResumeLang />
+        <ResumeDegrees />
+        {/* TODO: LANGUAGES */}
+      </div>
     </section>
   );
 };
