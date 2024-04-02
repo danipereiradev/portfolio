@@ -76,7 +76,7 @@ export const Portfolio = () => {
       </p>
 
       {/*  <Loader /> */}
-      <div className='portfolio-container flex flex-col  p-8 md:flex-row md:gap-8'>
+      <div className='portfolio-container flex flex-col gap-8 p-8 md:flex-row'>
         {thingsToMap}
       </div>
     </section>
