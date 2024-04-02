@@ -50,10 +50,7 @@ const ResumeWorkExp = () => {
                   </span>{' '}
                 </h3>
                 {/* TODO: FIX THIS ERROR */}
-                <details
-                  className='align-self-start flex'
-                  name='work-experience'
-                >
+                <details className='align-self-start flex'>
                   <summary className='mt-4 text-xl font-light text-slate-100'>
                     Read more
                   </summary>
