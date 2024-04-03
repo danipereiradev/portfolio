@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import { Footer } from '@/components/Footer';
-import { Main } from '@/components/Main';
-import Header from '@/components/Header';
+import { Footer } from '@/components/organisms/Footer';
+import { AppLayout } from '@/components/molecules/AppLayout';
+import Header from '@/components/organisms/Header';
 import React, { useState } from 'react';
 
 export default function App() {
@@ -13,10 +13,11 @@ export default function App() {
         <title>DPEREIRA.ES</title>
         <meta name='description' content='Frontend Software Engineer' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta name='theme-color' content='#2dd4bf' />
         <link rel='icon' href='/code2.png' />
       </Head>
 
-      <Main />
+      <AppLayout />
       <Footer ischecked={ischecked} />
     </div>
   );

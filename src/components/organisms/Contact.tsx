@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useTranslation } from 'react-i18next';
 
-export const Form = () => {
+export const Contact = () => {
   const [state, handleSubmit] = useForm('xjvqwpde');
   const [showSuccess, setShowSuccess] = useState(true);
   const [isPrivacyChecked, setIsPrivacyChecked] = useState(false);
@@ -159,9 +159,7 @@ export const Form = () => {
               <span
                 className='text-slate-600
 '
-              >
-                {!isPrivacyChecked && '*'}
-              </span>
+              ></span>
             </label>
           </div>
 

@@ -6,7 +6,7 @@ import {
   faCode,
   faCircleInfo,
 } from '@fortawesome/free-solid-svg-icons';
-import { PortfolioItemPopup } from './PortfolioItemPopup';
+import { PortfolioItemPopup } from '../atoms/PortfolioItemPopup';
 
 interface PortfolioItemProps {
   id: number;

@@ -1,10 +1,7 @@
-import { useState } from 'react';
-import { PortfolioItem } from './PortfolioItem';
+import { PortfolioItem } from '../molecules/PortfolioItem';
 import { useTranslation } from 'react-i18next';
 
 export const Portfolio = () => {
-  const [checkLive, setCheckLive] = useState(false);
-
   const { t } = useTranslation();
 
   const portfolioData = [

@@ -1,13 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Modal } from './Modal';
+import { Modal } from '../molecules/Modal';
 import { useState, useEffect } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoMdClose } from 'react-icons/io';
 import { useTranslation } from 'react-i18next';
 
-import DropdownMenu from './DropdownMenu';
+import DropdownMenu from '../molecules/DropdownMenu';
 
 interface HeaderProps {
   onToggleThemeMode: (e: React.ChangeEvent<HTMLInputElement>) => void;

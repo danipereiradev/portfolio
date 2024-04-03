@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { countriesEU } from '@/data/countries';
+
 import { Modal } from './Modal';
 import OutsideClickHandler from 'react-outside-click-handler';
 import { useTranslation } from 'react-i18next';
@@ -8,15 +8,14 @@ interface dropdownProps {
   onShowDropDown: (newState: boolean) => void;
 }
 
-// TO-DO SACAR ESTA FUNCIÓN A UN HELPER
+// TODO: MOVE THIS FUNCTION TO HELPER'S DIR
 const smoothScroll = (sectionId: string) => {
   const section = document.getElementById(sectionId);
   if (section) {
-    let headerHeight = 0; // Default header height for non-desktop screens
+    let headerHeight = 0;
 
-    // Check if the screen width is greater than a certain threshold for desktop screens
     if (window.innerWidth >= 768) {
-      headerHeight = 84; // Adjust this to your actual header height for desktop screens
+      headerHeight = 84;
     }
 
     const offset =
@@ -55,10 +54,9 @@ export const DropdownMenu: React.FC<dropdownProps> = ({ onShowDropDown }) => {
   };
 
   const handleOutsideClick = () => {
-    // Handle the logic to close the dropdown
     setShowDropdown(false);
-    // Notify the parent component that the dropdown should be hidden
-    onShowDropDown(false); // Call the passed function
+
+    onShowDropDown(false);
   };
 
   //TODO SACAR FUNCION A HELPER

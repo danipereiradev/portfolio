@@ -2,12 +2,12 @@ import UseResumeData from '@/hooks/useResumeData';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { FaRegFilePdf } from 'react-icons/fa6';
-import ResumeEducation from './ResumeEducation';
-import ResumeWorkExp from './ResumeWorkExp';
-import ResumeSkills from './ResumeSkills';
-import ResumeSoftSkills from './ResumeSoftSkills';
-import ResumeLang from './ResumeLang';
-import ResumeDegrees from './ResumeDegrees';
+import ResumeEducation from '../molecules/resume/ResumeEducation';
+import ResumeWorkExp from '../molecules/resume/ResumeWorkExp';
+import ResumeSkills from '../molecules/resume/ResumeSkills';
+import ResumeSoftSkills from '../molecules/resume/ResumeSoftSkills';
+import ResumeLang from '../molecules/resume/ResumeLang';
+import ResumeDegrees from '../molecules/resume/ResumeDegrees';
 
 const currentDate = new Date();
 
