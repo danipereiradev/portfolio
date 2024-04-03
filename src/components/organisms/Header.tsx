@@ -85,7 +85,7 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
             <div className='rounded-full bg-gradient-to-r from-[#2dd4bf] via-[#0f7467] to-white p-1'>
               <Image
                 className='rounded-full'
-                src='/danipereira-avatar.png'
+                src='/avatar-dani.png'
                 alt='icon Logo danipereira.dev'
                 width={150}
                 height={150}
