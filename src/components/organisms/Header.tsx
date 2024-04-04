@@ -82,9 +82,9 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
       <div className='container flex w-5/6 items-center justify-center py-7 lg:py-5'>
         <Link href='/'>
           <div className='flex flex-col items-center gap-2'>
-            <div className='rounded-full bg-gradient-to-r from-[#2dd4bf] via-[#0f7467] to-white p-1'>
+            <div className='rounded-lg bg-gradient-to-r from-[#2dd4bf] via-[#0f7467] to-white p-1'>
               <Image
-                className='rounded-full'
+                className='rounded-lg'
                 src='/avatar-dani.png'
                 alt='icon Logo danipereira.dev'
                 width={150}
