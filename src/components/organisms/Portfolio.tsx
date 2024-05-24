@@ -5,21 +5,6 @@ export const Portfolio = () => {
   const { t } = useTranslation();
 
   const portfolioData = [
-    /* {
-      id: 1,
-      title: 'FEEL-FIT APP',
-      buttonLive: t('portfolio.buttons.live').toUpperCase(),
-      buttonCode: t('portfolio.buttons.code').toUpperCase(),
-      buttonInfo: t('portfolio.buttons.info').toUpperCase(),
-      isLive: false,
-      imageUrl: '/feelfit.png',
-      description: 'Lorem ipsum',
-      techLogos: ['/js.png', '/react.png'],
-      linkLive: '#',
-      linkCode: 'https://github.com/danipereiracodes/fitnessapp',
-      technologies: ['/ts.png', '/react.png', '/chatgpt.png'],
-      popupDescription: t('portfolio.projects.fitness.description'),
-    }, */
     {
       id: 2,
       title: 'EL VIAJE DE LOS ELEFANTES',

@@ -7,6 +7,7 @@ import { About } from '../organisms/About';
 export const AppLayout: React.FC = () => {
   return (
     <main className='flex min-h-screen flex-col bg-black'>
+      {/* TODO: ANIMATE SECTION TITLES ON SCROLL */}
       <HomeBanner />
       <About />
       <Resume />
