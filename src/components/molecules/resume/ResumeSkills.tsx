@@ -1,5 +1,5 @@
 import UseResumeData from '@/hooks/useResumeData';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Image from 'next/image';
 ('use client');
 
@@ -17,11 +17,11 @@ const ResumeSkills = () => {
     { image: '/ts.png' },
   ];
 
-  const handleToggleWorkData = () => {
+  /*   const handleToggleWorkData = () => {
     setIsOpen(!isOpen);
-  };
+  }; */
 
-  const moveElement = (e) => {
+  /*   const moveElement = (e: React.KeyboardEvent<HTMLButtonElement>) => {
     let newX;
     let newY;
     const element = itemToScroll.current;
@@ -35,13 +35,13 @@ const ResumeSkills = () => {
 
       element.style.position = 'absolute';
       element.style.left = `${newX}px`;
-      element.style.bottom = `${newY}px`; // Adjust the element's position
+      element.style.bottom = `${newY}px`; 
 
       e.preventDefault();
 
-      // Ensure element remains visible (optional)
+     
     }
-  };
+  }; */
 
   return (
     <>
@@ -56,50 +56,18 @@ const ResumeSkills = () => {
                 {element.tech_skills.category}
               </h3>
 
-              <button
-                type='button'
-                className={`border-1 mt-4 w-[100px] cursor-pointer rounded-lg border py-2 text-center text-xs  ${
-                  isOpen ? 'border-[#2dd4bf] bg-[#2dd4bf] text-gray-900' : ''
-                }`}
-                onClick={handleToggleWorkData}
-              >
-                {isOpen ? 'Close' : 'Read more'}
-              </button>
-              {isOpen === true && (
-                <ul className='flex flex-wrap '>
-                  {element.tech_skills.skills.map((skill: string) => (
-                    <li
-                      key={skill}
-                      className='py-2 pr-4 text-xl font-light text-slate-100'
-                    >
-                      <p>{skill}</p>
-                    </li>
-                  ))}
-                </ul>
-              )}
+              <ul className='flex flex-wrap '>
+                {element.tech_skills.skills.map((skill: string) => (
+                  <li
+                    key={skill}
+                    className='py-2 pr-4 text-xl font-light text-slate-100'
+                  >
+                    <p>{skill}</p>
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
-        <div className='h-[200px] w-[200px] bg-red-400 '>DIV</div>
-        <div className='h-[200px] w-[200px] bg-red-400 '>DIV</div>
-        <div className='h-[200px] w-[200px] bg-red-400 '>DIV</div>
-        <div className='h-[200px] w-[200px] bg-red-400 '>DIV</div>
-        <div className='h-[200px] w-[200px] bg-red-400 '>DIV</div>
-        <div className='h-[200px] w-[200px] bg-red-400 '>DIV</div>
-        <div className='h-[200px] w-[200px] bg-red-400 '>DIV</div>
-        <div
-          tabIndex={0}
-          ref={itemToScroll}
-          className='h-[200px] w-[200px] bg-blue-400 '
-        >
-          DIV
-        </div>
-        <button
-          className='bottom-0 z-20 cursor-pointer'
-          onKeyDown={moveElement}
-        >
-          {' '}
-          Scroll
-        </button>
       </div>
     </>
   );

@@ -9,9 +9,12 @@ const splitText = (text: string) => {
   ));
 };
 
+interface NumericKeyObject {
+  [key: number]: string | boolean;
+}
+
 const ResumeWorkExp = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [idOpen, setIdOpen] = useState<{}>({});
+  const [idOpen, setIdOpen] = useState<NumericKeyObject>({});
   const { data } = UseResumeData(
     `https://wajrqdbpukfrgzsdqzmg.supabase.co/rest/v1/RESUME_WORK_EXPERIENCE?select="*"`
   );
