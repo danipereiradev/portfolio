@@ -6,7 +6,7 @@ import {
   faCode,
   faCircleInfo,
 } from '@fortawesome/free-solid-svg-icons';
-import { PortfolioItemPopup } from './PortfolioItemPopup';
+import { PortfolioItemPopup } from '../atoms/PortfolioItemPopup';
 
 interface PortfolioItemProps {
   id: number;
@@ -58,7 +58,7 @@ export const PortfolioItem: React.FC<PortfolioItemProps> = (props) => {
   };
 
   return (
-    <div className='portfolio-item h-1/3 grow items-start justify-center rounded-lg border-2 border-gray-900 py-8'>
+    <div className='portfolio-item h-1/3 grow items-start justify-center rounded-lg  bg-gray-900 pb-8'>
       <a href={linkLive} target='blank'>
         <div className='image-container relative h-full w-full rounded-lg'>
           <Image
@@ -67,6 +67,7 @@ export const PortfolioItem: React.FC<PortfolioItemProps> = (props) => {
             width={600}
             height={200}
             priority
+            className='rounded-t-lg'
           />
           <div
             className={`popup absolute inset-0 flex items-center justify-center opacity-80  ${
@@ -80,13 +81,13 @@ export const PortfolioItem: React.FC<PortfolioItemProps> = (props) => {
         </div>
       </a>
       <div className='portfolio-item-container flex flex-col justify-center gap-4 py-4 text-center'>
-        <h3 className='text-xl'>{title}</h3>
+        <h3 className='text-xl uppercase text-teal-200'>{title}</h3>
         <div className='button-container flex justify-center gap-4'>
           <a
             href={!checkLive && linkLive !== '' ? linkLive : undefined}
             target='_blank'
             rel='noopener noreferrer'
-            className='cursor-pointer text-xs'
+            className='cursor-pointer text-xs text-white'
             onClick={() => !isLive && handleCheckLiveView()}
           >
             <div className='flex gap-1'>
@@ -99,7 +100,7 @@ export const PortfolioItem: React.FC<PortfolioItemProps> = (props) => {
             href={linkCode}
             target='_blank'
             rel='noopener noreferrer'
-            className='text-xs'
+            className='text-xs text-white'
           >
             <div className='flex gap-1'>
               <FontAwesomeIcon icon={faCode} className='w-[.9rem]' />
@@ -107,7 +108,7 @@ export const PortfolioItem: React.FC<PortfolioItemProps> = (props) => {
             </div>
           </a>
           <div
-            className='flex cursor-pointer gap-1 text-xs'
+            className='flex cursor-pointer gap-1 text-xs text-white'
             onClick={openPopup}
           >
             <FontAwesomeIcon icon={faCircleInfo} className='w-[.9rem]' />

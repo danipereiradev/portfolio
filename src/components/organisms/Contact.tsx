@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useTranslation } from 'react-i18next';
 
-export const Form = () => {
+export const Contact = () => {
   const [state, handleSubmit] = useForm('xjvqwpde');
   const [showSuccess, setShowSuccess] = useState(true);
   const [isPrivacyChecked, setIsPrivacyChecked] = useState(false);
@@ -49,7 +49,7 @@ export const Form = () => {
   return (
     <section
       id='contact'
-      className='container mx-auto flex w-5/6 flex-col justify-center py-28'
+      className='container mx-auto flex w-5/6 flex-col justify-center py-28 text-center'
     >
       <h2
         className='items-center bg-gradient-to-r from-white
@@ -58,9 +58,9 @@ export const Form = () => {
       >
         {t('contact.title').toUpperCase()}
       </h2>
-      <h3 className='mt-6 mb-2 text-center text-lg font-bold text-slate-200'>
-        {t('contact.desc')}
-      </h3>
+      <h2 className=' m-auto text-xl font-light text-slate-100 md:max-w-[75] md:text-2xl'>
+        Fill the form below and I will get back to you ASAP.
+      </h2>
       <div className='form-container py-8 '>
         <form
           onSubmit={handleSubmitForm}
@@ -71,7 +71,7 @@ export const Form = () => {
               id='name'
               name='name'
               type='text'
-              className=' border border-gray-900 bg-black py-4 px-2 placeholder-gray-700'
+              className=' border border-gray-800 bg-gray-900 py-4 px-2 text-white placeholder-white'
               placeholder={t('contact.form.name')}
               required
             />
@@ -83,7 +83,7 @@ export const Form = () => {
            flex'
             >
               <select
-                className='w-1/4 appearance-none border border-gray-900 bg-black py-4 px-2 placeholder-slate-700'
+                className='w-[10%] appearance-none border border-gray-800 bg-gray-900 py-4 px-2 text-white placeholder-white'
                 name='areaCode'
                 required
                 defaultValue={countriesEU.findIndex(
@@ -102,7 +102,7 @@ export const Form = () => {
                 id='phone'
                 name='phone'
                 type='tel'
-                className='border border-gray-900 bg-black py-4 px-2 placeholder-slate-700 md:w-[85%]'
+                className='border border-gray-800 bg-gray-900 py-4 px-2 text-white placeholder-white md:w-[90%]'
                 placeholder={t('contact.form.phone')}
                 required
               />
@@ -117,7 +117,7 @@ export const Form = () => {
             <input
               id='email'
               name='email'
-              className='border border-gray-900 bg-black py-4 px-2 placeholder-slate-700'
+              className='border border-gray-800 bg-gray-900 py-4 px-2 text-white placeholder-white'
               type='email'
               placeholder={t('contact.form.mail')}
               required
@@ -130,7 +130,7 @@ export const Form = () => {
           </div>
           <div className='message flex w-full grow flex-col text-center md:w-4/6'>
             <textarea
-              className='border border-gray-900 bg-black py-4 px-2 placeholder-slate-700'
+              className='border border-gray-800 bg-gray-900 py-4 px-2 text-white placeholder-white'
               rows={4}
               cols={50}
               placeholder={t('contact.form.message')}
@@ -159,9 +159,7 @@ export const Form = () => {
               <span
                 className='text-slate-600
 '
-              >
-                {!isPrivacyChecked && '*'}
-              </span>
+              ></span>
             </label>
           </div>
 

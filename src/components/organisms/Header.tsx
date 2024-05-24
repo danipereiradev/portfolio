@@ -1,13 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Modal } from './Modal';
+import { Modal } from '../molecules/Modal';
 import { useState, useEffect } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoMdClose } from 'react-icons/io';
 import { useTranslation } from 'react-i18next';
 
-import DropdownMenu from './DropdownMenu';
+import DropdownMenu from '../molecules/DropdownMenu';
 
 interface HeaderProps {
   onToggleThemeMode: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -81,11 +81,11 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
     <header className=' z-20 flex w-screen items-center justify-center bg-[#00000059] px-12  py-4 lg:px-0'>
       <div className='container flex w-5/6 items-center justify-center py-7 lg:py-5'>
         <Link href='/'>
-          <div className='flex flex-col items-center gap-2'>
-            <div className='rounded-full bg-gradient-to-r from-[#2dd4bf] via-[#0f7467] to-white p-1'>
+          <div className='group flex flex-col items-center gap-2'>
+            <div className='rounded-full p-1 group-hover:bg-[#2dd4bf]'>
               <Image
                 className='rounded-full'
-                src='/danipereira-avatar.png'
+                src='/avatar-dani.png'
                 alt='icon Logo danipereira.dev'
                 width={150}
                 height={150}

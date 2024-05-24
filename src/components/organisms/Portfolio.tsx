@@ -1,28 +1,10 @@
-import { useState } from 'react';
-import { PortfolioItem } from './PortfolioItem';
+import { PortfolioItem } from '../molecules/PortfolioItem';
 import { useTranslation } from 'react-i18next';
 
 export const Portfolio = () => {
-  const [checkLive, setCheckLive] = useState(false);
-
   const { t } = useTranslation();
 
   const portfolioData = [
-    {
-      id: 1,
-      title: 'FEEL-FIT APP',
-      buttonLive: t('portfolio.buttons.live').toUpperCase(),
-      buttonCode: t('portfolio.buttons.code').toUpperCase(),
-      buttonInfo: t('portfolio.buttons.info').toUpperCase(),
-      isLive: false,
-      imageUrl: '/feelfit.png',
-      description: 'Lorem ipsum',
-      techLogos: ['/js.png', '/react.png'],
-      linkLive: '#',
-      linkCode: 'https://github.com/danipereiracodes/fitnessapp',
-      technologies: ['/ts.png', '/react.png', '/chatgpt.png'],
-      popupDescription: t('portfolio.projects.fitness.description'),
-    },
     {
       id: 2,
       title: 'EL VIAJE DE LOS ELEFANTES',
@@ -71,12 +53,12 @@ export const Portfolio = () => {
       >
         {t('portfolio.title').toUpperCase()}
       </h2>
-      <h3 className='mt-6 mb-2 text-center text-lg font-bold text-slate-200'>
-        {t('portfolio.desc')}
-      </h3>
+      <p className='text-center text-xl font-light text-slate-100'>
+        These are my latest projects
+      </p>
 
       {/*  <Loader /> */}
-      <div className='portfolio-container flex flex-col  p-8 md:flex-row md:gap-8'>
+      <div className='portfolio-container flex flex-col gap-8 p-8 md:flex-row'>
         {thingsToMap}
       </div>
     </section>
