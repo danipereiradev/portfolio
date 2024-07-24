@@ -80,36 +80,27 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
   return (
     <header className=' z-20 flex w-screen items-center justify-center bg-[#00000059] px-12  py-4 lg:px-0'>
       <div className='container flex w-5/6 items-center justify-center py-7 lg:py-5'>
-        <Link href='/'>
-          <div className='group flex flex-col items-center gap-2'>
-            <div className='rounded-full p-1 group-hover:bg-[#2dd4bf]'>
-              <Image
-                className='rounded-full'
-                src='/avatar-dani.png'
-                alt='icon Logo danipereira.dev'
-                width={150}
-                height={150}
-                priority
-              />
-            </div>
+        <div className='flex flex-col items-center gap-2'>
+          <div className='rounded-full p-1'>
+            <Image
+              className='rounded-full'
+              src='/dpg.jpg'
+              alt='icon Logo danipereira.dev'
+              width={150}
+              height={150}
+              priority
+            />
+          </div>
 
-            <div className='flex items-center justify-center gap-4'>
-              <Image
-                style={{ filter: 'invert(1)' }}
-                src='/code.png'
-                alt='icon Logo danipereira.dev'
-                width={25}
-                height={25}
-                priority
-              />
-              <h1
-                className='font-
+          <div className='flex items-center justify-center gap-4'>
+            <h1
+              className='font-
               items-center bg-gradient-to-r from-white
   to-teal-400 bg-clip-text pt-2 font-Arcade text-3xl uppercase tracking-wider text-transparent '
-              >
-                DPEREIRA.ES
-              </h1>
-              {/* <select
+            >
+              pereiradev
+            </h1>
+            {/* <select
                 name='language'
                 id='language'
                 onChange={handleLanguageChange}
@@ -120,9 +111,8 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
                 <option value='gl'>Gl</option>
                 <option value='es'>Es</option>
               </select> */}
-            </div>
           </div>
-        </Link>
+        </div>
 
         {/* 
         <div className='flex flex-col items-center justify-center'>
