@@ -98,7 +98,7 @@ const Header: React.FC<HeaderProps> = ({ onToggleThemeMode, ischecked }) => {
               items-center bg-gradient-to-r from-white
   to-teal-400 bg-clip-text pt-2 font-Arcade text-3xl uppercase tracking-wider text-transparent '
             >
-              pereiradev
+              Dani Pereira
             </h1>
             {/* <select
                 name='language'
